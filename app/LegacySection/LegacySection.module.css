@@ -1,7 +1,7 @@
 .legacySection {
   width: 100%;
-  background: #f7efe4;
-  padding: 22px 18px;
+  background: #EFE2D1;
+  /* padding: 22px 18px; */
 }
 
 .inner {
@@ -12,9 +12,9 @@
   grid-template-columns: 1.1fr 1.2fr 1.2fr;
   align-items: center;
   gap: 20px;
-  background:
+  /* background:
     linear-gradient(rgba(255,255,255,0.06), rgba(255,255,255,0.06)),
-    #f7efe4;
+    #f7efe4; */
   border: 1px solid rgba(127, 83, 39, 0.12);
   box-shadow: 0 10px 24px rgba(0,0,0,0.05);
 }
