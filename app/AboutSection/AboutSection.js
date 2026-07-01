@@ -1,12 +1,29 @@
 import styles from "./AboutSection.module.css";
 
+const stats = [
+  {
+    icon: "/asset/shop.svg",
+    title: "100+",
+    text: "Years of Legacy",
+  },
+  {
+    icon: "/asset/customers.svg",
+    title: "Millions",
+    text: "Happy Customers",
+  },
+  {
+    icon: "/asset/trust.svg",
+    title: "Generations",
+    text: "of Trust & Tradition",
+  },
+];
+
 export default function AboutSection() {
   return (
     <section className={styles.aboutSection}>
-   
-
       <div className={styles.aboutCard}>
         <div className={styles.leftImageBox}>
+          <img src="/asset/wheat.svg" alt="" aria-hidden="true" className={styles.wheatIcon} />
           <img
             src="/nature.png"
             alt="Heritage Shop"
@@ -16,7 +33,11 @@ export default function AboutSection() {
 
         <div className={styles.centerContent}>
           <p className={styles.tag}>OUR LEGACY</p>
-          <h3 className={styles.heading}>A HERITAGE SWEET SINCE GENERATIONS</h3>
+          <h3 className={styles.heading}>
+            A HERITAGE SWEET
+            <br />
+            SINCE GENERATIONS
+          </h3>
           <p className={styles.description}>
             For over a century, our halwa has been part of Tirunelveli&apos;s
             identity. Prepared with the same devotion and traditional methods,
@@ -29,20 +50,15 @@ export default function AboutSection() {
         </div>
 
         <div className={styles.rightStats}>
-          <div className={styles.statItem}>
-            <div className={styles.statNumber}>100+</div>
-            <div className={styles.statText}>Years of Legacy</div>
-          </div>
-
-          <div className={styles.statItem}>
-            <div className={styles.statNumber}>Millions</div>
-            <div className={styles.statText}>Happy Customers</div>
-          </div>
-
-          <div className={styles.statItem}>
-            <div className={styles.statNumber}>Generations</div>
-            <div className={styles.statText}>of Trust & Tradition</div>
-          </div>
+          {stats.map((item) => (
+            <div className={styles.statItem} key={item.title}>
+              <img src={item.icon} alt="" aria-hidden="true" className={styles.statIcon} />
+              <div className={styles.statCopy}>
+                <div className={styles.statNumber}>{item.title}</div>
+                <div className={styles.statText}>{item.text}</div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

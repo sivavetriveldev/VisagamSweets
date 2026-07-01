@@ -6,18 +6,21 @@ export default function Home() {
       <div className={styles.headerWrap}>
         <div className={styles.logoRow}>
         
-          <img src="/Shop-logo.svg" alt="Shop Logo" className={styles.shopLogo} />
+          <img src="/irutukadai-logo.png" alt="Shop Logo" className={styles.shopLogo} />
         </div>
 
         <div className={styles.navBar}>
-          <a href="#" className={styles.navLinkActive}>HOME</a>
+          <a href="#" className={styles.navLink}>HOME</a>
           <a href="#" className={styles.navLink}>OUR LEGACY</a>
           <a href="#" className={styles.navLink}>PRODUCTS</a>
           <a href="#" className={styles.navLink}>MAKING</a>
           <a href="#" className={styles.navLink}>GALLERY</a>
           <a href="#" className={styles.navLink}>MEDIA</a>
           <a href="#" className={styles.navLink}>CONTACT</a>
-          <a href="#" className={styles.orderBtn}>ORDER ONLINE</a>
+          <a href="#" className={styles.orderBtn}>
+            <img src="/asset/cart.svg" alt="" aria-hidden="true" className={styles.orderIcon} />
+            <span>ORDER ONLINE</span>
+          </a>
         </div>
       </div>
 
@@ -32,8 +35,14 @@ export default function Home() {
     </p>
 
     <div className={styles.heroButtons}>
-      <a href="#" className={styles.primaryBtn}>ORDER NOW</a>
-      <a href="#" className={styles.secondaryBtn}>VISIT OUR SHOP</a>
+      <a href="#" className={styles.primaryBtn}>
+        <img src="/asset/cart.svg" alt="" aria-hidden="true" className={styles.orderIcon} />
+        <span>ORDER NOW</span>
+      </a>
+      <a href="#" className={styles.secondaryBtn}>
+        <img src="/asset/location.svg" alt="" aria-hidden="true" className={styles.orderIcon} />
+        <span>VISIT OUR SHOP</span>
+      </a>
     </div>
    
   </div>
