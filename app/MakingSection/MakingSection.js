@@ -3,37 +3,37 @@ import styles from "./MakingSection.module.css";
 const steps = [
   {
     no: "1",
-    icon: "🌾",
+    icon: "/asset/art-wheat.svg",
     title: "SELECTED WHEAT",
     desc: "Carefully chosen for the best quality.",
   },
   {
     no: "2",
-    icon: "🥣",
+    icon: "/asset/wheat-milk.svg",
     title: "WHEAT MILK EXTRACTION",
     desc: "Extracted to perfection.",
   },
   {
     no: "3",
-    icon: "🍯",
+    icon: "/asset/slow-cooking.svg",
     title: "SLOW COOKING",
     desc: "Cooked patiently over controlled heat.",
   },
   {
     no: "4",
-    icon: "🫗",
+    icon: "/asset/ghee-pot.svg",
     title: "PURE GHEE",
     desc: "Pure ghee added gradually.",
   },
   {
     no: "5",
-    icon: "🥄",
+    icon: "/asset/perfect-texture.svg",
     title: "PERFECT TEXTURE",
     desc: "Expert hands ensure the right texture.",
   },
   {
     no: "6",
-    icon: "🍽️",
+    icon: "/asset/fresh.svg",
     title: "FRESHLY SERVED",
     desc: "Made fresh and served with love.",
   },
@@ -49,7 +49,7 @@ export default function MakingSection() {
           {steps.map((step) => (
             <div className={styles.step} key={step.no}>
               <div className={styles.circle}>
-                <span className={styles.icon}>{step.icon}</span>
+                <img src={step.icon} alt="" aria-hidden="true" className={styles.icon} />
               </div>
 
               <div className={styles.number}>{step.no}</div>
