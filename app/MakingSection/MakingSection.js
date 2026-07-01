@@ -1,0 +1,65 @@
+import styles from "./MakingSection.module.css";
+
+const steps = [
+  {
+    no: "1",
+    icon: "🌾",
+    title: "SELECTED WHEAT",
+    desc: "Carefully chosen for the best quality.",
+  },
+  {
+    no: "2",
+    icon: "🥣",
+    title: "WHEAT MILK EXTRACTION",
+    desc: "Extracted to perfection.",
+  },
+  {
+    no: "3",
+    icon: "🍯",
+    title: "SLOW COOKING",
+    desc: "Cooked patiently over controlled heat.",
+  },
+  {
+    no: "4",
+    icon: "🫗",
+    title: "PURE GHEE",
+    desc: "Pure ghee added gradually.",
+  },
+  {
+    no: "5",
+    icon: "🥄",
+    title: "PERFECT TEXTURE",
+    desc: "Expert hands ensure the right texture.",
+  },
+  {
+    no: "6",
+    icon: "🍽️",
+    title: "FRESHLY SERVED",
+    desc: "Made fresh and served with love.",
+  },
+];
+
+export default function MakingSection() {
+  return (
+    <section className={styles.makingSection}>
+      <div className={styles.wrapper}>
+        <h2 className={styles.title}>THE ART OF MAKING HALWA</h2>
+
+        <div className={styles.timeline}>
+          {steps.map((step) => (
+            <div className={styles.step} key={step.no}>
+              <div className={styles.circle}>
+                <span className={styles.icon}>{step.icon}</span>
+              </div>
+
+              <div className={styles.number}>{step.no}</div>
+
+              <h3 className={styles.stepTitle}>{step.title}</h3>
+              <p className={styles.stepDesc}>{step.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

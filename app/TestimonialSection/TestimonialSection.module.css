@@ -1,0 +1,101 @@
+.testimonialSection {
+  width: 100%;
+  background: #fbf3e7;
+  padding: 26px 18px 34px;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  border: 1px solid rgba(120, 80, 40, 0.45);
+  background: linear-gradient(180deg, #f8efe2 0%, #f4e8d8 100%);
+  padding: 14px 18px 18px;
+}
+
+.title {
+  margin: 0 0 18px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  color: #6f1b1b;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  position: relative;
+  min-height: 120px;
+  border: 1px solid rgba(130, 90, 40, 0.12);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.22);
+  padding: 22px 18px 16px 28px;
+  color: #7b5a48;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
+}
+
+.quote {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  color: rgba(111, 27, 27, 0.22);
+  line-height: 1;
+}
+
+.text {
+  margin: 0 0 10px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #7b5a48;
+  font-weight: 500;
+}
+
+.name {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7b5a48;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.dot,
+.dotActive {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #6f1b1b;
+}
+
+.dot {
+  background: transparent;
+  opacity: 0.65;
+}
+
+.dotActive {
+  background: #6f1b1b;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+}

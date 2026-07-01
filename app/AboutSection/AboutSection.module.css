@@ -1,0 +1,153 @@
+.aboutSection {
+  width: 100%;
+  padding: 40px 24px;
+  background: #fbf8f3;
+}
+
+.sectionTitle {
+  margin: 0 0 16px;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #111;
+}
+
+.aboutCard {
+  display: grid;
+  grid-template-columns: 1.1fr 1.2fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+  background: #fcf8f2;
+  border: 1px solid rgba(216, 161, 58, 0.35);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.leftImageBox {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  margin: 0 auto;
+  padding: 18px;
+  border: 3px solid #e6b24a;
+  border-radius: 180px 180px 18px 18px;
+  background: #fdf8f0;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.heritageImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 170px 170px 12px 12px;
+  filter: grayscale(100%) contrast(1.05);
+}
+
+.centerContent {
+  padding: 10px 0;
+}
+
+.tag {
+  margin: 0 0 10px;
+  color: #d59a2f;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.heading {
+  margin: 0 0 16px;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #7b2d26;
+}
+
+.description {
+  margin: 0 0 18px;
+  max-width: 420px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.storyLink {
+  display: inline-block;
+  text-decoration: none;
+  color: #7b2d26;
+  font-weight: 800;
+  font-size: 16px;
+  border-bottom: 2px solid #d59a2f;
+  padding-bottom: 4px;
+}
+
+.rightStats {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-left: 24px;
+  border-left: 1px solid rgba(216, 161, 58, 0.45);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statNumber {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #7b2d26;
+}
+
+.statText {
+  font-size: 16px;
+  color: #444;
+}
+
+@media (max-width: 1100px) {
+  .aboutCard {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .rightStats {
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1px solid rgba(216, 161, 58, 0.45);
+    padding-top: 20px;
+    align-items: center;
+  }
+
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 24px 14px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .heritageImage {
+    max-width: 260px;
+    height: 260px;
+  }
+}
