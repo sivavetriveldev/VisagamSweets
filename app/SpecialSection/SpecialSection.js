@@ -13,6 +13,17 @@ export default function SpecialSection() {
   return (
     <section className={styles.specialSection}>
       <div className={styles.topBand}>
+          <img
+      src="/asset/Footer/cornerLeft.svg"
+      alt=""
+      className={styles.cornerLeft}
+    />
+
+    <img
+      src="/asset/Footer/cornerRight.svg"
+      alt=""
+      className={styles.cornerRight}
+    />
         <h2 className={styles.bandTitle}>WHY OUR HALWA IS SPECIAL</h2>
 
         <div className={styles.topGrid}>

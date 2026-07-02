@@ -19,11 +19,11 @@ export default function FooterSection() {
       <div className={styles.wrapper}>
         <div className={styles.colLeft}>
           <div className={styles.brandRow}>
-            <img src="/fav-icon.jpg" alt="Iruttukadai Halwa" className={styles.logo} />
-            <div className={styles.brandText}>
+            <img src="/irutukadai-logo.png" alt="Iruttukadai Halwa"  />
+            {/* <div className={styles.brandText}>
               <h2 className={styles.brandName}>IRUTTUKADAI</h2>
               <h2 className={styles.brandName}>HALWA</h2>
-            </div>
+            </div> */}
           </div>
 
           <p className={styles.tagline}>
