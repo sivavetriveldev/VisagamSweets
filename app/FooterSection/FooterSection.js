@@ -100,8 +100,8 @@ export default function FooterSection() {
         </div>
 
         <img
-          src="/bottom-icon.png"
-          alt=""
+          src="/asset/Footer/Footertemple.svg"
+          alt="Temple"
           aria-hidden="true"
           className={styles.bottomSketch}
         />
