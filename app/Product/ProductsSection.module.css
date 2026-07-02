@@ -154,17 +154,18 @@
   text-decoration: none;
   color: #7b2d26;
   font-weight: 800;
-  border: 1px solid #e8b54a;
+  border: 1px solid #d18e22;
   border-radius: 999px;
-  background: linear-gradient(180deg, #fffefc, #fff6e8);
-  box-shadow: 0 8px 16px rgba(92, 54, 20, 0.05);
+  background: linear-gradient(180deg, #f2b24a 0%, #e39a1f 100%);
+  color: #5f230f;
+  box-shadow: 0 8px 16px rgba(145, 90, 25, 0.14);
   transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .readMoreBtn:hover {
-  background: linear-gradient(180deg, #fff7ea, #fff0d8);
+  background: linear-gradient(180deg, #db8f16 0%, #c5780f 100%);
   transform: translateY(-1px);
-  box-shadow: 0 10px 18px rgba(92, 54, 20, 0.08);
+  box-shadow: 0 10px 18px rgba(145, 90, 25, 0.22);
 }
 
 @keyframes productZoom {

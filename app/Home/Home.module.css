@@ -107,7 +107,8 @@ body {
   min-height: 38px;
   border-radius: 10px;
   text-decoration: none;
-  background: linear-gradient(180deg, #8e1f1f, #6f1414);
+  background-image: linear-gradient(45deg, #8a1f20 0%, #6e1416 51%, #8a1f20 100%);
+  background-size: 200% auto;
   color: #fff;
   font-family: "Georgia", "Times New Roman", serif;
   font-size: 12px;
@@ -115,6 +116,13 @@ body {
   letter-spacing: 0.03em;
   white-space: nowrap;
   flex-shrink: 0;
+  border: 1px solid rgba(122, 28, 28, 0.15);
+  box-shadow: 0 8px 18px rgba(93, 20, 20, 0.16);
+  transition: 0.5s;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 .orderIcon {
@@ -127,6 +135,8 @@ body {
 
 .orderBtn:hover {
   transform: translateY(-1px);
+  background-position: right center;
+  box-shadow: 0 10px 20px rgba(93, 20, 20, 0.22);
 }
 
 .heroSection {
@@ -220,14 +230,42 @@ body {
 }
 
 .primaryBtn {
-  background: linear-gradient(180deg, #8e1f1f, #6f1414);
+  background-image: linear-gradient(45deg, #8a1f20 0%, #6e1416 51%, #8a1f20 100%);
+  background-size: 200% auto;
   color: #fff;
+  border: 1px solid rgba(122, 28, 28, 0.15);
+  box-shadow: 0 10px 20px rgba(93, 20, 20, 0.18);
+  transition: 0.5s;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 .secondaryBtn {
-  border: 2px solid #e8b54a;
-  color: #a26d2f;
-  background: #fff;
+  border: 2px solid #8a1f20;
+  color: #8a1f20;
+  background: #fff8f2;
+  box-shadow: 0 8px 16px rgba(93, 20, 20, 0.08);
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-1px);
+  background-position: right center;
+  box-shadow: 0 12px 22px rgba(93, 20, 20, 0.24);
+}
+
+.secondaryBtn:hover {
+  transform: translateY(-1px);
+  background: #8a1f20;
+  color: #fff;
+  box-shadow: 0 12px 20px rgba(93, 20, 20, 0.18);
+}
+
+.orderBtn:active,
+.primaryBtn:active {
+  transform: scale(0.95);
 }
 
 .heroRight {
