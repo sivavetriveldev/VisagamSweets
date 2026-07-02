@@ -26,7 +26,7 @@ export default function Home() {
 
      
       
-<section className={styles.heroSection}>
+      <section className={styles.heroSection}>
   <div className={styles.heroLeft}>
     <p className={styles.heroSmall}>THE ORIGINAL TASTE OF</p>
     <h1 className={styles.heroTitle}>TIRUNELVELI</h1>

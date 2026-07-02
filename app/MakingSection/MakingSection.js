@@ -46,7 +46,7 @@ export default function MakingSection() {
         <h2 className={styles.title}>THE ART OF MAKING HALWA</h2>
 
         <div className={styles.timeline}>
-          {steps.map((step) => (
+          {steps.map((step, index) => (
             <div className={styles.step} key={step.no}>
               <div className={styles.circle}>
                 <img src={step.icon} alt="" aria-hidden="true" className={styles.icon} />
