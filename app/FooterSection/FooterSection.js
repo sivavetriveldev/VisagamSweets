@@ -3,7 +3,7 @@ import styles from "./FooterSection.module.css";
 export default function FooterSection() {
   return (
     <footer className={styles.footerSection}>
-      <img
+      {/* <img
         src="/asset/Footer/designtopleft.svg"
         alt=""
         aria-hidden="true"
@@ -14,7 +14,7 @@ export default function FooterSection() {
         alt=""
         aria-hidden="true"
         className={styles.cornerTopRight}
-      />
+      /> */}
 
       <div className={styles.wrapper}>
         <div className={styles.colLeft}>
