@@ -5,7 +5,7 @@ export default function LegacySection() {
     <section className={styles.legacySection}>
       <div className={styles.inner}>
         <div className={styles.leftArt}>
-          <img src="/legacy-cook.svg" alt="Traditional cooking art" />
+          <img src="asset/OurLegacy/Human.svg" alt="Traditional cooking art" />
         </div>
 
         <div className={styles.centerText}>
