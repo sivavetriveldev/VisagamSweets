@@ -91,7 +91,8 @@ export default function TestimonialSection() {
   return (
     <section className={styles.testimonialSection}>
       <div className={styles.wrapper}>
-        <h2 className={styles.title}>Testimonials - Loved By Generations</h2>
+        <h2 className={styles.title}>Testimonials</h2>
+        <p className={styles.subtitle}>Loved By Generations</p>
 
         <div className={styles.carouselShell}>
           <button
