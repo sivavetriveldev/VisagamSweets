@@ -100,7 +100,7 @@ export default function FooterSection() {
         </div>
 
         <img
-          src="/bottom-icon.png"
+          src="/asset/bottom-icon.png"
           alt=""
           aria-hidden="true"
           className={styles.bottomSketch}
