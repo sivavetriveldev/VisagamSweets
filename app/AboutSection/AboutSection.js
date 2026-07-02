@@ -39,12 +39,12 @@ export default function AboutSection() {
               aria-hidden="true"
               className={styles.tagIcon}
             />
-            <span>OUR LEGACY</span>
+            <span>Our Legacy</span>
           </p>
           <h3 className={styles.heading}>
-            A HERITAGE SWEET
+            A Heritage Sweet
             <br />
-            SINCE GENERATIONS
+            Since Generations
           </h3>
           <p className={styles.description}>
             For over a century, our halwa has been part of Tirunelveli&apos;s
@@ -53,7 +53,7 @@ export default function AboutSection() {
           </p>
 
           <a href="#" className={styles.storyLink}>
-            KNOW OUR STORY
+            Know Our Story
           </a>
         </div>
 

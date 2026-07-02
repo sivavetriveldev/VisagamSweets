@@ -4,37 +4,37 @@ const steps = [
   {
     no: "1",
     icon: "/asset/art-wheat.svg",
-    title: "SELECTED WHEAT",
+    title: "Selected Wheat",
     desc: "Carefully chosen for the best quality.",
   },
   {
     no: "2",
     icon: "/asset/wheat-milk.svg",
-    title: "WHEAT MILK EXTRACTION",
+    title: "Wheat Milk Extraction",
     desc: "Extracted to perfection.",
   },
   {
     no: "3",
     icon: "/asset/slow-cooking.svg",
-    title: "SLOW COOKING",
+    title: "Slow Cooking",
     desc: "Cooked patiently over controlled heat.",
   },
   {
     no: "4",
     icon: "/asset/ghee-pot.svg",
-    title: "PURE GHEE",
+    title: "Pure Ghee",
     desc: "Pure ghee added gradually.",
   },
   {
     no: "5",
     icon: "/asset/perfect-texture.svg",
-    title: "PERFECT TEXTURE",
+    title: "Perfect Texture",
     desc: "Expert hands ensure the right texture.",
   },
   {
     no: "6",
     icon: "/asset/fresh.svg",
-    title: "FRESHLY SERVED",
+    title: "Freshly Served",
     desc: "Made fresh and served with love.",
   },
 ];
@@ -43,7 +43,7 @@ export default function MakingSection() {
   return (
     <section className={styles.makingSection}>
       <div className={styles.wrapper}>
-        <h2 className={styles.title}>THE ART OF MAKING HALWA</h2>
+        <h2 className={styles.title}>The Art Of Making Halwa</h2>
 
         <div className={styles.timeline}>
           {steps.map((step, index) => (

@@ -24,7 +24,7 @@ export default function SpecialSection() {
       alt=""
       className={styles.cornerRight}
     />
-        <h2 className={styles.bandTitle}>WHY OUR HALWA IS SPECIAL</h2>
+        <h2 className={styles.bandTitle}>Why Our Halwa Is Special</h2>
 
         <div className={styles.topGrid}>
           {features.map((item, index) => (

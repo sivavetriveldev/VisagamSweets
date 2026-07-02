@@ -21,13 +21,13 @@ export default function FooterSection() {
           <div className={styles.brandRow}>
             <img src="/irutukadai-logo.png" alt="Iruttukadai Halwa"  />
             {/* <div className={styles.brandText}>
-              <h2 className={styles.brandName}>IRUTTUKADAI</h2>
-              <h2 className={styles.brandName}>HALWA</h2>
+              <h2 className={styles.brandName}>Iruttukadai</h2>
+              <h2 className={styles.brandName}>Halwa</h2>
             </div> */}
           </div>
 
           <p className={styles.tagline}>
-            The Original Taste of Tirunelveli Since Generations.
+            The Original Taste Of Tirunelveli Since Generations.
           </p>
 
           <div className={styles.socialRow}>
@@ -49,37 +49,37 @@ export default function FooterSection() {
         <div className={styles.divider}></div>
 
         <div className={styles.colMid}>
-          <h3 className={styles.colTitle}>QUICK LINKS</h3>
+          <h3 className={styles.colTitle}>Quick Links</h3>
           <ul className={styles.linkList}>
             <li>
-              <a href="#" className={styles.footerLink}>
+                <a href="#" className={styles.footerLink}>
                 Home
-              </a>
+                </a>
             </li>
             <li>
-              <a href="#" className={styles.footerLink}>
+                <a href="#" className={styles.footerLink}>
                 Our Legacy
-              </a>
+                </a>
             </li>
             <li>
-              <a href="#" className={styles.footerLink}>
+                <a href="#" className={styles.footerLink}>
                 Products
-              </a>
+                </a>
             </li>
             <li>
-              <a href="#" className={styles.footerLink}>
+                <a href="#" className={styles.footerLink}>
                 Making Process
-              </a>
+                </a>
             </li>
             <li>
-              <a href="#" className={styles.footerLink}>
+                <a href="#" className={styles.footerLink}>
                 Gallery
-              </a>
+                </a>
             </li>
             <li>
-              <a href="#" className={styles.footerLink}>
+                <a href="#" className={styles.footerLink}>
                 Contact
-              </a>
+                </a>
             </li>
           </ul>
         </div>
@@ -87,7 +87,7 @@ export default function FooterSection() {
         <div className={styles.divider}></div>
 
         <div className={styles.colRight}>
-          <h3 className={styles.colTitle}>VISIT US</h3>
+          <h3 className={styles.colTitle}>Visit Us</h3>
           <p className={styles.info}>
             Iruttukadai Halwa Shop
             <br />

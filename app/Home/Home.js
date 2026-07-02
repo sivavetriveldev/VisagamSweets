@@ -10,16 +10,16 @@ export default function Home() {
         </div>
 
         <div className={styles.navBar}>
-          <a href="#" className={styles.navLink}>HOME</a>
-          <a href="#" className={styles.navLink}>OUR LEGACY</a>
-          <a href="#" className={styles.navLink}>PRODUCTS</a>
-          <a href="#" className={styles.navLink}>MAKING</a>
-          <a href="#" className={styles.navLink}>GALLERY</a>
-          <a href="#" className={styles.navLink}>MEDIA</a>
-          <a href="#" className={styles.navLink}>CONTACT</a>
+          <a href="#" className={styles.navLink}>Home</a>
+          <a href="#" className={styles.navLink}>Our Legacy</a>
+          <a href="#" className={styles.navLink}>Products</a>
+          <a href="#" className={styles.navLink}>Making</a>
+          <a href="#" className={styles.navLink}>Gallery</a>
+          <a href="#" className={styles.navLink}>Media</a>
+          <a href="#" className={styles.navLink}>Contact</a>
           <a href="#" className={styles.orderBtn}>
             <img src="/asset/cart.svg" alt="" aria-hidden="true" className={styles.orderIcon} />
-            <span>ORDER ONLINE</span>
+            <span>Order Online</span>
           </a>
         </div>
       </div>
@@ -28,15 +28,8 @@ export default function Home() {
       
       <section className={styles.heroSection}>
   <div className={styles.heroLeft}>
-    <p className={styles.heroSmall}>THE ORIGINAL TASTE OF</p>
-    <h1 className={styles.heroTitle}>TIRUNELVELI</h1>
-    <div className={styles.titleDivider} aria-hidden="true">
-      <img
-        src="/asset/bottom-icon.svg"
-        alt=""
-        className={styles.bottomIcon}
-      />
-    </div>
+    <p className={styles.heroSmall}>The Original Taste Of</p>
+    <h1 className={styles.heroTitle}>Tirunelveli</h1>
     <p className={styles.heroDesc}>
       Crafted with tradition, pure ingredients and cherished for generations.
     </p>
@@ -44,11 +37,11 @@ export default function Home() {
     <div className={styles.heroButtons}>
       <a href="#" className={styles.primaryBtn}>
         <img src="/asset/cart.svg" alt="" aria-hidden="true" className={styles.orderIcon} />
-        <span>ORDER NOW</span>
+        <span>Order Now</span>
       </a>
       <a href="#" className={styles.secondaryBtn}>
         <img src="/asset/location.svg" alt="" aria-hidden="true" className={styles.orderIcon} />
-        <span>VISIT OUR SHOP</span>
+        <span>Visit Our Shop</span>
       </a>
     </div>
    

@@ -9,15 +9,15 @@ export default function LegacySection() {
         </div>
 
         <div className={styles.centerText}>
-          <p className={styles.label}>OUR LEGACY</p>
-          <h2 className={styles.title}>VISAKAM SWEETS & SAVOURIES</h2>
+          <p className={styles.label}>Our Legacy</p>
+          <h2 className={styles.title}>Visakam Sweets & Savouries</h2>
           <p className={styles.desc}>
             For more than a century, our halwa has been a part of Tirunelveli&apos;s
             culture and pride. Prepared with the same devotion and traditional
             methods, every piece carries a story of taste and trust.
           </p>
           <a href="#" className={styles.link}>
-            OUR STORY
+            Our Story
           </a>
         </div>
 

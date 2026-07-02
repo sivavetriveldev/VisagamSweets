@@ -22,7 +22,7 @@ export default function NewsSection() {
   return (
     <section className={styles.newsSection}>
       <div className={styles.wrapper}>
-        <h2 className={styles.title}>NEWS & EVENTS</h2>
+        <h2 className={styles.title}>News & Events</h2>
 
         <div className={styles.grid}>
           {newsItems.map((item, index) => (
@@ -41,7 +41,7 @@ export default function NewsSection() {
 
         <div className={styles.footer}>
           <a href="#" className={styles.viewAllBtn}>
-            VIEW ALL
+            View All
           </a>
         </div>
       </div>
