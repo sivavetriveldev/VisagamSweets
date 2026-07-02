@@ -30,6 +30,13 @@ export default function Home() {
   <div className={styles.heroLeft}>
     <p className={styles.heroSmall}>THE ORIGINAL TASTE OF</p>
     <h1 className={styles.heroTitle}>TIRUNELVELI</h1>
+    <div className={styles.titleDivider} aria-hidden="true">
+      <img
+        src="/asset/bottom-icon.svg"
+        alt=""
+        className={styles.bottomIcon}
+      />
+    </div>
     <p className={styles.heroDesc}>
       Crafted with tradition, pure ingredients and cherished for generations.
     </p>
