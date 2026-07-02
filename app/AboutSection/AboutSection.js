@@ -32,7 +32,15 @@ export default function AboutSection() {
         </div>
 
         <div className={styles.centerContent}>
-          <p className={styles.tag}>OUR LEGACY</p>
+          <p className={styles.tag}>
+            <img
+              src="/asset/heading-icon.svg"
+              alt=""
+              aria-hidden="true"
+              className={styles.tagIcon}
+            />
+            <span>OUR LEGACY</span>
+          </p>
           <h3 className={styles.heading}>
             A HERITAGE SWEET
             <br />

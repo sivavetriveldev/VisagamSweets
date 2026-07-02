@@ -14,8 +14,8 @@ export default function HomePage() {
     <AboutSection />
     <ProductsSection />
     <SpecialSection />
-    <MakingSection />
     <LegacySection />
+    <MakingSection />
     <TestimonialSection />
     <NewsSection />
     <FooterSection />

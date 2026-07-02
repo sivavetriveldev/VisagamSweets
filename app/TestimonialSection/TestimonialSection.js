@@ -16,6 +16,18 @@ const testimonials = [
     text: "Every bite reflects tradition and quality. Highly recommended!",
     name: "Aravind, Bengaluru",
   },
+    {
+    text: "The taste takes me back to my childhood days in Tirunelveli. Simply unmatched!",
+    name: "Ramesh, Chennai",
+  },
+  {
+    text: "Authentic, rich and always consistent. Our family's all-time favorite.",
+    name: "Lakshmi, Madurai",
+  },
+  {
+    text: "Every bite reflects tradition and quality. Highly recommended!",
+    name: "Aravind, Bengaluru",
+  },
 ];
 
 export default function TestimonialSection() {

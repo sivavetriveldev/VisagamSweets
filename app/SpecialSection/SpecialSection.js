@@ -27,7 +27,7 @@ export default function SpecialSection() {
         </div>
       </div>
 
-        <div className={styles.bottomGrid}>
+        {/* <div className={styles.bottomGrid}>
         <div className={styles.card}>
           <div className={styles.cardIcon}>
             <img src="/asset/quality.svg" alt="" aria-hidden="true" className={styles.cardIconImg} />
@@ -67,7 +67,7 @@ export default function SpecialSection() {
             We Make our Products Very Naturally and Healthy
           </p>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
