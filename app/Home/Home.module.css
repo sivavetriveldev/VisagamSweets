@@ -7,7 +7,7 @@ body {
 
 .page {
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background: #fbf8f3;
   overflow-x: hidden;
   padding: 110px 24px 0;
