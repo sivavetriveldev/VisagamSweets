@@ -1,11 +1,13 @@
 .testimonialSection {
-  background: #ffffff;
-  padding: 56px 24px 64px;
+  background: #fbf8f3;
+  padding: 0 4px;
 }
 
 .wrapper {
-  max-width: 1320px;
+  /* max-width: 1500px; */
   margin: 0 auto;
+  position: relative;
+  overflow: visible;
 }
 
 .title {
@@ -20,7 +22,7 @@
 }
 
 .subtitle {
-  margin: 8px 0 26px;
+  margin: 2px 0 4px;
   text-align: center;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 16px;
@@ -30,19 +32,46 @@
   text-transform: uppercase;
 }
 
+.templeImg,
+.leafImg {
+  position: absolute;
+ 
+  /* width:340px; */
+  /* width: min(300px, 24vw); */
+  /* max-width: 300px; */
+  pointer-events: none;
+  opacity: 0.95;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.templeImg {
+  left: -60px;
+  width:440px;
+   top: 75%;
+}
+
+.leafImg {
+  right: 0;
+  width:330px;
+   top: 50%;
+}
+
 .carouselShell {
-  display: grid;
-  grid-template-columns: 52px minmax(0, 520px) 52px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 0;
   padding: 0;
+  position: relative;
+  z-index: 2;
+  min-height: 0;
 }
 
 .viewport {
   min-width: 0;
   overflow: hidden;
-  width: 100%;
+  width: min(100%, 940px);
 }
 
 .track {
@@ -58,10 +87,34 @@
 }
 
 .slideInner {
-  width: min(100%, 480px);
+  width: 140%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+
+.centerImg {
+  width: 70%;
+  height: 70%;
+  display: block;
+  /* object-fit: contain; */
+  position: relative;
+  top:15%;
+  z-index: 1;
+}
+
+.centerContent {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 60px 32px;
+  text-align: center;
+  pointer-events: none;
 }
 
 .card {
@@ -158,23 +211,23 @@
   color: #a13c2f;
 }
 
-.arrowBtn {
-  position: static;
-  width: 52px;
-  height: 52px;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: #a13c2f;
-  font-size: 44px;
-  line-height: 1;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  transition: color 0.2s ease, transform 0.2s ease;
-  z-index: 2;
-  align-self: center;
-  /* transform: translateY(-6px); */
+.leftDecoration,
+.rightDecoration {
+  position: absolute;
+  top: 120px;
+  width: 180px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.leftDecoration {
+  left: 20px;
+}
+
+.rightDecoration {
+  right: 20px;
+  transform: scaleX(-1); /* Same image mirror aagum */
 }
 
 /* .arrowBtn:hover {
@@ -186,19 +239,11 @@
   transform: translateY(-56px) scale(0.94);
 } */
 
-.arrowLeft {
-  justify-self: end;
-}
-
-.arrowRight {
-  justify-self: start;
-}
-
 .dots {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 18px;
+  margin-bottom: 28px;
 }
 
 .dot,
@@ -222,75 +267,7 @@
 }
 
 .dot:focus-visible,
-.dotActive:focus-visible,
-.arrowBtn:focus-visible {
+.dotActive:focus-visible {
   outline: 2px solid rgba(214, 176, 98, 0.45);
   outline-offset: 3px;
-}
-
-@media (max-width: 900px) {
-  .testimonialSection {
-    padding: 40px 16px 50px;
-  }
-
-  .title {
-    font-size: 22px;
-  }
-
-  .subtitle {
-    font-size: 12px;
-    margin-bottom: 18px;
-  }
-
-  .carouselShell {
-    grid-template-columns: 42px minmax(0, 520px) 42px;
-    gap: 8px;
-  }
-
-  .arrowBtn {
-    width: 42px;
-    height: 42px;
-    font-size: 34px;
-    transform: translateY(-48px);
-  }
-
-  .arrowLeft {
-    justify-self: end;
-  }
-
-  .arrowRight {
-    justify-self: start;
-  }
-
-  .arrowBtn:hover {
-    transform: translateY(-48px) scale(1.03);
-  }
-
-  .arrowBtn:active {
-    transform: translateY(-48px) scale(0.94);
-  }
-
-  .card {
-    min-height: 200px;
-    padding: 20px 16px 32px;
-  }
-
-  .quoteMark {
-    font-size: 32px;
-    margin-bottom: 12px;
-  }
-
-  .text {
-    font-size: 15px;
-    line-height: 1.5;
-  }
-
-  .profile {
-    margin-top: 12px;
-    gap: 10px;
-  }
-
-  .name {
-    font-size: 17px;
-  }
 }

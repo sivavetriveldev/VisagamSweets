@@ -93,17 +93,22 @@ export default function TestimonialSection() {
       <div className={styles.wrapper}>
         <h2 className={styles.title}>Testimonials</h2>
         <p className={styles.subtitle}>Loved By Generations</p>
+          <img
+    src="/asset/Testimonial/LestSidetemple.svg"
+    alt=""
+    aria-hidden="true"
+    className={styles.templeImg}
+  />
+    <img
+    src="/asset/Testimonial/SideLeaf.png"
+    alt=""
+    aria-hidden="true"
+    className={styles.leafImg}
+  />
+
+        
 
         <div className={styles.carouselShell}>
-          <button
-            type="button"
-            className={`${styles.arrowBtn} ${styles.arrowLeft}`}
-            onClick={prevSlide}
-            aria-label="Previous testimonial"
-          >
-            &lt;
-          </button>
-
           <div className={styles.viewport} ref={viewportRef}>
             <div
               className={styles.track}
@@ -117,7 +122,13 @@ export default function TestimonialSection() {
               {slides.map((item, slideIndex) => (
                 <div className={styles.slide} key={`${item.name}-${slideIndex}`}>
                   <div className={styles.slideInner}>
-                    <article className={styles.card}>
+                    <img
+                      src="/asset/Testimonial/EmptyCenter.svg"
+                      alt=""
+                      aria-hidden="true"
+                      className={styles.centerImg}
+                    />
+                    <div className={styles.centerContent}>
                       <div className={styles.quoteMark}>&ldquo;</div>
                       <p className={styles.text}>{item.text}</p>
                       <div className={styles.profile}>
@@ -127,21 +138,12 @@ export default function TestimonialSection() {
                         <div className={styles.name}>{item.name}</div>
                         <div className={styles.role}>{item.role}</div>
                       </div>
-                    </article>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-
-          <button
-            type="button"
-            className={`${styles.arrowBtn} ${styles.arrowRight}`}
-            onClick={nextSlide}
-            aria-label="Next testimonial"
-          >
-            &gt;
-          </button>
         </div>
 
         <div className={styles.dots}>
