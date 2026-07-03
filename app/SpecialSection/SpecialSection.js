@@ -1,84 +1,81 @@
 import styles from "./SpecialSection.module.css";
 
-const features = [
-  { icon: "/asset/plate.svg", title: "Traditional Recipe" },
-  { icon: "/asset/ghee.svg", title: "Pure Ghee" },
-  { icon: "/asset/wheat-icon.svg", title: "Premium Ingredients" },
-  { icon: "/asset/cook.svg", title: "Slow Cooked" },
-  { icon: "/asset/fresh.svg", title: "Freshly Prepared" },
-  { icon: "/asset/Trust-customer.svg", title: "Trusted for Generations" },
+const leftFeatures = [
+  {
+    icon: "/asset/plate.svg",
+    title: "Traditional Recipe",
+    subtitle: ["Passed down through generations", "with the same authentic taste", "and timeless home-style care."],
+  },
+  {
+    icon: "/asset/ghee.svg",
+    title: "Pure Ghee",
+    subtitle: ["Made with rich pure ghee", "for a deep aromatic flavor", "and a smooth melt-in-mouth finish."],
+  },
+  {
+    icon: "/asset/wheat-icon.svg",
+    title: "Premium Ingredients",
+    subtitle: ["Carefully chosen premium ingredients", "combined fresh for every batch", "to keep quality at its best."],
+  },
 ];
+
+const rightFeatures = [
+  {
+    icon: "/asset/cook.svg",
+    title: "Slow Cooked",
+    subtitle: ["Slow cooked with patience", "to build the perfect texture", "and a rich traditional finish."],
+  },
+  {
+    icon: "/asset/fresh.svg",
+    title: "Freshly Prepared",
+    subtitle: ["Prepared fresh in small batches", "so every serving stays bright", "soft, and full of flavor."],
+  },
+  {
+    icon: "/asset/Trust-customer.svg",
+    title: "Trusted for Generations",
+    subtitle: ["Loved by families for years", "trusted across generations", "with the same consistent taste."],
+  },
+];
+
+function FeatureList({ items, align }) {
+  return (
+    <div className={`${styles.featureColumn} ${styles[align]}`}>
+      {items.map((item) => (
+        <div className={styles.featureItem} key={item.title}>
+          <div className={styles.featureIcon}>
+            <img src={item.icon} alt="" aria-hidden="true" className={styles.featureIconImg} />
+          </div>
+          <div className={styles.featureCopy}>
+            <div className={styles.featureText}>{item.title}</div>
+            <div className={styles.featureSubText}>
+              {item.subtitle.map((line) => (
+                <span key={line}>{line}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function SpecialSection() {
   return (
     <section className={styles.specialSection}>
-      <div className={styles.topBand}>
+      <div className={styles.overlay} aria-hidden="true" />
+
+      <div className={styles.content}>
+        <FeatureList items={leftFeatures} align="left" />
+
+        <div className={styles.centerWrap}>
           <img
-      src="/asset/Footer/cornerLeft.svg"
-      alt=""
-      className={styles.cornerLeft}
-    />
-
-    <img
-      src="/asset/Footer/cornerRight.svg"
-      alt=""
-      className={styles.cornerRight}
-    />
-        <h2 className={styles.bandTitle}>Why Our Halwa Is Special</h2>
-
-        <div className={styles.topGrid}>
-          {features.map((item, index) => (
-            <div className={styles.topItem} key={index}>
-              <div className={styles.topIcon}>
-                <img src={item.icon} alt="" aria-hidden="true" className={styles.topIconImg} />
-              </div>
-              <p className={styles.topText}>{item.title}</p>
-            </div>
-          ))}
+            src="/asset/OurLegacy/Human.svg"
+            alt="Our Legacy"
+            className={styles.centerImage}
+          />
         </div>
+
+        <FeatureList items={rightFeatures} align="right" />
       </div>
-
-        {/* <div className={styles.bottomGrid}>
-        <div className={styles.card}>
-          <div className={styles.cardIcon}>
-            <img src="/asset/quality.svg" alt="" aria-hidden="true" className={styles.cardIconImg} />
-          </div>
-          <h3 className={styles.cardTitle}>Quality Product</h3>
-          <p className={styles.cardDesc}>
-            We are Providing our Customers High Quality Product
-          </p>
-        </div>
-
-        <div className={styles.card}>
-          <div className={styles.cardIcon}>
-            <img src="/asset/delivery.svg" alt="" aria-hidden="true" className={styles.cardIconImg} />
-          </div>
-          <h3 className={styles.cardTitle}>All Over India Delivery</h3>
-          <p className={styles.cardDesc}>
-            We Are Delivering our products to Our Customer in All over India
-          </p>
-        </div>
-
-        <div className={styles.card}>
-          <div className={styles.cardIcon}>
-            <img src="/asset/no-added-color.svg" alt="" aria-hidden="true" className={styles.cardIconImg} />
-          </div>
-          <h3 className={styles.cardTitle}>No Added Colours</h3>
-          <p className={styles.cardDesc}>
-            We Dont Add any preservatives and colors and Oil
-          </p>
-        </div>
-
-        <div className={styles.card}>
-          <div className={styles.cardIcon}>
-            <img src="/asset/natural-product.svg" alt="" aria-hidden="true" className={styles.cardIconImg} />
-          </div>
-          <h3 className={styles.cardTitle}>Natural Product</h3>
-          <p className={styles.cardDesc}>
-            We Make our Products Very Naturally and Healthy
-          </p>
-        </div>
-      </div> */}
     </section>
   );
 }
