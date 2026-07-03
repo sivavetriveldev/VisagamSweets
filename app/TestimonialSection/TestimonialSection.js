@@ -19,6 +19,21 @@ const testimonials = [
     name: "Arvind, Coimbatore",
     role: "Customer",
   },
+   {
+    text: "ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "Rameshhhhh, Chennai",
+    role: "Customer",
+  },
+  {
+    text: "ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "Meenakshiiiiii, Madurai",
+    role: "Customer",
+  },
+  {
+    text: "ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "Arvinddddd, Coimbatore",
+    role: "Customer",
+  },
 ];
 
 const getInitials = (name) =>
@@ -38,27 +53,24 @@ export default function TestimonialSection() {
     []
   );
   const viewportRef = useRef(null);
-  const isResettingRef = useRef(false);
   const [index, setIndex] = useState(1);
   const [isJumping, setIsJumping] = useState(false);
   const [slideWidth, setSlideWidth] = useState(0);
 
   const nextSlide = () => setIndex((current) => current + 1);
-  const prevSlide = () => setIndex((current) => current - 1);
-  const jumpToDot = (dotIndex) => setIndex(dotIndex + 1);
-
-  const activeDot = ((index - 1) % testimonials.length + testimonials.length) % testimonials.length;
+  const visibleDots = testimonials.slice(0, 3);
+  const activeDot = ((index - 1) % visibleDots.length + visibleDots.length) % visibleDots.length;
 
   useEffect(() => {
     const updateLayout = () => {
       const viewportWidth = viewportRef.current?.clientWidth ?? 0;
       if (!viewportWidth) return;
-      setSlideWidth(viewportWidth);
+      setSlideWidth(viewportWidth * 0.72);
     };
 
     updateLayout();
 
-    const timer = window.setInterval(nextSlide, 4500);
+    const timer = window.setInterval(nextSlide, 2400);
     window.addEventListener("resize", updateLayout);
 
     let resizeObserver;
@@ -75,13 +87,7 @@ export default function TestimonialSection() {
   }, []);
 
   const handleTransitionEnd = () => {
-    if (isResettingRef.current) {
-      isResettingRef.current = false;
-      return;
-    }
-
     if (index >= slides.length - 1) {
-      isResettingRef.current = true;
       setIsJumping(true);
       setIndex(1);
       requestAnimationFrame(() => setIsJumping(false));
@@ -89,7 +95,6 @@ export default function TestimonialSection() {
     }
 
     if (index <= 0) {
-      isResettingRef.current = true;
       setIsJumping(true);
       setIndex(testimonials.length);
       requestAnimationFrame(() => setIsJumping(false));
@@ -101,21 +106,6 @@ export default function TestimonialSection() {
       <div className={styles.wrapper}>
         <h2 className={styles.title}>Testimonials</h2>
         <p className={styles.subtitle}>Loved By Generations</p>
-          <img
-    src="/asset/Testimonial/LestSidetemple.svg"
-    alt=""
-    aria-hidden="true"
-    className={styles.templeImg}
-  />
-    <img
-    src="/asset/Testimonial/SideLeaf.png"
-    alt=""
-    aria-hidden="true"
-    className={styles.leafImg}
-  />
-
-        
-
         <div className={styles.carouselShell}>
           <div className={styles.viewport} ref={viewportRef}>
             <div
@@ -123,8 +113,8 @@ export default function TestimonialSection() {
               onTransitionEnd={handleTransitionEnd}
               style={{
                 "--slide-width": `${slideWidth}px`,
-                transform: `translateX(-${index * slideWidth}px)`,
-                transition: isJumping ? "none" : "transform 500ms ease",
+                transform: `translateX(${slideWidth ? (viewportRef.current?.clientWidth - slideWidth) / 2 - index * slideWidth : 0}px)`,
+                transition: isJumping ? "none" : "transform 500ms linear",
               }}
             >
               {slides.map((item, slideIndex) => (
@@ -137,7 +127,6 @@ export default function TestimonialSection() {
                       className={styles.centerImg}
                     />
                     <div className={styles.centerContent}>
-                      {/* <div className={styles.quoteMark}>&ldquo;</div> */}
                       <p className={styles.text}>
                         <span className={styles.quoteMark}>&ldquo;</span>
                         {item.text}
@@ -151,9 +140,6 @@ export default function TestimonialSection() {
                         <img src="/asset/Testimonial/star.svg" alt="" className={styles.starIcon} />
                       </div>
                       <div className={styles.profile}>
-                        {/* <div className={styles.avatar} aria-hidden="true">
-                          {getInitials(item.name)}
-                        </div> */}
                         <div className={styles.name}>{item.name}</div>
                         <div className={styles.role}>{item.role}</div>
                       </div>
@@ -166,12 +152,11 @@ export default function TestimonialSection() {
         </div>
 
         <div className={styles.dots}>
-          {testimonials.map((item, dotIndex) => (
+          {visibleDots.map((item, dotIndex) => (
             <button
               key={item.name}
               type="button"
               className={dotIndex === activeDot ? styles.dotActive : styles.dot}
-              onClick={() => jumpToDot(dotIndex)}
               aria-label={`Show testimonial ${dotIndex + 1}`}
               aria-pressed={dotIndex === activeDot}
             />
