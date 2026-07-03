@@ -25,7 +25,7 @@ export default function AboutSection() {
         <div className={styles.leftImageBox}>
           <img src="/asset/wheat.svg" alt="" aria-hidden="true" className={styles.wheatIcon} />
           <img
-            src="/nature.png"
+            src="/asset/About/Shopimage.webp"
             alt="Heritage Shop"
             className={styles.heritageImage}
           />
