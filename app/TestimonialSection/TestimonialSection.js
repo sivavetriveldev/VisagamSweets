@@ -38,6 +38,7 @@ export default function TestimonialSection() {
     []
   );
   const viewportRef = useRef(null);
+  const isResettingRef = useRef(false);
   const [index, setIndex] = useState(1);
   const [isJumping, setIsJumping] = useState(false);
   const [slideWidth, setSlideWidth] = useState(0);
@@ -74,7 +75,13 @@ export default function TestimonialSection() {
   }, []);
 
   const handleTransitionEnd = () => {
+    if (isResettingRef.current) {
+      isResettingRef.current = false;
+      return;
+    }
+
     if (index >= slides.length - 1) {
+      isResettingRef.current = true;
       setIsJumping(true);
       setIndex(1);
       requestAnimationFrame(() => setIsJumping(false));
@@ -82,6 +89,7 @@ export default function TestimonialSection() {
     }
 
     if (index <= 0) {
+      isResettingRef.current = true;
       setIsJumping(true);
       setIndex(testimonials.length);
       requestAnimationFrame(() => setIsJumping(false));
@@ -129,12 +137,23 @@ export default function TestimonialSection() {
                       className={styles.centerImg}
                     />
                     <div className={styles.centerContent}>
-                      <div className={styles.quoteMark}>&ldquo;</div>
-                      <p className={styles.text}>{item.text}</p>
+                      {/* <div className={styles.quoteMark}>&ldquo;</div> */}
+                      <p className={styles.text}>
+                        <span className={styles.quoteMark}>&ldquo;</span>
+                        {item.text}
+                        <span className={styles.quoteMark}>&rdquo;</span>
+                      </p>
+                      <div className={styles.starRow} aria-hidden="true">
+                        <img src="/asset/Testimonial/star.svg" alt="" className={styles.starIcon} />
+                        <img src="/asset/Testimonial/star.svg" alt="" className={styles.starIcon} />
+                        <img src="/asset/Testimonial/star.svg" alt="" className={styles.starIcon} />
+                        <img src="/asset/Testimonial/star.svg" alt="" className={styles.starIcon} />
+                        <img src="/asset/Testimonial/star.svg" alt="" className={styles.starIcon} />
+                      </div>
                       <div className={styles.profile}>
-                        <div className={styles.avatar} aria-hidden="true">
+                        {/* <div className={styles.avatar} aria-hidden="true">
                           {getInitials(item.name)}
-                        </div>
+                        </div> */}
                         <div className={styles.name}>{item.name}</div>
                         <div className={styles.role}>{item.role}</div>
                       </div>

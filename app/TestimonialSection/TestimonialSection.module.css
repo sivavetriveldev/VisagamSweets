@@ -100,8 +100,9 @@
   display: block;
   /* object-fit: contain; */
   position: relative;
-  top:15%;
+  top:16%;
   z-index: 1;
+  left: 30px;
 }
 
 .centerContent {
@@ -115,6 +116,21 @@
   padding: 40px 60px 32px;
   text-align: center;
   pointer-events: none;
+}
+
+.starIcon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
+}
+
+.starRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 10px;
 }
 
 .card {
@@ -165,11 +181,21 @@
 .text {
   margin: 0 auto;
   max-width: 360px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
   line-height: 1.5;
   text-align: center;
   color: #3b2926;
+}
+
+.quoteMark {
+  display: inline-block;
+  color: #7c6537;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  line-height: 0;
+  vertical-align: middle;
+  margin: 0 6px;
 }
 
 .profile {

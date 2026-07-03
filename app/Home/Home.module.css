@@ -10,7 +10,7 @@ body {
   min-height: 100vh;
   background: #fbf8f3;
   overflow-x: hidden;
-  padding: 18px 24px 0;
+  padding: 110px 24px 0;
   font-family: "Georgia", "Times New Roman", serif;
 }
 
@@ -20,7 +20,14 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fbf8f3;
+  padding: 8px 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
 .logoRow {
@@ -53,7 +60,7 @@ body {
   display: flex;
   align-items: center;
   /* justify-content: flex-end; */
-  padding-left :20%;
+  padding-left :30%;
   gap: 24px;
   flex: 1 1 auto;
   min-width: 0;

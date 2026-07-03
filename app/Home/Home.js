@@ -11,12 +11,12 @@ export default function Home() {
 
         <div className={styles.navBar}>
           <a href="#" className={styles.navLink}>Home</a>
-          <a href="#" className={styles.navLink}>Our Legacy</a>
-          <a href="#" className={styles.navLink}>Products</a>
-          <a href="#" className={styles.navLink}>Making</a>
-          <a href="#" className={styles.navLink}>Gallery</a>
-          <a href="#" className={styles.navLink}>Media</a>
-          <a href="#" className={styles.navLink}>Contact</a>
+          <a href="#" className={styles.navLink}>About Us</a>
+          <a href="#" className={styles.navLink}>Halwa</a>
+          <a href="#" className={styles.navLink}>News & Events</a>
+          <a href="#" className={styles.navLink}>Contact Us</a>
+          {/* <a href="#" className={styles.navLink}>Media</a>
+          <a href="#" className={styles.navLink}>Contact</a> */}
           <a href="#" className={styles.orderBtn}>
             <img src="/asset/cart.svg" alt="" aria-hidden="true" className={styles.orderIcon} />
             <span>Order Online</span>
