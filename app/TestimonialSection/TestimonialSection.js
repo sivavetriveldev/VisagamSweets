@@ -10,12 +10,12 @@ const testimonials = [
     role: "Customer",
   },
   {
-    text: "The perfect blend of ghee and sweetness. Truly authentic and traditional.",
+    text: "ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     name: "Meenakshi, Madurai",
     role: "Customer",
   },
   {
-    text: "We order every festival. Quality and taste are always consistent.",
+    text: "ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     name: "Arvind, Coimbatore",
     role: "Customer",
   },
@@ -120,15 +120,14 @@ export default function TestimonialSection() {
                     <article className={styles.card}>
                       <div className={styles.quoteMark}>&ldquo;</div>
                       <p className={styles.text}>{item.text}</p>
-                    </article>
-
-                    <div className={styles.profile}>
-                      <div className={styles.avatar} aria-hidden="true">
-                        {getInitials(item.name)}
+                      <div className={styles.profile}>
+                        <div className={styles.avatar} aria-hidden="true">
+                          {getInitials(item.name)}
+                        </div>
+                        <div className={styles.name}>{item.name}</div>
+                        <div className={styles.role}>{item.role}</div>
                       </div>
-                      <div className={styles.name}>{item.name}</div>
-                      <div className={styles.role}>{item.role}</div>
-                    </div>
+                    </article>
                   </div>
                 </div>
               ))}
