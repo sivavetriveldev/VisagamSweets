@@ -22,7 +22,7 @@
 }
 
 .subtitle {
-  margin: 2px 0 4px;
+  margin: 2px 0 28px;
   text-align: center;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 16px;
@@ -81,7 +81,7 @@
 }
 
 .slide {
-  flex: 0 0 48%;
+  flex: 0 0 56%;
   width: var(--slide-width);
   max-width: var(--slide-width);
   box-sizing: border-box;
@@ -90,7 +90,7 @@
 }
 
 .slideInner {
-  width: 100%;
+  width: min(160%, 780px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,8 +100,9 @@
 .centerImg {
   width: 100%;
   height: auto;
+  max-height: 260px;
   display: block;
-  object-fit: contain;
+  /* object-fit: contain; */
   position: relative;
   z-index: 1;
 }
@@ -114,14 +115,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 44px 50px 32px;
+  padding: 36px 46px 28px;
   text-align: center;
   pointer-events: none;
 }
 
 .starIcon {
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   display: block;
   object-fit: contain;
 }
@@ -131,7 +132,7 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .card {
@@ -175,16 +176,16 @@
   margin-bottom: 10px;
   color: #d6b062;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 30px;
+  font-size: 26px;
   line-height: 0.85;
 }
 
 .text {
   margin: 0 auto;
-  max-width: 250px;
+  max-width: 450px;
   font-family: 'Playfair Display', serif;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 20px;
+  line-height: 1.42;
   text-align: center;
   color: #3b2926;
 }
@@ -193,18 +194,18 @@
   display: inline-block;
   color: #7c6537;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 0;
   vertical-align: middle;
   margin: 0 6px;
 }
 
 .profile {
-  margin-top: 10px;
+  margin-top: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   text-align: center;
 }
 
@@ -226,7 +227,7 @@
 .name {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.2;
   color: #57161a;
 }
@@ -271,6 +272,7 @@
   justify-content: center;
   gap: 10px;
   margin-bottom: 28px;
+  margin-top: 28px;
 }
 
 .dot,
@@ -301,8 +303,8 @@
 
 @media (max-width: 768px) {
   .slide {
-    flex-basis: 88%;
-    width: 88%;
-    max-width: 88%;
+    flex-basis: 94%;
+    width: 94%;
+    max-width: 94%;
   }
 }

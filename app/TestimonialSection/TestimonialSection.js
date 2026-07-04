@@ -36,17 +36,6 @@ const testimonials = [
   },
 ];
 
-const getInitials = (name) =>
-  name
-    .split(",")[0]
-    .trim()
-    .split(" ")
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0])
-    .join("")
-    .toUpperCase();
-
 export default function TestimonialSection() {
   const slides = useMemo(
     () => [testimonials[testimonials.length - 1], ...testimonials, testimonials[0]],
@@ -56,6 +45,7 @@ export default function TestimonialSection() {
   const [index, setIndex] = useState(1);
   const [isJumping, setIsJumping] = useState(false);
   const [slideWidth, setSlideWidth] = useState(0);
+  const [viewportWidth, setViewportWidth] = useState(0);
 
   const nextSlide = () => setIndex((current) => current + 1);
   const visibleDots = testimonials.slice(0, 3);
@@ -65,7 +55,9 @@ export default function TestimonialSection() {
     const updateLayout = () => {
       const viewportWidth = viewportRef.current?.clientWidth ?? 0;
       if (!viewportWidth) return;
-      setSlideWidth(viewportWidth * 0.72);
+      setViewportWidth(viewportWidth);
+      const isMobile = window.innerWidth <= 768;
+      setSlideWidth(viewportWidth * (isMobile ? 0.9 : 0.56));
     };
 
     updateLayout();
@@ -87,17 +79,11 @@ export default function TestimonialSection() {
   }, []);
 
   const handleTransitionEnd = () => {
-    if (index >= slides.length - 1) {
-      setIsJumping(true);
-      setIndex(1);
-      requestAnimationFrame(() => setIsJumping(false));
-      return;
-    }
-
-    if (index <= 0) {
+    if (index >= testimonials.length * 2) {
       setIsJumping(true);
       setIndex(testimonials.length);
       requestAnimationFrame(() => setIsJumping(false));
+      return;
     }
   };
 
@@ -113,8 +99,8 @@ export default function TestimonialSection() {
               onTransitionEnd={handleTransitionEnd}
               style={{
                 "--slide-width": `${slideWidth}px`,
-                transform: `translateX(${slideWidth ? (viewportRef.current?.clientWidth - slideWidth) / 2 - index * slideWidth : 0}px)`,
-                transition: isJumping ? "none" : "transform 500ms linear",
+                transform: `translateX(${slideWidth ? (viewportWidth - slideWidth) / 2 - index * slideWidth : 0}px)`,
+                transition: isJumping ? "none" : "transform 650ms ease-in-out",
               }}
             >
               {slides.map((item, slideIndex) => (

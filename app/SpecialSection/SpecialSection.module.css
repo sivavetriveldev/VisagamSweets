@@ -11,9 +11,9 @@
   content: "";
   position: absolute;
   inset: 0;
-  background:
+  /* background:
     linear-gradient(rgba(22, 16, 10, 0.58), rgba(22, 16, 10, 0.58)),
-    url("/nature.png") center/cover no-repeat;
+    url("/nature.png") center/cover no-repeat; */
   transform: scale(1.06);
   filter: saturate(0.95) contrast(1.02);
   z-index: 0;
