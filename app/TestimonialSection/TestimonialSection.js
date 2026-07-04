@@ -37,19 +37,22 @@ const testimonials = [
 ];
 
 export default function TestimonialSection() {
+  const repeatCount = 5;
+  const loopStart = testimonials.length * 2;
+  const loopEnd = testimonials.length * 3;
   const slides = useMemo(
-    () => [testimonials[testimonials.length - 1], ...testimonials, testimonials[0]],
+    () => Array.from({ length: repeatCount }, () => testimonials).flat(),
     []
   );
   const viewportRef = useRef(null);
-  const [index, setIndex] = useState(1);
+  const timerRef = useRef(null);
+  const [index, setIndex] = useState(loopStart);
   const [isJumping, setIsJumping] = useState(false);
   const [slideWidth, setSlideWidth] = useState(0);
   const [viewportWidth, setViewportWidth] = useState(0);
 
-  const nextSlide = () => setIndex((current) => current + 1);
   const visibleDots = testimonials.slice(0, 3);
-  const activeDot = ((index - 1) % visibleDots.length + visibleDots.length) % visibleDots.length;
+  const activeDot = ((index % testimonials.length) % visibleDots.length + visibleDots.length) % visibleDots.length;
 
   useEffect(() => {
     const updateLayout = () => {
@@ -62,7 +65,14 @@ export default function TestimonialSection() {
 
     updateLayout();
 
-    const timer = window.setInterval(nextSlide, 2400);
+    const startAutoplay = () => {
+      timerRef.current = window.setTimeout(() => {
+        setIndex((current) => current + 1);
+        startAutoplay();
+      }, 2400);
+    };
+
+    startAutoplay();
     window.addEventListener("resize", updateLayout);
 
     let resizeObserver;
@@ -72,17 +82,21 @@ export default function TestimonialSection() {
     }
 
     return () => {
-      window.clearInterval(timer);
+      window.clearTimeout(timerRef.current);
       window.removeEventListener("resize", updateLayout);
       if (resizeObserver) resizeObserver.disconnect();
     };
   }, []);
 
-  const handleTransitionEnd = () => {
-    if (index >= testimonials.length * 2) {
+  const handleTransitionEnd = (event) => {
+    if (event.propertyName !== "transform") return;
+
+    if (index >= loopEnd) {
       setIsJumping(true);
-      setIndex(testimonials.length);
-      requestAnimationFrame(() => setIsJumping(false));
+      setIndex(loopStart);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => setIsJumping(false));
+      });
       return;
     }
   };
@@ -97,12 +111,12 @@ export default function TestimonialSection() {
             <div
               className={styles.track}
               onTransitionEnd={handleTransitionEnd}
-              style={{
-                "--slide-width": `${slideWidth}px`,
-                transform: `translateX(${slideWidth ? (viewportWidth - slideWidth) / 2 - index * slideWidth : 0}px)`,
-                transition: isJumping ? "none" : "transform 650ms ease-in-out",
-              }}
-            >
+                style={{
+                  "--slide-width": `${slideWidth}px`,
+                  transform: `translateX(${slideWidth ? (viewportWidth - slideWidth) / 2 - index * slideWidth : 0}px)`,
+                  transition: isJumping ? "none" : "transform 650ms ease-in-out",
+                }}
+              >
               {slides.map((item, slideIndex) => (
                 <div className={styles.slide} key={`${item.name}-${slideIndex}`}>
                   <div className={styles.slideInner}>
