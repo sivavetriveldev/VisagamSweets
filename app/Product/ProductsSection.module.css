@@ -4,6 +4,7 @@
     radial-gradient(circle at top center, rgba(232, 181, 74, 0.10) 0 18%, transparent 18%),
     linear-gradient(180deg, #fbf8f3 0%, #f8f1e5 100%); */
   /* padding: 18px 0 30px; */
+  scroll-margin-top: 110px;
 }
 
 .sectionTitle {
@@ -28,12 +29,36 @@
   overflow: hidden;
 }
 
-.productsCard::before {
+/* .productsCard::before {
   content: "";
   position: absolute;
   inset: 14px;
   border: 1px solid rgba(201, 143, 47, 0.1);
   pointer-events: none;
+} */
+
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: fit-content;
+  margin: 0 auto 10px;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #e1a12d;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  position: relative;
+  z-index: 1;
+}
+
+.tagIcon {
+  display: block;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .collectionTitle {
@@ -45,6 +70,16 @@
   color: #7b2d26;
   letter-spacing: 0.04em;
   font-weight: 800;
+}
+
+.collectionSubtitle {
+  margin: 0 auto 28px;
+  max-width: 720px;
+  text-align: center;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.55;
+  color: #6f5a4d;
 }
 
 /* .collectionTitle::after {
@@ -140,32 +175,61 @@
 .productDesc {
   margin: 0 auto 18px;
   max-width: 250px;
-  font-size: 16px;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 18px;
   line-height: 1.6;
   color: #555;
 }
 
-.readMoreBtn {
+.actionRow {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.addToCartBtn,
+.viewBtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 138px;
+  min-width: 128px;
   padding: 11px 18px;
-  text-decoration: none;
-  color: #7b2d26;
-  font-weight: 800;
-  border: 1px solid #d18e22;
   border-radius: 999px;
-  background: linear-gradient(180deg, #f2b24a 0%, #e39a1f 100%);
-  color: #5f230f;
-  box-shadow: 0 8px 16px rgba(145, 90, 25, 0.14);
-  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease,
+    color 0.2s ease, border-color 0.2s ease;
 }
 
-.readMoreBtn:hover {
+.addToCartBtn {
+  background: linear-gradient(180deg, #f2b24a 0%, #e39a1f 100%);
+  color: #5f230f;
+  border: 1px solid #d18e22;
+  box-shadow: 0 8px 16px rgba(145, 90, 25, 0.14);
+}
+
+.viewBtn {
+  background: #fbf3e4;
+  color: #7b2d26;
+  border: 1px solid rgba(123, 45, 38, 0.22);
+  box-shadow: 0 8px 16px rgba(145, 90, 25, 0.08);
+}
+
+.addToCartBtn:hover {
   background: linear-gradient(180deg, #db8f16 0%, #c5780f 100%);
   transform: translateY(-1px);
   box-shadow: 0 10px 18px rgba(145, 90, 25, 0.22);
+}
+
+.viewBtn:hover {
+  background: #fff;
+  transform: translateY(-1px);
+  border-color: rgba(123, 45, 38, 0.35);
+  box-shadow: 0 10px 18px rgba(145, 90, 25, 0.12);
 }
 
 @keyframes productZoom {
@@ -208,8 +272,23 @@
     padding: 18px 14px 22px;
   }
 
+  .tag {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .tagIcon {
+    width: 22px;
+    height: 22px;
+  }
+
   .collectionTitle {
     font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .collectionSubtitle {
+    font-size: 18px;
     margin-bottom: 20px;
   }
 
@@ -232,10 +311,11 @@
   }
 
   .productDesc {
-    font-size: 15px;
+    font-size: 18px;
   }
 
-  .readMoreBtn {
+  .addToCartBtn,
+  .viewBtn {
     min-width: 128px;
     padding: 10px 16px;
     font-size: 14px;

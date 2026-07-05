@@ -20,11 +20,24 @@ const products = [
 
 export default function ProductsSection() {
   return (
-    <section className={styles.productsSection}>
+    <section id="halwa" className={styles.productsSection}>
       {/* <h2 className={styles.sectionTitle}>Products</h2> */}
 
       <div className={styles.productsCard}>
+        <p className={styles.tag}>
+          <img
+            src="/asset/heading-icon.svg"
+            alt=""
+            aria-hidden="true"
+            className={styles.tagIcon}
+          />
+          <span>Products</span>
+        </p>
+
         <h3 className={styles.collectionTitle}>Signature Collection</h3>
+        <p className={styles.collectionSubtitle}>
+          Handpicked favorites prepared with our authentic taste and tradition.
+        </p>
 
         <div className={styles.productGrid}>
           {products.map((item, index) => (
@@ -35,9 +48,14 @@ export default function ProductsSection() {
 
               <h4 className={styles.productTitle}>{item.title}</h4>
               <p className={styles.productDesc}>{item.desc}</p>
-              <a href="#" className={styles.readMoreBtn}>
-                Read More
-              </a>
+              <div className={styles.actionRow}>
+                <a href="#" className={styles.addToCartBtn}>
+                  Add to Cart
+                </a>
+                <a href="#" className={styles.viewBtn}>
+                  View
+                </a>
+              </div>
             </div>
           ))}
         </div>

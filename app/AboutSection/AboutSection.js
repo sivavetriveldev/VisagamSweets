@@ -8,19 +8,19 @@ const stats = [
   },
   {
     icon: "/asset/customers.svg",
-    title: "Millions",
+    title: "1000+",
     text: "Happy Customers",
   },
   {
     icon: "/asset/trust.svg",
-    title: "Generations",
+    title: "20000+",
     text: "of Trust & Tradition",
   },
 ];
 
 export default function AboutSection() {
   return (
-    <section className={styles.aboutSection}>
+    <section id="about" className={styles.aboutSection}>
       <div className={styles.aboutCard}>
         <div className={styles.leftImageBox}>
           <img src="/asset/wheat.svg" alt="" aria-hidden="true" className={styles.wheatIcon} />
@@ -39,7 +39,7 @@ export default function AboutSection() {
               aria-hidden="true"
               className={styles.tagIcon}
             />
-            <span>Our Legacy</span>
+            <span>About Us</span>
           </p>
           <h3 className={styles.heading}>
             A Heritage Sweet

@@ -11,14 +11,53 @@
   padding-top: 14px;
 }
 
-.title {
-  margin: 0 0 26px;
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: fit-content;
+  margin: 0;
+  color: #d89428;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.tagIcon {
+  display: block;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
   color: #6f1b1b;
   font-weight: 700;
   letter-spacing: 0.03em;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 760px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.55;
+  color: #6f5a4d;
 }
 
 .timeline {
@@ -72,15 +111,15 @@
   color: #fff;
   display: grid;
   place-items: center;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
   font-weight: 700;
 }
 
 .stepTitle {
   margin: 0 0 8px;
-  font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
   font-weight: 800;
   color: #6f1b1b;
   line-height: 1.25;
@@ -88,8 +127,8 @@
 
 .stepDesc {
   margin: 0;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
   line-height: 1.5;
   color: #3b2c24;
 }
@@ -110,8 +149,27 @@
     padding: 28px 14px 44px;
   }
 
+  .sectionHeader {
+    margin-bottom: 22px;
+  }
+
+  .tag {
+    font-size: 18px;
+    gap: 8px;
+  }
+
+  .tagIcon {
+    width: 22px;
+    height: 22px;
+  }
+
   .title {
     font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    line-height: 1.45;
   }
 
   .timeline {
@@ -129,10 +187,10 @@
   }
 
   .stepTitle {
-    font-size: 13px;
+    font-size: 18px;
   }
 
   .stepDesc {
-    font-size: 13px;
+    font-size: 18px;
   }
 }

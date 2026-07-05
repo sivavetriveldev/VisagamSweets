@@ -3,6 +3,7 @@ body {
   overflow-x: hidden;
   background: #fbf8f3;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 .page {
@@ -67,7 +68,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   font-family: "Georgia", "Times New Roman", serif;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.03em;
 }
@@ -109,16 +110,16 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 9px 14px;
+  padding: 4px 8px;
   min-width: 136px;
   min-height: 38px;
   border-radius: 10px;
   text-decoration: none;
   background-image: linear-gradient(45deg, #8a1f20 0%, #6e1416 51%, #8a1f20 100%);
-  background-size: 200% auto;
+  /* background-size: 100% auto; */
   color: #fff;
   font-family: "Georgia", "Times New Roman", serif;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.03em;
   white-space: nowrap;
@@ -151,6 +152,7 @@ body {
   min-height: 520px;
   padding-top: 60px;
   width: 100%;
+  scroll-margin-top: 110px;
 }
 
 .natureArt {
@@ -176,7 +178,8 @@ body {
 .heroSmall {
   margin: 0 0 14px;
   color: #7b2d26;
-  font-size: 22px;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.03em;
 }
@@ -193,8 +196,9 @@ body {
 .heroDesc {
   margin: 24px 0 0;
   max-width: 420px;
+  font-family: "Georgia", "Times New Roman", serif;
   color: #5a4b42;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -367,7 +371,7 @@ body {
 
   .heroSmall,
   .heroDesc {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .halwaPhoto {
@@ -413,7 +417,7 @@ body {
   }
 
   .heroDesc {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .natureArt {
@@ -475,7 +479,7 @@ body {
   }
 
   .heroSmall {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .heroTitle {
@@ -483,7 +487,7 @@ body {
   }
 
   .heroDesc {
-    font-size: 16px;
+    font-size: 18px;
     max-width: 100%;
   }
 

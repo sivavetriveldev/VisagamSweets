@@ -48,13 +48,26 @@
   text-align: left;
 }
 
-.label {
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: fit-content;
   margin: 0 0 8px;
   font-family: Georgia, "Times New Roman", serif;
   color: #8f5a2d;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.03em;
+}
+
+.tagIcon {
+  display: block;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .title {
@@ -69,9 +82,9 @@
 .desc {
   margin: 0 0 18px;
   max-width: 360px;
-  font-family: Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", serif;
   color: #4d3a30;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
   font-weight: 500;
 }
@@ -82,8 +95,8 @@
   gap: 10px;
   text-decoration: none;
   color: #8f3c2a;
-  font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
   font-weight: 800;
 }
 
@@ -103,8 +116,34 @@
     padding: 0;
   }
 
+  .tag {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .desc {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .tag {
+    font-size: 18px;
+    gap: 8px;
+  }
+
+  .tagIcon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .desc {
+    font-size: 18px;
+    line-height: 1.6;
   }
 }

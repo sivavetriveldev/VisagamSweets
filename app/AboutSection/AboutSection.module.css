@@ -2,6 +2,7 @@
   width: 100%;
   /* padding: 18px 18px 28px; */
   background: #faf3e8;
+  scroll-margin-top: 110px;
 }
 
 .aboutCard {
@@ -84,7 +85,8 @@
   gap: 10px;
   margin: 0 0 10px;
   color: #e1a12d;
-  font-size: 17px;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
@@ -124,7 +126,7 @@
   color: #8f3c2a;
   font-family: "Georgia", "Times New Roman", serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 0.02em;
 }
 
@@ -179,7 +181,8 @@
 
 .statText {
   margin: 0;
-  font-size: 15px;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 18px;
   color: #5c4d42;
   line-height: 1.35;
 }
@@ -240,7 +243,7 @@
   }
 
   .description {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .tagIcon {

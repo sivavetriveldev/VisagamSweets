@@ -1,7 +1,7 @@
 .newsSection {
   width: 100%;
   background:#FBF8F3;
- 
+  scroll-margin-top: 110px;
 }
 
 .wrapper {
@@ -12,14 +12,54 @@
   padding: 6px 30px 18px;
 }
 
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: fit-content;
+  margin: 0;
+  color: #d89428;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.tagIcon {
+  display: block;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .title {
-  margin: 0 0 14px;
+  margin: 0;
   text-align: center;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 26px;
+  font-size: 30px;
   color: #6f1b1b;
   font-weight: 700;
   letter-spacing: 0.04em;
+}
+
+.subtitle {
+  margin: 0;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.45;
+  color: #7a6055;
 }
 
 .grid {
@@ -41,7 +81,7 @@
 
 .imageWrap {
   width: 100%;
-  height: 180px;
+  height: 250px;
   overflow: hidden;
   background: #eadcc8;
 }
@@ -59,8 +99,8 @@
 
 .cardTitle {
   margin: 0 0 8px;
-  font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
   line-height: 1.35;
   font-weight: 700;
   color: #3a2a20;
@@ -68,8 +108,8 @@
 
 .date {
   margin: 0;
-  font-family: Arial, sans-serif;
-  font-size: 13px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
   font-weight: 600;
   color: #6a4b35;
 }
@@ -92,8 +132,8 @@
   text-decoration: none;
   border-radius: 10px;
   border: 0;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
   font-weight: 800;
   box-shadow: 0px 0px 14px -7px #f09819;
   transition: 0.5s;
@@ -119,12 +159,30 @@
     padding-right: 16px;
   }
 
+  .sectionHeader {
+    margin-bottom: 18px;
+  }
+
+  .tag {
+    font-size: 18px;
+    gap: 8px;
+  }
+
+  .tagIcon {
+    width: 22px;
+    height: 22px;
+  }
+
   .grid {
     grid-template-columns: 1fr;
   }
 
   .title {
     font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 18px;
   }
 
   .imageWrap {

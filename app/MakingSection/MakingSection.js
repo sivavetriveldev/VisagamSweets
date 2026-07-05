@@ -43,7 +43,22 @@ export default function MakingSection() {
   return (
     <section className={styles.makingSection}>
       <div className={styles.wrapper}>
-        <h2 className={styles.title}>The Art Of Making Halwa</h2>
+        <div className={styles.sectionHeader}>
+          <p className={styles.tag}>
+            <img
+              src="/asset/heading-icon.svg"
+              alt=""
+              aria-hidden="true"
+              className={styles.tagIcon}
+            />
+            <span>Our Process</span>
+          </p>
+          <h2 className={styles.title}>The Art Of Making Halwa</h2>
+          <p className={styles.subtitle}>
+            Every step is done with patience, care, and the same traditional
+            methods passed down through generations.
+          </p>
+        </div>
 
         <div className={styles.timeline}>
           {steps.map((step, index) => (

@@ -9,7 +9,15 @@ export default function LegacySection() {
         </div>
 
         <div className={styles.centerText}>
-          <p className={styles.label}>Our Legacy</p>
+          <p className={styles.tag}>
+            <img
+              src="/asset/heading-icon.svg"
+              alt=""
+              aria-hidden="true"
+              className={styles.tagIcon}
+            />
+            <span>Our Legacy</span>
+          </p>
           <h2 className={styles.title}>Visakam Sweets & Savouries</h2>
           <p className={styles.desc}>
             For more than a century, our halwa has been a part of Tirunelveli&apos;s

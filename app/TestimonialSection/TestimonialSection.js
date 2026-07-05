@@ -104,8 +104,19 @@ export default function TestimonialSection() {
   return (
     <section className={styles.testimonialSection}>
       <div className={styles.wrapper}>
-        <h2 className={styles.title}>Testimonials</h2>
-        <p className={styles.subtitle}>Loved By Generations</p>
+        <div className={styles.sectionHeader}>
+          <p className={styles.tag}>
+            <img
+              src="/asset/heading-icon.svg"
+              alt=""
+              aria-hidden="true"
+              className={styles.tagIcon}
+            />
+            <span>Customer Stories</span>
+          </p>
+          <h2 className={styles.title}>Testimonials</h2>
+          <p className={styles.subtitle}>Loved By Generations</p>
+        </div>
         <div className={styles.carouselShell}>
           <div className={styles.viewport} ref={viewportRef}>
             <div

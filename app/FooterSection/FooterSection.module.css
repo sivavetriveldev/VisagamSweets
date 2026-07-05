@@ -12,6 +12,7 @@
   overflow: hidden;
   /* padding: 18px 16px 10px; */
   background: #fffaf3;
+  scroll-margin-top: 110px;
 }
 
 .cornerTopLeft,
@@ -56,6 +57,10 @@
   margin-bottom: 18px;
 }
 
+.brandRow img{
+    width: 280px;
+    height: auto;
+}
 .logo {
   width: 92px;
   height: 92px;
@@ -80,8 +85,8 @@
 .tagline {
   margin: 0 0 22px;
   max-width: 360px;
-  font-family: Arial, sans-serif;
-  font-size: 19px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
   line-height: 1.55;
   color: #f7ead9;
   font-weight: 500;
@@ -146,8 +151,8 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
   color: #f7ead9;
   font-weight: 500;
   text-decoration: none;
@@ -180,8 +185,8 @@
 .info {
   margin: 0 0 14px;
   max-width: 300px;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
   line-height: 1.6;
   color: #f7ead9;
   font-weight: 500;
@@ -213,7 +218,7 @@
   padding: 14px 10px 4px;
   text-align: center;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 17px;
+  font-size: 18px;
   color: #f0d08f;
   letter-spacing: 0.02em;
 }
@@ -239,7 +244,7 @@
   .tagline,
   .info,
   .footerLink {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .colTitle {

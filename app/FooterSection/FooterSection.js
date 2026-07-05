@@ -2,7 +2,7 @@ import styles from "./FooterSection.module.css";
 
 export default function FooterSection() {
   return (
-    <footer className={styles.footerSection}>
+    <footer id="contact" className={styles.footerSection}>
       {/* <img
         src="/asset/Footer/designtopleft.svg"
         alt=""
@@ -52,35 +52,35 @@ export default function FooterSection() {
           <h3 className={styles.colTitle}>Quick Links</h3>
           <ul className={styles.linkList}>
             <li>
-                <a href="#" className={styles.footerLink}>
+                <a href="#home" className={styles.footerLink}>
                 Home
                 </a>
             </li>
             <li>
-                <a href="#" className={styles.footerLink}>
-                Our Legacy
+                <a href="#about" className={styles.footerLink}>
+               About Us
                 </a>
             </li>
             <li>
-                <a href="#" className={styles.footerLink}>
-                Products
+                <a href="#halwa" className={styles.footerLink}>
+               Halwa
                 </a>
             </li>
             <li>
-                <a href="#" className={styles.footerLink}>
-                Making Process
+                <a href="#news" className={styles.footerLink}>
+                News & Events
                 </a>
             </li>
             <li>
-                <a href="#" className={styles.footerLink}>
-                Gallery
+                <a href="#contact" className={styles.footerLink}>
+                Contact Us
                 </a>
             </li>
-            <li>
+            {/* <li>
                 <a href="#" className={styles.footerLink}>
                 Contact
                 </a>
-            </li>
+            </li> */}
           </ul>
         </div>
 

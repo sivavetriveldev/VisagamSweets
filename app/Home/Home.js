@@ -10,11 +10,11 @@ export default function Home() {
         </div>
 
         <div className={styles.navBar}>
-          <a href="#" className={styles.navLink}>Home</a>
-          <a href="#" className={styles.navLink}>About Us</a>
-          <a href="#" className={styles.navLink}>Halwa</a>
-          <a href="#" className={styles.navLink}>News & Events</a>
-          <a href="#" className={styles.navLink}>Contact Us</a>
+          <a href="#home" className={styles.navLink}>Home</a>
+          <a href="#about" className={styles.navLink}>About Us</a>
+          <a href="#halwa" className={styles.navLink}>Halwa</a>
+          <a href="#news" className={styles.navLink}>News & Events</a>
+          <a href="#contact" className={styles.navLink}>Contact Us</a>
           {/* <a href="#" className={styles.navLink}>Media</a>
           <a href="#" className={styles.navLink}>Contact</a> */}
           <a href="#" className={styles.orderBtn}>
@@ -26,7 +26,7 @@ export default function Home() {
 
      
       
-      <section className={styles.heroSection}>
+      <section id="home" className={styles.heroSection}>
   <div className={styles.heroLeft}>
     <p className={styles.heroSmall}>The Original Taste Of</p>
     <h1 className={styles.heroTitle}>Tirunelveli</h1>

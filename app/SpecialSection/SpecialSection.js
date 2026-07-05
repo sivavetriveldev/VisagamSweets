@@ -64,6 +64,23 @@ export default function SpecialSection() {
       <div className={styles.overlay} aria-hidden="true" />
 
       <div className={styles.content}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.tag}>
+            <img
+              src="/asset/heading-icon.svg"
+              alt=""
+              aria-hidden="true"
+              className={styles.tagIcon}
+            />
+            <span>Our Speciality</span>
+          </p>
+          <h2 className={styles.sectionTitle}>Crafted With Tradition And Care</h2>
+          <p className={styles.sectionSubtitle}>
+            Every batch is prepared with the same authentic process, premium
+            ingredients, and patient cooking that define our heritage.
+          </p>
+        </div>
+
         <FeatureList items={leftFeatures} align="left" />
 
         <div className={styles.centerWrap}>
