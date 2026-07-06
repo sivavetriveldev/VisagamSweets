@@ -61,7 +61,7 @@
   width: fit-content;
   margin: 0;
   color: #f1a93a;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -77,7 +77,7 @@
 
 .sectionTitle {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lora", serif;
   font-size: 34px;
   line-height: 1.12;
   color: #fbf8f3;
@@ -89,7 +89,7 @@
 .sectionSubtitle {
   margin: 0;
   max-width: 740px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   line-height: 1.55;
   color: rgba(251, 248, 243, 0.9);
@@ -144,11 +144,12 @@
 }
 
 .featureText {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lora", serif;
   font-size: 20px;
   line-height: 1.18;
   font-weight: 700;
-  color: #fbf8f3;
+  /* color: #fbf8f3; */
+   color: rgb(241, 169, 58);
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
 
@@ -165,7 +166,7 @@
   flex-direction: column;
   gap: 2px;
   width: 100%;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   line-height: 1.35;
   color: rgba(251, 248, 243, 0.9);

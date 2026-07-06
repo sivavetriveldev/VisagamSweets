@@ -55,7 +55,7 @@
   gap: 10px;
   width: fit-content;
   margin: 0 0 8px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   color: #8f5a2d;
   font-size: 18px;
   font-weight: 700;
@@ -72,7 +72,7 @@
 
 .title {
   margin: 0 0 14px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lora", serif;
   color: #6f1b1b;
   font-size: 32px;
   line-height: 1.15;
@@ -82,7 +82,7 @@
 .desc {
   margin: 0 0 18px;
   max-width: 360px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   color: #4d3a30;
   font-size: 18px;
   line-height: 1.7;
@@ -95,7 +95,7 @@
   gap: 10px;
   text-decoration: none;
   color: #8f3c2a;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   font-weight: 800;
 }

@@ -29,7 +29,7 @@
   width: fit-content;
   margin: 0;
   color: #d89428;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -46,7 +46,7 @@
 .title {
   margin: 0;
   text-align: center;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lora", serif;
   font-size: 30px;
   color: #6f1b1b;
   font-weight: 700;
@@ -56,7 +56,7 @@
 .subtitle {
   margin: 0;
   text-align: center;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   line-height: 1.45;
   color: #7a6055;
@@ -65,7 +65,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 450px);
-   padding-left :40px;
+  padding-left :40px;
   justify-content: center;
   gap: 18px;
 }
@@ -100,7 +100,7 @@
 
 .cardTitle {
   margin: 0 0 8px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lora", serif;
   font-size: 18px;
   line-height: 1.35;
   font-weight: 700;
@@ -109,10 +109,10 @@
 
 .date {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #6a4b35;
+  color: #c98f2f;
 }
 
 .footer {
@@ -133,7 +133,7 @@
   text-decoration: none;
   border-radius: 10px;
   border: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   font-weight: 800;
   box-shadow: 0px 0px 14px -7px #f09819;

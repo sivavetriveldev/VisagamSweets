@@ -28,7 +28,7 @@
   width: fit-content;
   margin: 0;
   color: #d89428;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -44,7 +44,7 @@
 
 .title {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lora", serif;
   font-size: 32px;
   color: #6f1b1b;
   font-weight: 700;
@@ -54,7 +54,7 @@
 .subtitle {
   margin: 0;
   max-width: 760px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   line-height: 1.55;
   color: #6f5a4d;
@@ -111,14 +111,14 @@
   color: #fff;
   display: grid;
   place-items: center;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lora", serif;
   font-size: 18px;
   font-weight: 700;
 }
 
 .stepTitle {
   margin: 0 0 8px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lora", serif;
   font-size: 18px;
   font-weight: 800;
   color: #6f1b1b;
@@ -127,7 +127,7 @@
 
 .stepDesc {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #3b2c24;

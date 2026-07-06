@@ -26,6 +26,14 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body suppressHydrationWarning style={{ textTransform: "capitalize" }}>{children}</body>
     </html>
   );

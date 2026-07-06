@@ -43,7 +43,7 @@
   grid-template-columns: 1.15fr 0.02fr 0.85fr 0.02fr 1fr;
   align-items: start;
   gap: 0;
-  min-height: 330px;
+  /* min-height: 330px; */
   padding: 34px 26px 48px;
   background: #571117;
   border: 1px solid rgba(232, 181, 74, 0.28);
@@ -58,8 +58,8 @@
 }
 
 .brandRow img{
-    width: 280px;
-    height: auto;
+  width: 280px;
+  height: auto;
 }
 .logo {
   width: 92px;
@@ -74,7 +74,7 @@
 
 .brandName {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lora", serif;
   font-size: 30px;
   line-height: 0.95;
   color: #f0d08f;
@@ -85,7 +85,7 @@
 .tagline {
   margin: 0 0 22px;
   max-width: 360px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   line-height: 1.55;
   color: #f7ead9;
@@ -115,8 +115,8 @@
 }
 
 .socialIcon img {
-  width: 19px;
-  height: 19px;
+  width: 25px;
+  height: 25px;
   object-fit: contain;
   display: block;
 }
@@ -130,7 +130,7 @@
 }
 .colTitle {
   margin: 0 0 18px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lora", serif;
   font-size: 22px;
   color: #f0d08f;
   letter-spacing: 0.04em;
@@ -151,18 +151,19 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
   color: #f7ead9;
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
 }
 
 .footerLink::before {
-  content: "›";
-  color: #d9a44d;
-  font-size: 22px;
-  line-height: 1;
+  content: "";
+  width: 12px;
+  height: 12px;
+  flex: 0 0 12px;
+  background: url("/asset/Footer/points.svg") center / contain no-repeat;
 }
 
 .footerLink::after {
@@ -185,11 +186,11 @@
 .info {
   margin: 0 0 14px;
   max-width: 300px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
   line-height: 1.6;
   color: #f7ead9;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .visitLine {
@@ -214,10 +215,12 @@
 
 .copyRow {
   max-width: 1600px;
-  margin: 0 auto;
-  padding: 14px 10px 4px;
+  /* margin: 0 auto; */
+  position: relative;
+  top: 38px;
+  /* padding: 14px 10px 4px; */
   text-align: center;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   color: #f0d08f;
   letter-spacing: 0.02em;

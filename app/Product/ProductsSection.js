@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import styles from "./ProductsSection.module.css";
 
 const products = [
@@ -5,24 +8,52 @@ const products = [
     title: "Tirunelveli Halwa",
     desc: "Our classic. Soft, rich and made with pure ghee.",
     image: "/nature.png",
+    price: 399,
   },
   {
     title: "Pure Ghee Halwa",
     desc: "More ghee. More richness. Pure indulgence.",
     image: "/nature.png",
+    price: 549,
   },
   {
     title: "Festival Packs",
     desc: "Special packs for your festive celebrations.",
     image: "/Shop-logo.svg",
+    price: 899,
   },
 ];
 
 export default function ProductsSection() {
+  const [quantities, setQuantities] = useState(() =>
+    products.reduce((acc, _, index) => {
+      acc[index] = 1;
+      return acc;
+    }, {})
+  );
+  const [wishlist, setWishlist] = useState(() =>
+    products.reduce((acc, _, index) => {
+      acc[index] = false;
+      return acc;
+    }, {})
+  );
+
+  const updateQuantity = (index, delta) => {
+    setQuantities((current) => ({
+      ...current,
+      [index]: Math.max(1, (current[index] || 1) + delta),
+    }));
+  };
+
+  const toggleWishlist = (index) => {
+    setWishlist((current) => ({
+      ...current,
+      [index]: !current[index],
+    }));
+  };
+
   return (
     <section id="halwa" className={styles.productsSection}>
-      {/* <h2 className={styles.sectionTitle}>Products</h2> */}
-
       <div className={styles.productsCard}>
         <p className={styles.tag}>
           <img
@@ -46,12 +77,74 @@ export default function ProductsSection() {
                 <img src={item.image} alt={item.title} className={styles.productImage} />
               </div>
 
+              <button
+                type="button"
+                className={`${styles.heartBtn} ${wishlist[index] ? styles.heartBtnActive : ""}`}
+                onClick={() => toggleWishlist(index)}
+                aria-pressed={wishlist[index]}
+                aria-label={
+                  wishlist[index]
+                    ? `Remove ${item.title} from wishlist`
+                    : `Add ${item.title} to wishlist`
+                }
+              >
+                <img src="/asset/heart.svg" alt="" aria-hidden="true" className={styles.heartIcon} />
+              </button>
+
               <h4 className={styles.productTitle}>{item.title}</h4>
               <p className={styles.productDesc}>{item.desc}</p>
+
+              <div className={styles.metaRow}>
+                <div className={styles.priceRow}>
+                  <div className={styles.priceValue}>
+                    <img
+                      src="/asset/rupees.svg"
+                      alt=""
+                      aria-hidden="true"
+                      className={styles.priceIcon}
+                    />
+                    <span>{item.price}</span>
+                  </div>
+                </div>
+
+                <div className={styles.qtyBlock}>
+                  <span className={styles.metaLabel}>Qty</span>
+                  <div className={styles.qtySelector} aria-label={`Quantity for ${item.title}`}>
+                    <button
+                      type="button"
+                      className={styles.qtyBtn}
+                      onClick={() => updateQuantity(index, -1)}
+                      aria-label={`Decrease quantity for ${item.title}`}
+                    >
+                      <img
+                        src="/asset/minus.svg"
+                        alt=""
+                        aria-hidden="true"
+                        className={styles.qtyIcon}
+                      />
+                    </button>
+                    <span className={styles.qtyValue}>{quantities[index] || 1}</span>
+                    <button
+                      type="button"
+                      className={styles.qtyBtn}
+                      onClick={() => updateQuantity(index, 1)}
+                      aria-label={`Increase quantity for ${item.title}`}
+                    >
+                      <img
+                        src="/asset/plus.svg"
+                        alt=""
+                        aria-hidden="true"
+                        className={styles.qtyIcon}
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
               <div className={styles.actionRow}>
-                <a href="#" className={styles.addToCartBtn}>
+                <button type="button" className={styles.addToCartBtn}>
                   Add to Cart
-                </a>
+                </button>
                 <a href="#" className={styles.viewBtn}>
                   View
                 </a>
