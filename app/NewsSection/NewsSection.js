@@ -23,19 +23,27 @@ export default function NewsSection() {
     <section id="news" className={styles.newsSection}>
       <div className={styles.wrapper}>
         <div className={styles.sectionHeader}>
-          <p className={styles.tag}>
-            <img
-              src="/asset/heading-icon.svg"
-              alt=""
-              aria-hidden="true"
-              className={styles.tagIcon}
-            />
-            <span>Latest Updates</span>
-          </p>
-          <h2 className={styles.title}>News & Events</h2>
-          <p className={styles.subtitle}>
-            Stories, announcements, and moments from our sweet journey.
-          </p>
+          <div className={styles.headerTopRow}>
+            <div className={styles.headerText}>
+              <p className={styles.tag}>
+                <img
+                  src="/asset/heading-icon.svg"
+                  alt=""
+                  aria-hidden="true"
+                  className={styles.tagIcon}
+                />
+                <span>Latest Updates</span>
+              </p>
+              <h2 className={styles.title}>News & Events</h2>
+              <p className={styles.subtitle}>
+                Stories, announcements, and moments from our sweet journey.
+              </p>
+            </div>
+
+            <a href="#" className={styles.viewAllBtn}>
+              View All
+            </a>
+          </div>
         </div>
 
         <div className={styles.grid}>
@@ -53,11 +61,6 @@ export default function NewsSection() {
           ))}
         </div>
 
-        <div className={styles.footer}>
-          <a href="#" className={styles.viewAllBtn}>
-            View All
-          </a>
-        </div>
       </div>
     </section>
   );

@@ -14,9 +14,10 @@ export default function HomePage() {
     <AboutSection />
     <ProductsSection />
     <SpecialSection />
+    <TestimonialSection />
     <LegacySection />
     {/* <MakingSection /> */}
-    <TestimonialSection />
+    
     <NewsSection />
     <FooterSection />
     <a

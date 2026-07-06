@@ -1,7 +1,7 @@
 .legacySection {
   width: 100%;
   background: #EFE2D1;
-  /* padding: 22px 18px; */
+  padding: 52px 20px 42px;
 }
 
 .inner {
@@ -15,8 +15,8 @@
   /* background:
     linear-gradient(rgba(255,255,255,0.06), rgba(255,255,255,0.06)),
     #f7efe4; */
-  border: 1px solid rgba(127, 83, 39, 0.12);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+  /* border: 1px solid rgba(127, 83, 39, 0.12);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.05); */
 }
 
 .leftArt,

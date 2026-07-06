@@ -5,22 +5,25 @@ import styles from "./ProductsSection.module.css";
 
 const products = [
   {
-    title: "Tirunelveli Halwa",
+    title: "Halwa Bites",
     desc: "Our classic. Soft, rich and made with pure ghee.",
     image: "/nature.png",
-    price: 399,
+    oldPrice: 300.0,
+    price: 200.00,
   },
   {
-    title: "Pure Ghee Halwa",
+    title: "Iruttukadai Halwa - 100 Gm",
     desc: "More ghee. More richness. Pure indulgence.",
     image: "/nature.png",
-    price: 549,
+    oldPrice: 350.0,
+    price: 275.00,
   },
   {
-    title: "Festival Packs",
+    title: "Iruttukadai Halwa - 400 Gm",
     desc: "Special packs for your festive celebrations.",
     image: "/Shop-logo.svg",
-    price: 899,
+    oldPrice: 750.0,
+    price: 700.00,
   },
 ];
 
@@ -95,15 +98,26 @@ export default function ProductsSection() {
               <p className={styles.productDesc}>{item.desc}</p>
 
               <div className={styles.metaRow}>
-                <div className={styles.priceRow}>
-                  <div className={styles.priceValue}>
+                <div className={styles.priceBlock}>
+                  <span className={styles.oldPrice}>
                     <img
                       src="/asset/rupees.svg"
                       alt=""
                       aria-hidden="true"
-                      className={styles.priceIcon}
+                      className={styles.oldPriceIcon}
                     />
-                    <span>{item.price}</span>
+                    <span>{item.oldPrice.toFixed(2)}</span>
+                  </span>
+                  <div className={styles.priceRow}>
+                    <div className={styles.priceValue}>
+                      <img
+                        src="/asset/rupees.svg"
+                        alt=""
+                        aria-hidden="true"
+                        className={styles.priceIcon}
+                      />
+                      <span>{item.price.toFixed(2)}</span>
+                    </div>
                   </div>
                 </div>
 

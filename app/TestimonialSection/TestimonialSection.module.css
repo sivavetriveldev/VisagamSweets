@@ -1,6 +1,6 @@
 .testimonialSection {
   background: #fbf8f3;
-  padding: 0 4px;
+  padding: 52px 20px 42px;
 }
 
 .wrapper {
@@ -304,7 +304,7 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 28px;
+  /* margin-bottom: 28px; */
   margin-top: 28px;
 }
 
