@@ -28,6 +28,7 @@
   grid-template-columns: 1fr auto;
   align-items: start;
   gap: 16px;
+  
 }
 
 .headerText {
@@ -36,7 +37,9 @@
   align-items: left;
   text-align: left;
   gap: 10px;
-  width: 100%;
+  /* width: 100%; */
+  position: relative;
+  left: 90px;
 }
 
 .tag {
@@ -158,7 +161,7 @@
   margin-top: 68px;
   justify-self: end;
   position: relative;
-  right: 90px;
+  right: 110px;
 }
 
 .viewAllBtn:hover {

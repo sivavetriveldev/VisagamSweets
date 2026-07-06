@@ -11,7 +11,7 @@ body {
   /* min-height: 100vh; */
   background: #fbf8f3;
   overflow-x: hidden;
-  padding: 110px 24px 0;
+  padding: 90px 0px 0;
   font-family: "DM Sans", sans-serif;
 }
 
@@ -176,31 +176,34 @@ body {
 
 .heroSection {
   position: relative;
-  min-height: 520px;
+  min-height: 560px;
   padding-top: 60px;
   width: 100%;
-  scroll-margin-top: 110px;
+  /* scroll-margin-top: 110px; */
+  overflow: hidden;
+  /* border-radius: 28px; */
+  /* background: #f5ead8; */
 }
 
 .heroContent {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: minmax(360px, 520px) minmax(320px, 1fr);
+  grid-template-columns: minmax(360px, 560px) minmax(320px, 1fr);
   align-items: center;
   gap: 36px;
-  min-height: 520px;
+  min-height: 560px;
+  padding: 0 24px 28px;
 }
 
 .natureArt {
   position: absolute;
-  left: 0;
-  bottom: -80px;
-  width: 60%;
-  max-width: 1100px;
-  height: auto;
-  object-fit: contain;
-  opacity: 0.35;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 1;
   z-index: 1;
   pointer-events: none;
 }
@@ -209,6 +212,7 @@ body {
   z-index: 2;
   max-width: 520px;
   padding-left: 40px;
+  padding-top: 20px;
 }
 
 .heroSmall {
@@ -223,10 +227,11 @@ body {
 .heroTitle {
   margin: 0;
   color: #651a1a;
-  font-size: 70px;
-  line-height: 0.95;
+  font-size: clamp(22px, 4.8vw, 70px);
+  line-height: 1;
   font-weight: 600;
   letter-spacing: 0.03em;
+  white-space: nowrap;
 }
 
 .heroDesc {
@@ -545,6 +550,7 @@ body {
     grid-template-columns: 1fr;
     gap: 18px;
     min-height: auto;
+    padding: 22px 18px 28px;
   }
 
   .heroLeft {
@@ -554,10 +560,6 @@ body {
 
   .heroRight {
     min-height: 360px;
-  }
-
-  .heroTitle {
-    font-size: 60px;
   }
 
   .heroSmall,
@@ -597,10 +599,6 @@ body {
     padding: 18px 0 0;
   }
 
-  .heroTitle {
-    font-size: 44px;
-  }
-
   .heroSmall,
   .heroDesc {
     font-size: 18px;
@@ -633,16 +631,12 @@ body {
   }
 
   .heroSection {
-    min-height: 700px;
+    min-height: 560px;
   }
 /* 
   .heroLeft {
     padding-top: 50px;
   } */
-
-  .heroTitle {
-    font-size: 60px;
-  }
 
   .heroSmall {
     font-size: 18px;
@@ -650,10 +644,6 @@ body {
 
   .heroDesc {
     font-size: 18px;
-  }
-
-  .natureArt {
-    width: 90%;
   }
 }
 
@@ -713,10 +703,6 @@ body {
     font-size: 18px;
   }
 
-  .heroTitle {
-    font-size: 44px;
-  }
-
   .heroDesc {
     font-size: 18px;
     max-width: 100%;
@@ -767,11 +753,4 @@ body {
     width: 100%;
   }
 
-  .natureArt {
-    width: 100%;
-    bottom: -10px;
-    left: 0;
-    transform: none;
-    opacity: 0.28;
-  }
 }

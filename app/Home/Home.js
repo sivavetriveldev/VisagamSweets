@@ -95,8 +95,8 @@ export default function Home() {
       <section id="home" className={styles.heroSection}>
         <div className={styles.heroContent}>
           <div className={styles.heroLeft}>
-            <p className={styles.heroSmall}>The Original Taste Of</p>
-            <h1 className={styles.heroTitle}>Tirunelveli</h1>
+            <h1 className={styles.heroSmall}>The Original </h1>
+            <h1 className={styles.heroTitle}>Taste Of Tirunelveli</h1>
             <p className={styles.heroDesc}>
               Crafted with tradition, pure ingredients and cherished for generations.
             </p>
@@ -113,14 +113,14 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.heroRight}>
+          {/* <div className={styles.heroRight}>
             <img src="/asset/home-page-right.svg" alt="Iruttukadai Halwa" className={styles.heroImage} />
-          </div>
+          </div> */}
         </div>
-        <img src="/nature.png" alt="Nature Art" className={styles.natureArt} />
+        <img src="/asset/Homepage/banner.webp" alt="Nature Art" className={styles.natureArt} />
       </section>
 
-      <div className={styles.bottomArt}></div>
+      {/* <div className={styles.bottomArt}></div> */}
 
       {isOrderOpen && (
         <div className={styles.modalOverlay} onClick={closeOrderForm}>

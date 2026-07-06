@@ -7,22 +7,22 @@ const products = [
   {
     title: "Halwa Bites",
     desc: "Our classic. Soft, rich and made with pure ghee.",
-    image: "/nature.png",
+    image: "/asset/Product-image/halwa-bytes.webp",
     oldPrice: 300.0,
     price: 200.00,
   },
   {
     title: "Iruttukadai Halwa - 100 Gm",
     desc: "More ghee. More richness. Pure indulgence.",
-    image: "/nature.png",
+    image: "/asset/Product-image/halwa-100g.webp",
     oldPrice: 350.0,
     price: 275.00,
   },
   {
     title: "Iruttukadai Halwa - 400 Gm",
     desc: "Special packs for your festive celebrations.",
-    image: "/Shop-logo.svg",
-    oldPrice: 750.0,
+    image: "/asset/Product-image/halwa-400g.webp",
+    oldPrice: 0.0,
     price: 700.00,
   },
 ];
