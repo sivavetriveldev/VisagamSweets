@@ -120,7 +120,7 @@
   backdrop-filter: blur(2px);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   width: 400px;
-  height: 520px;
+  height: 620px;
 }
 
 .heartBtn {
@@ -161,11 +161,11 @@
   flex-shrink: 0;
 }
 
-/* .productItem:hover {
+.productItem:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 30px rgba(80, 47, 20, 0.1);
   border-color: rgba(201, 143, 47, 0.35);
-} */
+}
 
 .productItem:nth-child(2) {
   transform: translateY(8px);
