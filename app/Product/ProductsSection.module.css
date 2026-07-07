@@ -108,6 +108,10 @@
   z-index: 1;
 }
 
+.productAosWrap {
+  width: 100%;
+}
+
 .productItem {
   position: relative;
   text-align: center;

@@ -76,98 +76,106 @@ export default function ProductsSection() {
         <div className={styles.productGrid}>
           {products.map((item, index) => (
             <div
-              className={styles.productItem}
               key={index}
-              data-aos="fade-up"
-              data-aos-duration={700 + index * 150}
-              data-aos-delay={index * 120}
+              className={index === 1 ? styles.productAosWrap : undefined}
+              data-aos={index === 1 ? "flip-left" : "fade-up"}
+              data-aos-easing={index === 1 ? "ease-out-cubic" : "ease-in-out"}
+              data-aos-duration={index === 1 ? "2000" : `${700 + index * 150}`}
+              data-aos-delay={index === 1 ? "0" : `${index * 120}`}
             >
-              <div className={styles.imageWrap}>
-                <img src={item.image} alt={item.title} className={styles.productImage} />
-              </div>
+              <div className={styles.productItem}>
+                <div className={styles.imageWrap}>
+                  <img src={item.image} alt={item.title} className={styles.productImage} />
+                </div>
 
-              <button
-                type="button"
-                className={`${styles.heartBtn} ${wishlist[index] ? styles.heartBtnActive : ""}`}
-                onClick={() => toggleWishlist(index)}
-                aria-pressed={wishlist[index]}
-                aria-label={
-                  wishlist[index]
-                    ? `Remove ${item.title} from wishlist`
-                    : `Add ${item.title} to wishlist`
-                }
-              >
-                <img src="/asset/heart.svg" alt="" aria-hidden="true" className={styles.heartIcon} />
-              </button>
+                <button
+                  type="button"
+                  className={`${styles.heartBtn} ${wishlist[index] ? styles.heartBtnActive : ""}`}
+                  onClick={() => toggleWishlist(index)}
+                  aria-pressed={wishlist[index]}
+                  aria-label={
+                    wishlist[index]
+                      ? `Remove ${item.title} from wishlist`
+                      : `Add ${item.title} to wishlist`
+                  }
+                >
+                  <img
+                    src="/asset/heart.svg"
+                    alt=""
+                    aria-hidden="true"
+                    className={styles.heartIcon}
+                  />
+                </button>
 
-              <h4 className={styles.productTitle}>{item.title}</h4>
-              <p className={styles.productDesc}>{item.desc}</p>
+                <h4 className={styles.productTitle}>{item.title}</h4>
+                <p className={styles.productDesc}>{item.desc}</p>
 
-              <div className={styles.metaRow}>
-                <div className={styles.priceBlock}>
-                  <span className={styles.oldPrice}>
-                    <img
-                      src="/asset/rupees.svg"
-                      alt=""
-                      aria-hidden="true"
-                      className={styles.oldPriceIcon}
-                    />
-                    <span>{item.oldPrice.toFixed(2)}</span>
-                  </span>
-                  <div className={styles.priceRow}>
-                    <div className={styles.priceValue}>
+                <div className={styles.metaRow}>
+                  <div className={styles.priceBlock}>
+                    <span className={styles.oldPrice}>
                       <img
                         src="/asset/rupees.svg"
                         alt=""
                         aria-hidden="true"
-                        className={styles.priceIcon}
+                        className={styles.oldPriceIcon}
                       />
-                      <span>{item.price.toFixed(2)}</span>
+                      <span>{item.oldPrice.toFixed(2)}</span>
+                    </span>
+                    <div className={styles.priceRow}>
+                      <div className={styles.priceValue}>
+                        <img
+                          src="/asset/rupees.svg"
+                          alt=""
+                          aria-hidden="true"
+                          className={styles.priceIcon}
+                        />
+                        <span>{item.price.toFixed(2)}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className={styles.qtyBlock}>
+                    <span className={styles.metaLabel}>Qty</span>
+                    <div className={styles.qtySelector} aria-label={`Quantity for ${item.title}`}>
+                      <button
+                        type="button"
+                        className={styles.qtyBtn}
+                        onClick={() => updateQuantity(index, -1)}
+                        aria-label={`Decrease quantity for ${item.title}`}
+                      >
+                        <img
+                          src="/asset/minus.svg"
+                          alt=""
+                          aria-hidden="true"
+                          className={styles.qtyIcon}
+                        />
+                      </button>
+                      <span className={styles.qtyValue}>{quantities[index] || 1}</span>
+                      <button
+                        type="button"
+                        className={styles.qtyBtn}
+                        onClick={() => updateQuantity(index, 1)}
+                        aria-label={`Increase quantity for ${item.title}`}
+                      >
+                        <img
+                          src="/asset/plus.svg"
+                          alt=""
+                          aria-hidden="true"
+                          className={styles.qtyIcon}
+                        />
+                      </button>
                     </div>
                   </div>
                 </div>
 
-                <div className={styles.qtyBlock}>
-                  <span className={styles.metaLabel}>Qty</span>
-                  <div className={styles.qtySelector} aria-label={`Quantity for ${item.title}`}>
-                    <button
-                      type="button"
-                      className={styles.qtyBtn}
-                      onClick={() => updateQuantity(index, -1)}
-                      aria-label={`Decrease quantity for ${item.title}`}
-                    >
-                      <img
-                        src="/asset/minus.svg"
-                        alt=""
-                        aria-hidden="true"
-                        className={styles.qtyIcon}
-                      />
-                    </button>
-                    <span className={styles.qtyValue}>{quantities[index] || 1}</span>
-                    <button
-                      type="button"
-                      className={styles.qtyBtn}
-                      onClick={() => updateQuantity(index, 1)}
-                      aria-label={`Increase quantity for ${item.title}`}
-                    >
-                      <img
-                        src="/asset/plus.svg"
-                        alt=""
-                        aria-hidden="true"
-                        className={styles.qtyIcon}
-                      />
-                    </button>
-                  </div>
+                <div className={styles.actionRow}>
+                  <button type="button" className={styles.addToCartBtn}>
+                    Add to Cart
+                  </button>
+                  <a href="#" className={styles.viewBtn}>
+                    View
+                  </a>
                 </div>
-              </div>
-
-              <div className={styles.actionRow}>
-                <button type="button" className={styles.addToCartBtn}>
-                  Add to Cart
-                </button>
-                <a href="#" className={styles.viewBtn}>
-                  View
-                </a>
               </div>
             </div>
           ))}
