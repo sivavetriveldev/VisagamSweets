@@ -806,3 +806,38 @@ body {
   }
 }
 
+@media (min-width: 1201px) and (max-width: 1366px) {
+  .headerWrap {
+    padding: 8px 18px;
+    gap: 12px;
+  }
+
+  .shopLogo {
+    width: 250px;
+    margin-left: 0;
+  }
+
+  .navBar {
+    padding-left: 20%;
+    gap: 16px;
+    font-size: 18px;
+    overflow: visible;
+  }
+
+  .orderBtn {
+    min-width: 120px;
+    font-size: 15px;
+    padding: 6px 10px;
+  }
+
+  .cartLink {
+    width: 24px;
+    height: 24px;
+  }
+
+  .navIcon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
