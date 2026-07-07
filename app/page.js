@@ -6,7 +6,8 @@ import MakingSection from "./MakingSection/MakingSection";
 import LegacySection from "./LegacySection/LegacySection";
 import TestimonialSection from "./TestimonialSection/TestimonialSection";
 import NewsSection from "./NewsSection/NewsSection";
-import FooterSection from "./FooterSection/FooterSection";
+import Stip from "./Stip/Stip";
+import NewFooter from "./NewFooter/NewFooter";
 export default function HomePage() {
   return (
     <>
@@ -19,7 +20,8 @@ export default function HomePage() {
     {/* <MakingSection /> */}
     
     <NewsSection />
-    <FooterSection />
+    <Stip />
+    <NewFooter />
     <a
       href="https://wa.me/911234567890?text=Hello%20Iruttukadai%20Halwa"
       target="_blank"
