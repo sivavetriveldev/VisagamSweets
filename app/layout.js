@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import AOSLoader from "./AOSLoader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,8 +34,15 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        />
       </head>
-      <body suppressHydrationWarning style={{ textTransform: "capitalize" }}>{children}</body>
+      <body suppressHydrationWarning style={{ textTransform: "capitalize" }}>
+        <AOSLoader />
+        {children}
+      </body>
     </html>
   );
 }

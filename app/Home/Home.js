@@ -94,7 +94,12 @@ export default function Home() {
 
       <section id="home" className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <div className={styles.heroLeft}>
+          <div
+            className={styles.heroLeft}
+            data-aos="fade-right"
+            data-aos-duration="800"
+            data-aos-easing="ease-out-cubic"
+          >
             <h1 className={styles.heroSmall}>The Original </h1>
             <h1 className={styles.heroTitle}>Taste Of Tirunelveli</h1>
             <p className={styles.heroDesc}>
@@ -117,7 +122,7 @@ export default function Home() {
             <img src="/asset/home-page-right.svg" alt="Iruttukadai Halwa" className={styles.heroImage} />
           </div> */}
         </div>
-        <img src="/asset/Homepage/banner.webp" alt="Nature Art" className={styles.natureArt} />
+        <img src="/asset/Homepage/banner.webp" alt="Halwa-image" className={styles.natureArt} />
       </section>
 
       {/* <div className={styles.bottomArt}></div> */}

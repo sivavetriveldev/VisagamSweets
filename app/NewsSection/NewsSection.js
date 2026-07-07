@@ -48,7 +48,15 @@ export default function NewsSection() {
 
         <div className={styles.grid}>
           {newsItems.map((item, index) => (
-            <article className={styles.card} key={index}>
+            <article
+              className={styles.card}
+              key={index}
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-back"
+              data-aos-delay={index * 180}
+              data-aos-duration={700 + index * 120}
+              data-aos-offset="0"
+            >
               <div className={styles.imageWrap}>
                 <img src={item.image} alt={item.title} className={styles.image} />
               </div>

@@ -75,7 +75,13 @@ export default function ProductsSection() {
 
         <div className={styles.productGrid}>
           {products.map((item, index) => (
-            <div className={styles.productItem} key={index}>
+            <div
+              className={styles.productItem}
+              key={index}
+              data-aos="fade-up"
+              data-aos-duration={700 + index * 150}
+              data-aos-delay={index * 120}
+            >
               <div className={styles.imageWrap}>
                 <img src={item.image} alt={item.title} className={styles.productImage} />
               </div>

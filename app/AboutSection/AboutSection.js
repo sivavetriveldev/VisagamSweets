@@ -22,7 +22,12 @@ export default function AboutSection() {
   return (
     <section id="about" className={styles.aboutSection}>
       <div className={styles.aboutCard}>
-        <div className={styles.leftImageBox}>
+        <div
+          className={styles.leftImageBox}
+          data-aos="zoom-in-up"
+          data-aos-duration="750"
+          data-aos-easing="ease-out-cubic"
+        >
           <img src="/asset/wheat.svg" alt="" aria-hidden="true" className={styles.wheatIcon} />
           <img
             src="/asset/About/Shopimage.webp"
@@ -57,7 +62,12 @@ export default function AboutSection() {
           </a>
         </div>
 
-        <div className={styles.rightStats}>
+        <div
+          className={styles.rightStats}
+          data-aos="zoom-in-up"
+          data-aos-duration="1100"
+          data-aos-easing="ease-out-cubic"
+        >
           {stats.map((item) => (
             <div className={styles.statItem} key={item.title}>
               <img src={item.icon} alt="" aria-hidden="true" className={styles.statIcon} />

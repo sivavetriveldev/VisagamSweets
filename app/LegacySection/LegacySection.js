@@ -2,7 +2,12 @@ import styles from "./LegacySection.module.css";
 
 export default function LegacySection() {
   return (
-    <section className={styles.legacySection}>
+    <section
+      className={styles.legacySection}
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1200"
+    >
       <div className={styles.inner}>
         <div className={styles.leftArt}>
           <img src="asset/OurLegacy/Human.svg" alt="Traditional cooking art" />

@@ -81,7 +81,13 @@ export default function SpecialSection() {
           </p>
         </div>
 
-        <FeatureList items={leftFeatures} align="left" />
+        <div
+          data-aos="fade-right"
+          data-aos-duration="800"
+          data-aos-easing="ease-out-cubic"
+        >
+          <FeatureList items={leftFeatures} align="left" />
+        </div>
 
         <div className={styles.centerWrap}>
           <img
@@ -91,7 +97,13 @@ export default function SpecialSection() {
           />
         </div>
 
-        <FeatureList items={rightFeatures} align="right" />
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1100"
+          data-aos-easing="ease-out-cubic"
+        >
+          <FeatureList items={rightFeatures} align="right" />
+        </div>
       </div>
     </section>
   );
