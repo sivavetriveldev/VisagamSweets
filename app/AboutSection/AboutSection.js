@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import styles from "./AboutSection.module.css";
 
 const stats = [
@@ -19,8 +22,57 @@ const stats = [
 ];
 
 export default function AboutSection() {
+  const sectionRef = useRef(null);
+  const startedRef = useRef(false);
+  const [countValues, setCountValues] = useState(stats.map(() => 0));
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return undefined;
+
+    const animateCounts = () => {
+      const duration = 1400;
+      const startTime = performance.now();
+      const targets = stats.map((item) => Number.parseInt(item.title, 10) || 0);
+
+      const step = (now) => {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+
+        setCountValues(targets.map((target) => Math.round(target * eased)));
+
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        }
+      };
+
+      requestAnimationFrame(step);
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !startedRef.current) {
+          startedRef.current = true;
+          animateCounts();
+        }
+      },
+      { threshold: 0.35 }
+    );
+
+    observer.observe(section);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  const formatStatTitle = (title, index) => {
+    const suffix = title.includes("+") ? "+" : "";
+    return `${countValues[index]}${suffix}`;
+  };
+
   return (
-    <section id="about" className={styles.aboutSection}>
+    <section id="about" className={styles.aboutSection} ref={sectionRef}>
       <div className={styles.aboutCard}>
         <div
           className={styles.leftImageBox}
@@ -68,11 +120,11 @@ export default function AboutSection() {
           data-aos-duration="1100"
           data-aos-easing="ease-out-cubic"
         >
-          {stats.map((item) => (
+          {stats.map((item, index) => (
             <div className={styles.statItem} key={item.title}>
               <img src={item.icon} alt="" aria-hidden="true" className={styles.statIcon} />
               <div className={styles.statCopy}>
-                <div className={styles.statNumber}>{item.title}</div>
+                <div className={styles.statNumber}>{formatStatTitle(item.title, index)}</div>
                 <div className={styles.statText}>{item.text}</div>
               </div>
             </div>
