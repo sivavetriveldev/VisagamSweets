@@ -119,32 +119,49 @@
   content: "→";
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 768px) {
+  .legacySection {
+    padding: 34px 14px 28px;
+  }
+
   .inner {
     grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 18px;
     text-align: center;
-    padding: 20px 14px;
+    padding: 10px 0;
+  }
+
+  .leftArt,
+  .rightImage {
+    justify-content: center;
+    margin-left: 0;
+    right: 0;
+  }
+
+  .leftArt img {
+    width: min(100%, 260px);
+    opacity: 0.55;
+  }
+
+  .rightImage img {
+    width: 250;
+    position: relative;
+    right: 15px;
   }
 
   .centerText {
+    right: 0;
     text-align: center;
     padding: 0;
+    max-width: 100%;
+    justify-self: center;
   }
 
   .tag {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .desc {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .tag {
-    font-size: 18px;
+    font-size: 16px;
     gap: 8px;
   }
 
@@ -154,11 +171,117 @@
   }
 
   .title {
-    font-size: 26px;
+    font-size: 24px;
+    margin-bottom: 12px;
   }
 
   .desc {
-    font-size: 18px;
-    line-height: 1.6;
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .link {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .legacySection {
+    padding: 40px 16px 34px;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 20px;
+    text-align: center;
+    padding: 14px 0;
+  }
+
+  .leftArt,
+  .rightImage {
+    justify-content: center;
+    margin-left: 0;
+    right: 0;
+  }
+
+  .leftArt img {
+    width: min(100%, 320px);
+    opacity: 0.6;
+  }
+
+  .rightImage img {
+    width: min(100%, 340px);
+  }
+
+  .centerText {
+    right: 0;
+    text-align: center;
+    padding: 0;
+    max-width: 620px;
+    justify-self: center;
+  }
+
+  .tag {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .desc {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 560px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .legacySection {
+    padding: 46px 18px 38px;
+  }
+
+  .inner {
+    grid-template-columns: minmax(220px, 0.9fr) minmax(300px, 1fr) minmax(220px, 0.9fr);
+    gap: 14px;
+    min-height: auto;
+  }
+
+  .leftArt {
+    right: -40px;
+  }
+
+  .leftArt img {
+    width: min(100%, 360px);
+  }
+
+  .rightImage {
+    margin-left: -12%;
+  }
+
+  .rightImage img {
+    width: min(100%, 330px);
+  }
+
+  .centerText {
+    right: 0;
+    max-width: 420px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .desc {
+    font-size: 17px;
+    max-width: 340px;
+  }
+
+  .link {
+    font-size: 17px;
   }
 }

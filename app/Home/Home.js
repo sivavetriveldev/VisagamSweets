@@ -19,6 +19,7 @@ const initialForm = {
 
 export default function Home() {
   const [isOrderOpen, setIsOrderOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState(initialForm);
   const [submitStatus, setSubmitStatus] = useState("");
 
@@ -44,11 +45,20 @@ export default function Home() {
     event.preventDefault();
     setSubmitStatus("");
     setIsOrderOpen(true);
+    setIsMobileMenuOpen(false);
   };
 
   const closeOrderForm = () => {
     setIsOrderOpen(false);
     setSubmitStatus("");
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((current) => !current);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
   };
 
   const handleChange = (event) => {
@@ -71,17 +81,35 @@ export default function Home() {
           <img src="/irutukadai-logo.png" alt="Shop Logo" className={styles.shopLogo} />
         </div>
 
-        <div className={styles.navBar}>
-          <a href="#home" className={styles.navLink}>Home</a>
-          <a href="#about" className={styles.navLink}>About Us</a>
-          <a href="#halwa" className={styles.navLink}>Halwa</a>
-          <a href="#news" className={styles.navLink}>News & Events</a>
-          <a href="#contact" className={styles.navLink}>Contact Us</a>
+        <button
+          type="button"
+          className={styles.menuBtn}
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMobileMenuOpen}
+          onClick={toggleMobileMenu}
+        >
+          <img
+            src={isMobileMenuOpen ? "/asset/close-icon.svg" : "/asset/menu.svg"}
+            alt=""
+            aria-hidden="true"
+            className={styles.menuIcon}
+          />
+        </button>
+
+        <div className={`${styles.navBar} ${isMobileMenuOpen ? styles.navBarOpen : ""}`}>
+          <a href="#home" className={styles.navLink} onClick={closeMobileMenu}>Home</a>
+          <a href="#about" className={styles.navLink} onClick={closeMobileMenu}>About Us</a>
+          <a href="#halwa" className={styles.navLink} onClick={closeMobileMenu}>Halwa</a>
+          <a href="#news" className={styles.navLink} onClick={closeMobileMenu}>News & Events</a>
+          <a href="#contact" className={styles.navLink} onClick={closeMobileMenu}>Contact Us</a>
           <a
             href="#"
             className={styles.cartLink}
             aria-label="Cart"
-            onClick={(event) => event.preventDefault()}
+            onClick={(event) => {
+              event.preventDefault();
+              closeMobileMenu();
+            }}
           >
             <img src="/asset/cart.svg" alt="" aria-hidden="true" className={styles.navIcon} />
           </a>
@@ -107,7 +135,7 @@ export default function Home() {
             </p>
 
             <div className={styles.heroButtons}>
-              <button type="button" className={styles.primaryBtn} onClick={openOrderForm}>
+              <button type="button" className={styles.primaryBtn}>
                 <img src="/asset/cart.svg" alt="" aria-hidden="true" className={styles.orderIcon} />
                 <span>Order Now</span>
               </button>

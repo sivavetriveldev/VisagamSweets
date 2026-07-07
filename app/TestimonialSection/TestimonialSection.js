@@ -60,7 +60,7 @@ export default function TestimonialSection() {
       if (!viewportWidth) return;
       setViewportWidth(viewportWidth);
       const isMobile = window.innerWidth <= 768;
-      setSlideWidth(viewportWidth * (isMobile ? 0.9 : 0.56));
+      setSlideWidth(viewportWidth * (isMobile ? 1 : 0.56));
     };
 
     updateLayout();

@@ -73,6 +73,24 @@ body {
   letter-spacing: 0.03em;
 }
 
+.menuBtn {
+  display: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 6px;
+  margin-left: auto;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.menuIcon {
+  width: 28px;
+  height: 28px;
+  display: block;
+  object-fit: contain;
+}
+
 .navLink,
 .navLinkActive {
   position: relative;
@@ -545,7 +563,109 @@ body {
   opacity: 0.5;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
+  .page {
+    padding: 76px 0px 0;
+  }
+
+  .headerWrap {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 18px 10px 14px;
+    gap: 10px;
+  }
+
+  .logoRow {
+    flex: 1 1 auto;
+  }
+
+  .shopLogo {
+    width: 184px;
+    margin-left: 0;
+  }
+
+  .menuBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 25px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  .navBar {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px 16px 20px;
+    background: #fbf8f3;
+    border-top: 1px solid rgba(95, 44, 34, 0.08);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.12);
+    white-space: normal;
+    overflow: visible;
+    /* padding-left: 16px; */
+    font-size: 15px;
+    z-index: 1200;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.28s ease, opacity 0.28s ease;
+  }
+
+  .navBarOpen {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navLink {
+    width: 100%;
+    padding: 6px 0;
+  }
+
+  .navLink::after {
+    bottom: 0;
+  }
+
+  .cartLink {
+    width: auto;
+    height: auto;
+    padding: 4px 0;
+  }
+
+  .orderBtn {
+    width: 45%;
+    min-width: 0;
+    justify-content: center;
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+
+  .navIcon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .menuIcon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .heroSection {
+    min-height: 620px;
+  }
+
   .heroContent {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -558,166 +678,19 @@ body {
     max-width: 100%;
   }
 
-  .heroRight {
-    min-height: 360px;
+  .heroSmall {
+    font-size: 42px;
   }
 
-  .heroSmall,
-  .heroDesc {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  .page {
-    padding: 12px 14px 0;
-  }
-
-  .headerWrap {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .navBar {
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 13px;
-    gap: 10px;
+  .heroTitle {
     white-space: normal;
   }
 
-  .shopLogo {
-    width: 200px;
-  }
-
-  .vilakuCenter {
-    width: 96px;
-    margin-left: -12px;
-  }
-
-  .heroLeft {
-    padding: 18px 0 0;
-  }
-
-  .heroSmall,
   .heroDesc {
     font-size: 18px;
-  }
-
-  .halwaPhoto {
-    width: 88%;
-  }
-}
-@media (max-width: 1200px) {
-  .page {
-    padding: 14px 18px 0;
-  }
-
-  .headerWrap {
-    gap: 14px;
-  }
-
-  .navBar {
-    gap: 12px;
-    font-size: 14px;
-  }
-
-  .shopLogo {
-    width: 240px;
-  }
-
-  .vilakuCenter {
-    width: 108px;
-  }
-
-  .heroSection {
-    min-height: 560px;
-  }
-/* 
-  .heroLeft {
-    padding-top: 50px;
-  } */
-
-  .heroSmall {
-    font-size: 18px;
-  }
-
-  .heroDesc {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  .page {
-    padding: 12px 14px 0;
-  }
-
-  .headerWrap {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .logoRow {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .navBar {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    font-size: 13px;
-    white-space: normal;
-  }
-
-  .shopLogo {
-    width: 200px;
-  }
-
-  .vilakuCenter {
-    width: 96px;
-    margin-left: -12px;
-  }
-
-  .orderBtn {
-    min-width: 120px;
-    min-height: 36px;
-    padding: 8px 12px;
-    font-size: 11px;
-  }
-
-  .heroSection {
-    min-height: 620px;
-  }
-
-  .heroLeft {
-    max-width: 100%;
-    padding-top: 35px;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: left;
-    transform: translateX(0);
-  }
-
-  .heroSmall {
-    font-size: 18px;
-  }
-
-  .heroDesc {
-    font-size: 18px;
-    max-width: 100%;
-  }
-
-  .heroRight {
-    min-height: 240px;
-  }
-
-  .heroImage {
-    width: min(100%, 420px);
   }
 
   .heroButtons {
-    justify-content: flex-start;
     gap: 12px;
   }
 
@@ -726,31 +699,91 @@ body {
     font-size: 14px;
     padding: 10px 14px;
   }
-
-  .modalOverlay {
-    padding: 16px;
-  }
-
-  .modalCard {
-    padding: 22px 18px 18px;
-    border-radius: 22px;
-  }
-
-  .modalTitle {
-    font-size: 24px;
-  }
-
-  .fieldGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .modalActions {
-    justify-content: stretch;
-  }
-
-  .secondaryAction,
-  .primaryAction {
-    width: 100%;
-  }
-
 }
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .headerWrap {
+    padding: 10px 18px;
+    gap: 14px;
+  }
+
+  .shopLogo {
+    width: 220px;
+    margin-left: 0;
+  }
+
+  .navBar {
+    padding-left: 8%;
+    gap: 14px;
+    font-size: 14px;
+  }
+
+  .orderBtn {
+    min-width: 120px;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    min-height: auto;
+    padding: 18px 18px 28px;
+  }
+
+  .heroLeft {
+    padding-left: 0;
+    max-width: 100%;
+  }
+
+  .heroSmall {
+    font-size: 46px;
+  }
+
+  .heroTitle {
+    white-space: normal;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .headerWrap {
+    padding: 10px 20px;
+  }
+
+  .shopLogo {
+    width: 240px;
+    margin-left: 0;
+  }
+
+  .navBar {
+    padding-left: 10%;
+    gap: 18px;
+    font-size: 15px;
+  }
+
+  .orderBtn {
+    min-width: 126px;
+    font-size: 15px;
+  }
+
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    min-height: auto;
+    padding: 20px 20px 28px;
+  }
+
+  .heroLeft {
+    padding-left: 12px;
+    max-width: 100%;
+  }
+
+  .heroSmall {
+    font-size: 56px;
+  }
+
+  .heroTitle {
+    white-space: normal;
+  }
+}
+

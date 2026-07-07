@@ -119,8 +119,10 @@
   box-shadow: 0 10px 24px rgba(80, 47, 20, 0.06); */
   backdrop-filter: blur(2px);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 620px;
+  margin: 0 auto;
 }
 
 .heartBtn {
@@ -461,9 +463,125 @@
     transform: none;
   }
 
+  .productItem {
+    max-width: 560px;
+    height: auto;
+  }
+
   .imageWrap {
     width: 180px;
     height: 180px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .productsSection {
+    padding: 22px 16px 30px;
+  }
+
+  .productsCard {
+    padding: 8px 4px 18px;
+  }
+
+  .collectionTitle {
+    font-size: 28px;
+    margin-bottom: 18px;
+  }
+
+  .collectionSubtitle {
+    font-size: 17px;
+    margin-bottom: 22px;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .productItem {
+    max-width: none;
+    height: auto;
+    padding: 16px 14px 18px;
+  }
+
+  .productItem:nth-child(2) {
+    transform: translateY(8px);
+  }
+
+  .productItem:nth-child(2):hover {
+    transform: translateY(2px);
+  }
+
+  .imageWrap {
+    width: 170px;
+    height: 170px;
+  }
+
+  .productTitle {
+    font-size: 19px;
+  }
+
+  .productDesc {
+    font-size: 17px;
+  }
+
+  .metaRow {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .qtyBlock {
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .productsSection {
+    padding: 36px 18px 34px;
+  }
+
+  .productsCard {
+    padding: 14px 10px 20px;
+  }
+
+  .collectionTitle {
+    font-size: 30px;
+  }
+
+  .collectionSubtitle {
+    font-size: 17px;
+    max-width: 680px;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .productItem {
+    max-width: none;
+    height: auto;
+  }
+
+  .productItem:nth-child(2) {
+    transform: translateY(8px);
+  }
+
+  .productItem:nth-child(2):hover {
+    transform: translateY(2px);
+  }
+
+  .imageWrap {
+    width: 190px;
+    height: 190px;
+  }
+
+  .productTitle {
+    font-size: 20px;
+  }
+
+  .productDesc {
+    font-size: 17px;
   }
 }
 
@@ -492,7 +610,7 @@
   }
 
   .collectionSubtitle {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 20px;
   }
 
@@ -529,6 +647,8 @@
 
   .productItem {
     padding: 16px 14px 18px;
+    max-width: 80%;
+    height: auto;
   }
 
   .heartBtn {
@@ -539,12 +659,12 @@
   }
 
   .imageWrap {
-    width: 168px;
-    height: 168px;
+    width: 160px;
+    height: 160px;
   }
 
   .productDesc {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .metaRow {

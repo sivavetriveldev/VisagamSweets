@@ -286,48 +286,124 @@
   color: #f0d08f;
   letter-spacing: 0.02em;
 }
-/* 
-@media (max-width: 1100px) {
+
+@media (max-width: 768px) {
   .wrapper {
     grid-template-columns: 1fr;
-    gap: 18px;
-    padding-bottom: 28px;
+    gap: 20px;
+    padding: 24px 16px 58px;
+    justify-items: start;
   }
 
   .divider,
   .bottomSketch {
     display: none;
   }
-}
 
-@media (max-width: 768px) {
-  .brandName {
-    font-size: 24px;
+  .brandRow {
+    margin-bottom: 12px;
+  }
+
+  .brandRow img {
+    width: 220px;
+    max-width: 100%;
   }
 
   .tagline,
   .info,
   .footerLink {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .colTitle {
     font-size: 20px;
+    margin-bottom: 14px;
   }
 
-  .cornerTopLeft,
-  .cornerTopRight {
-    width: 64px;
-    height: 64px;
+  .socialRow {
+    gap: 12px;
   }
 
-  .logo {
-    width: 78px;
-    height: 78px;
+  .socialIcon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .socialIcon img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .visitLine {
+    height: 4px;
+    margin-top: 12px;
+  }
+
+  .copyRow {
+    top: 0;
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.45;
+    text-align: center;
+  }
+
+  .topArrowBtn {
+    right: 14px;
+    bottom: 14px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .topArrowIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 24px;
+    padding: 30px 20px 56px;
+  }
+
+  .colLeft {
+    grid-column: 1 / -1;
+  }
+
+  .divider,
+  .bottomSketch {
+    display: none;
+  }
+
+  .brandRow img {
+    width: 260px;
+  }
+
+  .copyRow {
+    top: 10px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .wrapper {
+    grid-template-columns: 1.05fr 0.02fr 0.9fr 0.02fr 0.95fr;
+    padding: 30px 22px 44px;
+  }
+
+  .brandRow img {
+    width: 250px;
   }
 
   .bottomSketch {
-    width: 150px;
-    opacity: 0.16;
+    width: 390px;
+    height: 260px;
+    right: -48px;
   }
-} */
+
+  .copyRow {
+    top: 24px;
+    font-size: 16px;
+  }
+}
