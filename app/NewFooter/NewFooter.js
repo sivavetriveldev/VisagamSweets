@@ -38,6 +38,10 @@ export default function NewFooter() {
             </a>
           </div>
 
+          <a href="#top" className={styles.topArrow} aria-label="Back to top">
+            <img src="/asset/Footer/top-arrow.svg" alt="" className={styles.topArrowImage} />
+          </a>
+
           <div className={styles.contactRow}>
             <a className={styles.contactItem} href="tel:+5558888888">
               <span className={styles.icon}>☎</span>
