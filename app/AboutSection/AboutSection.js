@@ -28,7 +28,7 @@ export default function AboutSection() {
           data-aos-duration="750"
           data-aos-easing="ease-out-cubic"
         >
-          <img src="/asset/wheat.svg" alt="" aria-hidden="true" className={styles.wheatIcon} />
+          {/* <img src="/asset/wheat.svg" alt="" aria-hidden="true" className={styles.wheatIcon} /> */}
           <img
             src="/asset/About/Shopimage.webp"
             alt="Heritage Shop"

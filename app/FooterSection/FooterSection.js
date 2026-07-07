@@ -1,6 +1,15 @@
+"use client";
+
 import styles from "./FooterSection.module.css";
 
 export default function FooterSection() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer id="contact" className={styles.footerSection}>
       {/* <img
@@ -105,6 +114,19 @@ export default function FooterSection() {
           aria-hidden="true"
           className={styles.bottomSketch}
         />
+        <button
+          type="button"
+          className={styles.topArrowBtn}
+          onClick={scrollToTop}
+          aria-label="Scroll to top"
+        >
+          <img
+            src="/asset/Footer/top-arrow.svg"
+            alt=""
+            aria-hidden="true"
+            className={styles.topArrowIcon}
+          />
+        </button>
         <div className={styles.copyRow}>Crafted with Tradition. Shared with Generations.</div>
       </div>
 

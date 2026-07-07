@@ -213,6 +213,67 @@
  
 }
 
+.topArrowBtn {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 223, 111, 0.28);
+  box-shadow:
+    0 0 0 1px rgba(255, 239, 184, 0.55),
+    0 8px 18px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  z-index: 4;
+  animation: arrowPulse 3.2s ease-in-out infinite;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.topArrowBtn:hover {
+  transform: translateY(-3px) scale(1.03);
+  background: rgba(255, 223, 111, 0.4);
+  box-shadow:
+    0 0 0 1px rgba(255, 239, 184, 0.75),
+    0 10px 22px rgba(0, 0, 0, 0.2);
+}
+
+.topArrowIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+  animation: arrowFloat 2.8s ease-in-out infinite;
+}
+
+@keyframes arrowPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 1px rgba(255, 239, 184, 0.55),
+      0 8px 18px rgba(0, 0, 0, 0.16);
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px rgba(255, 239, 184, 0.75),
+      0 10px 22px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes arrowFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
 .copyRow {
   max-width: 1600px;
   /* margin: 0 auto; */
