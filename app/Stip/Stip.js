@@ -4,15 +4,15 @@ import styles from "./Stip.module.css";
 
 const features = [
   {
-    icon: "/asset/shop.svg",
+    icon: "/asset/icon/shop.svg",
     title: "Personalized shop",
   },
   {
-    icon: "/asset/cart.svg",
+    icon: "/asset/icon/cart.svg",
     title: "Card payments",
   },
   {
-    icon: "/asset/delivery.svg",
+    icon: "/asset/icon/shipping.svg",
     title: "Worldwide shipping",
   },
   {

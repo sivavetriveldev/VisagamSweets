@@ -25,16 +25,16 @@ export default function NewFooter() {
         <div className={styles.contactStrip}>
           <div className={styles.socialRow}>
             <a href="#" className={styles.socialIcon} aria-label="Facebook">
-              <img src="/asset/Footer/facebook.svg" alt="" />
+              <img src="/asset/Footer/facebook.svg" alt="" className={styles.socialImage} />
             </a>
             <a href="#" className={styles.socialIcon} aria-label="Instagram">
-              <img src="/asset/Footer/instagram.svg" alt="" />
+              <img src="/asset/Footer/instagram.svg" alt="" className={styles.socialImage} />
             </a>
             <a href="#" className={styles.socialIcon} aria-label="YouTube">
-              <img src="/asset/Footer/youtube.svg" alt="" />
+              <img src="/asset/Footer/youtube.svg" alt="" className={styles.socialImage} />
             </a>
             <a href="#" className={styles.socialIcon} aria-label="WhatsApp">
-              <img src="/asset/Footer/whatsapp.svg" alt="" />
+              <img src="/asset/Footer/whatsapp.svg" alt="" className={styles.socialImage} />
             </a>
           </div>
 
