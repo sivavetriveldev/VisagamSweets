@@ -262,9 +262,9 @@
 }
 
 @media (min-width: 769px) and (max-width: 900px) {
-  .aboutSection {
+  /* .aboutSection {
     padding: 16px 14px 22px;
-  }
+  } */
 
   .aboutCard {
     grid-template-columns: 1fr;

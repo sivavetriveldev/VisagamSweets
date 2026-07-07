@@ -261,7 +261,7 @@
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding-left: 0;
-    padding-right: 0;
+    /* padding-right: 0; */
   }
 
   .card {

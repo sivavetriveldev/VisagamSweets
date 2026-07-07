@@ -703,25 +703,44 @@ body {
 
 @media (min-width: 769px) and (max-width: 900px) {
   .headerWrap {
-    padding: 10px 18px;
-    gap: 14px;
+    padding: 10px 14px;
+    gap: 10px;
   }
 
+  .page {
+    padding: 68px 0px 0px;
+  }
   .shopLogo {
-    width: 220px;
+    width: 175px;
     margin-left: 0;
   }
 
   .navBar {
-    padding-left: 8%;
-    gap: 14px;
-    font-size: 14px;
+    /* justify-content: flex-end; */
+    padding-left: 90px;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .navLink,
+  .navLinkActive {
+    padding: 6px 0;
   }
 
   .orderBtn {
-    min-width: 120px;
-    font-size: 14px;
-    padding: 8px 12px;
+    min-width: 102px;
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+
+  .cartLink {
+    width: 22px;
+    height: 22px;
+  }
+
+  .navIcon {
+    width: 18px;
+    height: 18px;
   }
 
   .heroContent {

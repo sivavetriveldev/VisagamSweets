@@ -476,7 +476,7 @@
 
 @media (min-width: 769px) and (max-width: 900px) {
   .productsSection {
-    padding: 22px 16px 30px;
+    padding: 22px 0px 30px;
   }
 
   .productsCard {
@@ -495,17 +495,19 @@
 
   .productGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
+    gap: 14px;
+    /* position: relative;
+    right: 30px; */
   }
 
   .productItem {
-    max-width: none;
+    max-width: 300px;
     height: auto;
-    padding: 16px 14px 18px;
+    padding: 14px 12px 16px;
   }
 
   .productItem:nth-child(2) {
-    transform: translateY(8px);
+    transform: translateY(6px);
   }
 
   .productItem:nth-child(2):hover {
@@ -513,16 +515,16 @@
   }
 
   .imageWrap {
-    width: 170px;
-    height: 170px;
+    width: 150px;
+    height: 150px;
   }
 
   .productTitle {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   .productDesc {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .metaRow {
@@ -532,6 +534,17 @@
 
   .qtyBlock {
     align-items: flex-start;
+  }
+
+  .actionRow {
+    gap: 10px;
+  }
+
+  .addToCartBtn,
+  .viewBtn {
+    min-width: 110px;
+    padding: 10px 14px;
+    font-size: 15px;
   }
 }
 
@@ -561,6 +574,7 @@
   .productItem {
     max-width: none;
     height: auto;
+    padding: 18px 16px 20px;
   }
 
   .productItem:nth-child(2) {
@@ -572,8 +586,8 @@
   }
 
   .imageWrap {
-    width: 190px;
-    height: 190px;
+    width: 180px;
+    height: 180px;
   }
 
   .productTitle {
@@ -647,7 +661,7 @@
 
   .productItem {
     padding: 16px 14px 18px;
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
   }
 
