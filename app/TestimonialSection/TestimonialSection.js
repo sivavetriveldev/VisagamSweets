@@ -115,7 +115,7 @@ export default function TestimonialSection() {
             <span>Customer Stories</span>
           </p>
           <h2 className={styles.title}>Testimonials</h2>
-          <p className={styles.subtitle}>Loved By Generations</p>
+          <p className={styles.subtitle}>Loved by generations</p>
         </div>
         <div className={styles.carouselShell}>
           <div className={styles.viewport} ref={viewportRef}>

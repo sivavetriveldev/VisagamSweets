@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
         />
       </head>
-      <body suppressHydrationWarning style={{ textTransform: "capitalize" }}>
+      <body suppressHydrationWarning>
         <AOSLoader />
         {children}
       </body>

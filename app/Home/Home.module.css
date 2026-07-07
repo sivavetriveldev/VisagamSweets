@@ -396,8 +396,7 @@ body {
   font-family: "DM Sans", sans-serif;
   font-size: 14px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.04em;
 }
 
 .modalTitle {

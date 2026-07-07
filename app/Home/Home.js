@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import styles from "./Home.module.css";
 
 const productOptions = [
-  "Tirunelveli Halwa",
-  "Pure Ghee Halwa",
-  "Festival Packs",
+  "Halwa Bites",
+  "Iruttukadai Halwa - 100 Gm",
+  "Iruttukadai Halwa - 400 Gm",
 ];
 
 const initialForm = {
@@ -242,7 +242,7 @@ export default function Home() {
                   Cancel
                 </button>
                 <button type="submit" className={styles.primaryAction}>
-                  Send Request
+                  View Cart
                 </button>
               </div>
             </form>
