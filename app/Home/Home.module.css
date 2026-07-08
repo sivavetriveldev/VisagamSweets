@@ -19,16 +19,23 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 18px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
   background: #fbf8f3;
-  padding: 8px 24px;
+  padding: 8px 0px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.headerInner {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
 }
 
 .logoRow {
@@ -60,8 +67,9 @@ body {
 .navBar {
   display: flex;
   align-items: center;
-  /* justify-content: flex-end; */
-  padding-left :25%;
+  justify-content: flex-end;
+  margin-left: auto;
+  padding-left: 0;
   gap: 24px;
   flex: 1 1 auto;
   min-width: 0;
@@ -568,9 +576,10 @@ body {
   }
 
   .headerWrap {
-    justify-content: space-between;
-    align-items: center;
     padding: 10px 18px 10px 14px;
+  }
+
+  .headerInner {
     gap: 10px;
   }
 
@@ -703,11 +712,13 @@ body {
 @media (min-width: 769px) and (max-width: 900px) {
   .headerWrap {
     padding: 10px 14px;
-    gap: 10px;
   }
 
   .page {
     padding: 68px 0px 0px;
+  }
+  .headerInner {
+    gap: 10px;
   }
   .shopLogo {
     width: 175px;
@@ -715,8 +726,7 @@ body {
   }
 
   .navBar {
-    /* justify-content: flex-end; */
-    padding-left: 90px;
+    padding-left: 0;
     gap: 10px;
     font-size: 12px;
   }
@@ -764,8 +774,12 @@ body {
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
-  .headerWrap {
+  /* .headerWrap {
     padding: 10px 20px;
+  } */
+
+  .headerInner {
+    gap: 12px;
   }
 
   .shopLogo {
@@ -774,7 +788,7 @@ body {
   }
 
   .navBar {
-    padding-left: 10%;
+    padding-left: 0;
     gap: 18px;
     font-size: 15px;
   }
@@ -802,41 +816,6 @@ body {
 
   .heroTitle {
     white-space: normal;
-  }
-}
-
-@media (min-width: 1201px) and (max-width: 1366px) {
-  .headerWrap {
-    padding: 8px 18px;
-    gap: 12px;
-  }
-
-  .shopLogo {
-    width: 250px;
-    margin-left: 0;
-  }
-
-  .navBar {
-    padding-left: 20%;
-    gap: 16px;
-    font-size: 18px;
-    overflow: visible;
-  }
-
-  .orderBtn {
-    min-width: 120px;
-    font-size: 15px;
-    padding: 6px 10px;
-  }
-
-  .cartLink {
-    width: 24px;
-    height: 24px;
-  }
-
-  .navIcon {
-    width: 18px;
-    height: 18px;
   }
 }
 

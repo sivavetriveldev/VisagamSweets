@@ -4,8 +4,8 @@
     radial-gradient(circle at top center, rgba(232, 181, 74, 0.10) 0 18%, transparent 18%),
     linear-gradient(180deg, #fbf8f3 0%, #f8f1e5 100%); */
   /* padding: 18px 0 30px; */
-  scroll-margin-top: 110px;
-  padding: 52px 20px 42px;
+  /* scroll-margin-top: 110px; */
+  padding: 52px 0px 42px;
    background:
     linear-gradient(180deg, rgba(255, 250, 242, 0.98), rgba(249, 240, 226, 0.98)),
     #fcf8f2;
@@ -19,21 +19,20 @@
   color: #111;
 }
 
-.productsCard {
+/* .productsCard {
   position: relative;
-  /* right: 20px; */
+  right: 20px;
   margin: 0 auto;
   max-width: 1600px;
-
-  /* padding: 24px 28px 30px; */
-  /* background:
+  padding: 24px 28px 30px;
+  background:
     linear-gradient(180deg, rgba(255, 250, 242, 0.98), rgba(249, 240, 226, 0.98)),
-    #fcf8f2; */
-  /* border-top: 1px solid rgba(201, 143, 47, 0.18); */
-  /* border-bottom: 1px solid rgba(201, 143, 47, 0.18); */
-  /* box-shadow: 0 18px 36px rgba(88, 52, 24, 0.06); */
-  /* overflow: hidden; */
-}
+    #fcf8f2;
+  border-top: 1px solid rgba(201, 143, 47, 0.18);
+  border-bottom: 1px solid rgba(201, 143, 47, 0.18);
+  box-shadow: 0 18px 36px rgba(88, 52, 24, 0.06);
+  overflow: hidden;
+} */
 
 /* .productsCard::before {
   content: "";
@@ -50,7 +49,6 @@
   gap: 10px;
   width: fit-content;
   margin: 0 auto 10px;
-
   color: #e1a12d;
   font-size: 18px;
   font-weight: 700;

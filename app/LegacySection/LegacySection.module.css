@@ -1,7 +1,7 @@
 .legacySection {
   width: 100%;
   background: #EFE2D1;
-  padding: 52px 20px 42px;
+  padding: 52px 40px 42px;
 }
 
 .inner {
@@ -29,7 +29,7 @@
 .leftArt {
   justify-content: flex-start;
   position: relative;
-  right: -90px;
+  /* right: -90px; */
 }
 
 .rightImage {
@@ -38,7 +38,7 @@
 }
 
 .leftArt img {
-  width: min(100%, 420px);
+  width: 400px;
   height: auto;
   object-fit: contain;
   opacity: 0.72;
@@ -60,7 +60,7 @@
   justify-self: start;
   max-width: 460px;
   position: relative;
-  right: 30px;
+  right: 70px;
 }
 
 .tag {
@@ -96,8 +96,8 @@
 
 .desc {
   margin: 0 0 18px;
-  max-width: 360px;
-  font-family: "DM Sans", sans-serif;
+  /* max-width: 360px; */
+  /* font-family: "DM Sans", sans-serif; */
   color: #4d3a30;
   font-size: 18px;
   line-height: 1.7;

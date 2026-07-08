@@ -111,11 +111,12 @@
 
 .description {
   margin: 0 0 18px;
-  max-width: 390px;
-  font-family: "DM Sans", sans-serif;
+  /* max-width: 390px; */
+  /* font-family: "DM Sans", sans-serif; */
   font-size: 18px;
   line-height: 1.65;
   color: #4f443a;
+  text-align: justify;
 }
 
 .storyLink {

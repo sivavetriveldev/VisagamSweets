@@ -131,9 +131,37 @@
   color: #3a2a20;
 }
 
+.description {
+  margin: 0 0 10px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #5b4a41;
+  display: block;
+}
+
+.descriptionText {
+  display: inline;
+}
+
+.readMoreBtn {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 800;
+  color: #8a1f20;
+  text-decoration: underline;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: baseline;
+  margin-left: 2px;
+}
+
 .date {
   margin: 0;
-  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: #c98f2f;
@@ -240,6 +268,15 @@
     min-height: 0;
   }
 
+  .description {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .readMoreBtn {
+    font-size: 13px;
+  }
+
   .imageWrap {
     height: 180px;
   }
@@ -270,6 +307,15 @@
   .card {
     min-height: 0;
   }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .readMoreBtn {
+    font-size: 13px;
+  }
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
@@ -294,5 +340,10 @@
 
   .card {
     min-height: 0;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.45;
   }
 }
