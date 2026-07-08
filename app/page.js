@@ -20,7 +20,7 @@ export default function HomePage() {
       {/* <MakingSection /> */}
 
       <NewsSection />
-      {/* <Stip /> */}
+      <Stip />
       <NewFooter />
       <a
         href="https://wa.me/911234567890?text=Hello%20Iruttukadai%20Halwa"

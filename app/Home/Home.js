@@ -9,6 +9,17 @@ const productOptions = [
   "Iruttukadai Halwa - 400 Gm",
 ];
 
+const heroSlides = [
+  {
+    src: "/asset/iruttukadai-halwa.webp",
+    alt: "Iruttukadai Halwa",
+  },
+  {
+    src: "/asset/tirunelveli-iruttukadai-halwa.webp",
+    alt: "Tirunelveli Iruttukadai Halwa",
+  },
+];
+
 const initialForm = {
   name: "",
   phone: "",
@@ -22,6 +33,7 @@ export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState(initialForm);
   const [submitStatus, setSubmitStatus] = useState("");
+  const [activeHeroSlide, setActiveHeroSlide] = useState(0);
 
   useEffect(() => {
     if (!isOrderOpen) return undefined;
@@ -40,6 +52,14 @@ export default function Home() {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isOrderOpen]);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveHeroSlide((current) => (current + 1) % heroSlides.length);
+    }, 3500);
+
+    return () => window.clearInterval(interval);
+  }, []);
 
   const openOrderForm = (event) => {
     event.preventDefault();
@@ -124,35 +144,32 @@ export default function Home() {
 
       <section id="home" className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <div
-            className={styles.heroLeft}
-            data-aos="fade-right"
-            data-aos-duration="800"
-            data-aos-easing="ease-out-cubic"
-          >
-            <h1 className={styles.heroSmall}>The Original </h1>
-            <h1 className={styles.heroTitle}>Taste Of Tirunelveli</h1>
-            <p className={styles.heroDesc}>
-              Crafted with tradition, pure ingredients and cherished for generations.
-            </p>
-
-            <div className={styles.heroButtons}>
-              <button type="button" className={styles.primaryBtn}>
-                <img src="/asset/cart.svg" alt="" aria-hidden="true" className={styles.orderIcon} />
-                <span>Order Now</span>
-              </button>
-              <a href="#" className={styles.secondaryBtn}>
-                <img src="/asset/location.svg" alt="" aria-hidden="true" className={styles.orderIcon} />
-                <span>Visit Our Shop</span>
-              </a>
+          <div className={styles.heroRight}>
+            <div className={styles.heroCarousel} aria-label="Featured halwa images">
+              {heroSlides.map((slide, index) => (
+                <img
+                  key={slide.src}
+                  src={slide.src}
+                  alt={slide.alt}
+                  className={`${styles.heroSlide} ${index === activeHeroSlide ? styles.heroSlideActive : ""}`}
+                />
+              ))}
             </div>
-          </div>
 
-          {/* <div className={styles.heroRight}>
-            <img src="/asset/home-page-right.svg" alt="Iruttukadai Halwa" className={styles.heroImage} />
-          </div> */}
+            {/* <div className={styles.heroDots} role="tablist" aria-label="Hero image navigation">
+              {heroSlides.map((slide, index) => (
+                <button
+                  key={slide.src}
+                  type="button"
+                  className={`${styles.heroDot} ${index === activeHeroSlide ? styles.heroDotActive : ""}`}
+                  onClick={() => setActiveHeroSlide(index)}
+                  aria-label={`Show image ${index + 1}`}
+                  aria-pressed={index === activeHeroSlide}
+                />
+              ))}
+            </div> */}
+          </div>
         </div>
-        <img src="/asset/Homepage/banner.webp" alt="Halwa-image" className={styles.natureArt} />
       </section>
 
       {/* <div className={styles.bottomArt}></div> */}

@@ -8,7 +8,7 @@ const features = [
     title: "Personalized shop",
   },
   {
-    icon: "/asset/icon/cart.svg",
+    icon: "/asset/icon/card-payment.svg",
     title: "Card payments",
   },
   {
