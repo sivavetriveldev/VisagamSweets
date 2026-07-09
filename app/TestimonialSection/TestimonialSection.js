@@ -10,8 +10,8 @@ const testimonials = [
 
   },
   {
-    text: "Finally we got the famous Iruttukadai Halwa! The taste is really excellent and worth the hype. Fresh, soft, and melts in the mouth. Everything was good and the quality is maintained.but the shop opens only at 5:00 PM, and people start standing in line from 4:00 PM itself. There was a long queue and we had to wait for quite some time to get the halwa.Still, it is definitely worth the wait. Must try when you visit!.",
-    name: "Rj Venki",
+    text: "It's an excellent halwa ever I had. No more words it's an Amrutham...😍",
+    name: "Sairam Bodana",
    
   },
   {
@@ -50,9 +50,36 @@ export default function TestimonialSection() {
   const [isJumping, setIsJumping] = useState(false);
   const [slideWidth, setSlideWidth] = useState(0);
   const [viewportWidth, setViewportWidth] = useState(0);
+  const [expandedIndexes, setExpandedIndexes] = useState({});
 
   const visibleDots = testimonials.slice(0, 3);
   const activeDot = ((index % testimonials.length) % visibleDots.length + visibleDots.length) % visibleDots.length;
+
+  const getReviewPreview = (text, wordLimit = 40) => {
+    const words = text.trim().split(/\s+/);
+    if (words.length <= wordLimit) {
+      return {
+        preview: text,
+        isLong: false,
+      };
+    }
+
+    return {
+      preview: `${words.slice(0, wordLimit).join(" ")}...`,
+      isLong: true,
+    };
+  };
+
+  const toggleExpanded = (slideIndex) => {
+    setExpandedIndexes((current) => ({
+      ...current,
+      [slideIndex]: !current[slideIndex],
+    }));
+  };
+
+  const handleDotClick = (dotIndex) => {
+    setIndex(loopStart + dotIndex);
+  };
 
   useEffect(() => {
     const updateLayout = () => {
@@ -69,7 +96,7 @@ export default function TestimonialSection() {
       timerRef.current = window.setTimeout(() => {
         setIndex((current) => current + 1);
         startAutoplay();
-      }, 2400);
+      }, 3000);
     };
 
     startAutoplay();
@@ -138,11 +165,32 @@ export default function TestimonialSection() {
                       className={styles.centerImg}
                     />
                     <div className={styles.centerContent}>
-                      <p className={styles.text}>
-                        <span className={styles.quoteMark}>&ldquo;</span>
-                        {item.text}
-                        <span className={styles.quoteMark}>&rdquo;</span>
-                      </p>
+                      {(() => {
+                        const { preview, isLong } = getReviewPreview(item.text, 50);
+                        const isExpanded = expandedIndexes[slideIndex];
+                        const displayText = isExpanded ? item.text : preview;
+
+                        return (
+                          <>
+                            <p className={styles.text}>
+                              <span className={styles.quoteMark}>&ldquo;</span>
+                              {displayText}
+                              <span className={styles.quoteMark}>&rdquo;</span>
+                            </p>
+                            {isLong ? (
+                              <span className={styles.readMoreWrap}>
+                                <button
+                                  type="button"
+                                  className={styles.readMoreBtn}
+                                  onClick={() => toggleExpanded(slideIndex)}
+                                >
+                                  {isExpanded ? "Read less" : "Read more"}
+                                </button>
+                              </span>
+                            ) : null}
+                          </>
+                        );
+                      })()}
                       <div className={styles.starRow} aria-hidden="true">
                         <img src="/asset/Testimonial/star.svg" alt="" className={styles.starIcon} />
                         <img src="/asset/Testimonial/star.svg" alt="" className={styles.starIcon} />
@@ -170,6 +218,7 @@ export default function TestimonialSection() {
               className={dotIndex === activeDot ? styles.dotActive : styles.dot}
               aria-label={`Show testimonial ${dotIndex + 1}`}
               aria-pressed={dotIndex === activeDot}
+              onClick={() => handleDotClick(dotIndex)}
             />
           ))}
         </div>
