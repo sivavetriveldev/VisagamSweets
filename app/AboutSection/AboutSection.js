@@ -24,12 +24,13 @@ const stats = [
 
 export default function AboutSection() {
   const sectionRef = useRef(null);
+  const cardRef = useRef(null);
   const startedRef = useRef(false);
   const [countValues, setCountValues] = useState(stats.map(() => 0));
 
   useEffect(() => {
-    const section = sectionRef.current;
-    if (!section) return undefined;
+    const card = cardRef.current;
+    if (!card) return undefined;
 
     const animateCounts = () => {
       const duration = 1400;
@@ -57,10 +58,13 @@ export default function AboutSection() {
           animateCounts();
         }
       },
-      { threshold: 0.35 }
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -10% 0px",
+      }
     );
 
-    observer.observe(section);
+    observer.observe(card);
 
     return () => {
       observer.disconnect();
@@ -74,7 +78,7 @@ export default function AboutSection() {
 
   return (
     <section id="about" className={styles.aboutSection} ref={sectionRef}>
-      <div className={styles.aboutCard}>
+      <div className={styles.aboutCard} ref={cardRef}>
         <div
           className={styles.leftImageBox}
           data-aos="zoom-in-up"

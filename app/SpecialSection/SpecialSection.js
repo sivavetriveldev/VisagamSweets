@@ -25,7 +25,7 @@ const rightFeatures = [
     subtitle: ["Slow cooked with patience", "to build the perfect texture", "and a rich traditional finish."],
   },
   {
-    icon: "/asset/fresh.svg",
+    icon: "/asset/freshly-prepared.svg",
     title: "Freshly Prepared",
     subtitle: ["Prepared fresh in small batches", "so every serving stays bright", "soft, and full of flavor."],
   },
