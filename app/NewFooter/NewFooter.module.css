@@ -16,13 +16,19 @@
 }
 
 .footerContainer {
-  width: 90%;
+  width: min(100% - 96px, 1600px);
   max-width: 1600px;
   margin: 0 auto;
 }
 
 .bottomBar {
   padding: 0 26px 14px;
+}
+
+.policyRow {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 12px;
 }
 
 .bottomLine {
@@ -36,25 +42,29 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 18px;
   padding-top: 10px;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .designedBy {
   font-size: 16px;
   color: #5d1414;
   white-space: nowrap;
+  flex: 0 0 auto;
 }
 
 .policyLinks {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  flex-wrap: nowrap;
+  justify-content: center;
   gap: 8px;
   align-items: center;
   font-size: 15px;
   color: #5d1414;
+  flex: 0 1 auto;
+  white-space: nowrap;
 }
 
 .policyLinks a {
@@ -91,7 +101,7 @@
 .wrapper {
   position: relative;
   display: grid;
-  grid-template-columns: 1.15fr 0.02fr 0.85fr 0.02fr 1fr;
+  grid-template-columns: 1.05fr 0.02fr 0.95fr 0.02fr 1fr;
   align-items: start;
   gap: 0;
   /* min-height: 330px; */
@@ -239,8 +249,8 @@
   max-width: 300px;
   /* font-family: "DM Sans", sans-serif; */
   font-size: 16px;
-  line-height: 1.6;
-  color: #502f14;
+  line-height: 1.5;
+  color: #571117;
   font-weight: 400;
 }
 
@@ -432,6 +442,13 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    flex-wrap: nowrap;
+  }
+
+  .policyLinks {
+    white-space: nowrap;
+    overflow-x: auto;
+    max-width: 100%;
   }
 
   .policyLinks {
@@ -442,6 +459,10 @@
 
   .designedBy {
     font-size: 14px;
+  }
+
+  .policyRow {
+    padding-bottom: 10px;
   }
 }
 
@@ -476,7 +497,7 @@
 
 @media (min-width: 901px) and (max-width: 1200px) {
   .wrapper {
-    grid-template-columns: 1.05fr 0.02fr 0.9fr 0.02fr 0.95fr;
+    grid-template-columns: 1fr 0.02fr 0.95fr 0.02fr 0.95fr;
     padding: 30px 22px 44px;
   }
 

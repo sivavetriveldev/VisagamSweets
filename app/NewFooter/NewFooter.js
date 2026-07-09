@@ -12,19 +12,6 @@ export default function FooterSection() {
 
   return (
     <footer id="contact" className={styles.footerSection}>
-      {/* <img
-        src="/asset/Footer/designtopleft.svg"
-        alt=""
-        aria-hidden="true"
-        className={styles.cornerTopLeft}
-      />
-      <img
-        src="/asset/Footer/rightTop.svg"
-        alt=""
-        aria-hidden="true"
-        className={styles.cornerTopRight}
-      /> */}
-
       <div className={styles.footerContainer}>
         <div className={styles.wrapper}>
           <div className={styles.colLeft}>
@@ -64,12 +51,17 @@ export default function FooterSection() {
               </li>
               <li>
                 <a href="#about" className={styles.footerLink}>
-                  About Us
+                  About
                 </a>
               </li>
               <li>
                 <a href="#halwa" className={styles.footerLink}>
                   Halwa
+                </a>
+              </li>
+              <li>
+                <a href="#halwa" className={styles.footerLink}>
+                  Sweets & Savories
                 </a>
               </li>
               <li>
@@ -79,7 +71,7 @@ export default function FooterSection() {
               </li>
               <li>
                 <a href="#contact" className={styles.footerLink}>
-                  Contact Us
+                  Contact
                 </a>
               </li>
             </ul>
@@ -111,8 +103,6 @@ export default function FooterSection() {
                 </a>
               </li>
             </ul>
-
-            {/* <div className={styles.visitLine}></div> */}
           </div>
 
           <img
@@ -137,29 +127,28 @@ export default function FooterSection() {
         </div>
 
         <div className={styles.bottomBar}>
-          {/* <div className={styles.bottomLine} aria-hidden="true" /> */}
-          <div className={styles.bottomRow}>
-            <div className={styles.designedBy}>Designed by Xcodefix</div>
-
+          <div className={styles.policyRow}>
             <div className={styles.policyLinks}>
-              <a href="#">
-                Terms & Condition
-              </a>
+              <a href="#">Terms &amp; Condition</a>
               <span>|</span>
-              <a href="#">
-                Privacy Policy
-              </a>
+              <a href="#">Privacy Policy</a>
               <span>|</span>
-              <a href="#">
-                Cancellation Policy
-              </a>
+              <a href="#">Cancellation Policy</a>
               <span>|</span>
-              <a href="#">
-                Refund Policy
-              </a>
+              <a href="#">Refund Policy</a>
               <span>|</span>
-              <a href="#">
-                Pricing Policy
+              <a href="#">Pricing Policy</a>
+            </div>
+          </div>
+
+          <div className={styles.bottomRow}>
+            <div className={styles.designedBy}>
+              <p>© Copyright - 2026 IRUTTUKADAI HALWA. All rights reserved.</p>
+            </div>
+
+            <div className={styles.designedBy}>
+              <a href="https://www.xcodefix.com" target="_blank" rel="noopener noreferrer">
+                Website Design & SEO By Xcodefix
               </a>
             </div>
           </div>
