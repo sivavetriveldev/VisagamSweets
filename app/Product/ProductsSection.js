@@ -7,7 +7,7 @@ const products = [
   {
     title: "Halwa Bites",
     desc: "Our classic. Soft, rich and made with pure ghee.",
-    image: "/asset/Product-image/halwa-bytes.webp",
+    image: "/asset/Product-image/halwa-bites.webp",
     oldPrice: 300.00,
     price: 200.00,
   },
