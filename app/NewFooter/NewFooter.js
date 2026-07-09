@@ -64,7 +64,7 @@ export default function FooterSection() {
               </li>
               <li>
                 <a href="#about" className={styles.footerLink}>
-                  About Us
+                  About
                 </a>
               </li>
               <li>
@@ -79,7 +79,7 @@ export default function FooterSection() {
               </li>
               <li>
                 <a href="#contact" className={styles.footerLink}>
-                  Contact Us
+                  Contact
                 </a>
               </li>
             </ul>

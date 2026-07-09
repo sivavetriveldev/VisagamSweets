@@ -114,7 +114,7 @@ export default function Home() {
     <div className={styles.page}>
       <header className={styles.headerWrap}>
         <div className={styles.headerInner}>
-          <a href="#home" className={styles.logoRow} aria-label="Iruttukadai Halwa home">
+          <a href="/" className={styles.logoRow} aria-label="Iruttukadai Halwa home">
             <img
               src="/irutukadai-logo.png"
               alt="Iruttukadai Halwa"
@@ -154,27 +154,27 @@ export default function Home() {
           >
             <ul className={styles.navList}>
               <li>
-                <a href="#home" className={styles.navLink} onClick={closeMobileMenu}>
+                <a href="/" className={styles.navLink} onClick={closeMobileMenu}>
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className={styles.navLink} onClick={closeMobileMenu}>
+                <a href="#" className={styles.navLink} onClick={closeMobileMenu}>
                   About 
                 </a>
               </li>
               <li>
-                <a href="#halwa" className={styles.navLink} onClick={closeMobileMenu}>
+                <a href="#" className={styles.navLink} onClick={closeMobileMenu}>
                   Halwa
                 </a>
               </li>
               <li>
-                <a href="#news" className={styles.navLink} onClick={closeMobileMenu}>
+                <a href="#" className={styles.navLink} onClick={closeMobileMenu}>
                   News & Events
                 </a>
               </li>
               <li>
-                <a href="#contact" className={styles.navLink} onClick={closeMobileMenu}>
+                <a href="#" className={styles.navLink} onClick={closeMobileMenu}>
                   Contact 
                 </a>
               </li>

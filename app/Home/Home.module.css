@@ -109,7 +109,7 @@ body {
   justify-content: flex-end;
   flex: 0 0 auto;
   margin-left: 12px;
-  gap: 15px;
+  gap: 20px;
 }
 
 .mobileOrderItem {
@@ -616,7 +616,7 @@ body {
 
 @media (max-width: 768px) {
   .page {
-    padding: 76px 0px 0;
+    padding: 60px 0px 0;
   }
 
   .headerWrap {
