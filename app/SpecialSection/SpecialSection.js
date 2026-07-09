@@ -66,12 +66,7 @@ export default function SpecialSection() {
       <div className={styles.content}>
         <div className={styles.sectionHeader}>
           <p className={styles.tag}>
-            <img
-              src="/asset/heading-icon.svg"
-              alt=""
-              aria-hidden="true"
-              className={styles.tagIcon}
-            />
+          
             <span>Our Speciality</span>
           </p>
           <h2 className={styles.sectionTitle}>Crafted With Tradition And Care</h2>

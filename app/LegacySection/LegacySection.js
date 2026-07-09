@@ -9,10 +9,6 @@ export default function LegacySection() {
       data-aos-duration="1200"
     >
       <div className={styles.inner}>
-        <div className={styles.leftArt}>
-          <img src="asset/OurLegacy/Human.svg" alt="Traditional cooking art" />
-        </div>
-
         <div className={styles.centerText}>
           <p className={styles.tag}>
             <img
@@ -34,8 +30,13 @@ export default function LegacySection() {
           </a>
         </div>
 
-        <div className={styles.rightImage}>
-          <img src="/asset/visakam-sweets.webp" alt="Heritage shop" />
+        <div className={styles.rightImages}>
+          <div className={styles.rightImage}>
+            <img src="/asset/visakam-sweets.webp" alt="Heritage shop" />
+          </div>
+          <div className={styles.rightImage}>
+            <img src="/asset/visakam-sweets.webp" alt="Heritage shop" />
+          </div>
         </div>
       </div>
     </section>
