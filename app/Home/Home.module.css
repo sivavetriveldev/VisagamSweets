@@ -60,7 +60,7 @@ body {
 
 .shopLogo {
   width: 280px;
-  height: auto;
+  height: 76px;
   object-fit: contain;
   display: block;
   flex-shrink: 0;

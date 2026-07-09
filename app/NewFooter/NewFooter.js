@@ -33,7 +33,7 @@ export default function FooterSection() {
             </div>
 
             <p className={styles.tagline}>
-              The Original Taste Of Tirunelveli Since Generations.
+              The original taste of tirunelveli since generations.
             </p>
 
             <div className={styles.socialRow}>
