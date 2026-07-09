@@ -102,6 +102,9 @@ export default function NewsSection() {
           ))}
         </div>
 
+        <a href="#" className={styles.mobileViewAllBtn}>
+          View All
+        </a>
       </div>
     </section>
   );
