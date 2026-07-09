@@ -34,7 +34,7 @@
 
 .rightImage img {
   width: min(100%, 320px);
-  height: auto;
+  height: 360px;
   object-fit: cover;
   border-radius: 26px 26px 12px 12px;
   border: 4px solid #d9b06a;
@@ -130,6 +130,7 @@
 
   .rightImage img {
     width: min(100%, 260px);
+    height: 300px;
   }
 
   .centerText {
@@ -189,6 +190,7 @@
 
   .rightImage img {
     width: min(100%, 220px);
+    height: 260px;
   }
 
   .centerText {
@@ -239,6 +241,7 @@
 
   .rightImage img {
     width: min(100%, 280px);
+    height: 330px;
   }
 
   .centerText {

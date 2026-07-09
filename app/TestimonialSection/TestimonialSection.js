@@ -5,34 +5,34 @@ import styles from "./TestimonialSection.module.css";
 
 const testimonials = [
   {
-    text: "ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    name: "Ramesh, Chennai",
-    role: "Customer",
+    text: "Worth for your money..amzing taste and fresh...",
+    name: "Selvam R",
+
   },
   {
-    text: "ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    name: "Meenakshi, Madurai",
-    role: "Customer",
+    text: "Finally we got the famous Iruttukadai Halwa! The taste is really excellent and worth the hype. Fresh, soft, and melts in the mouth. Everything was good and the quality is maintained.but the shop opens only at 5:00 PM, and people start standing in line from 4:00 PM itself. There was a long queue and we had to wait for quite some time to get the halwa.Still, it is definitely worth the wait. Must try when you visit!.",
+    name: "Rj Venki",
+   
   },
   {
-    text: "ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    name: "Arvind, Coimbatore",
-    role: "Customer",
+    text: "A small shop😊 but we loved. We are from Kerala and travelled to Tirunelveli to visit this shop and eat halwa in vazha ila ( banana leaf ). We ate lot of halwa in vazha ilai and purchased nearly 7 kg halwa.. Superb 😍",
+    name: "Suja Sunny, Kerala",
+ 
   },
    {
-    text: "ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    name: "Rameshhhhh, Chennai",
-    role: "Customer",
+    text: "The taste remains authentic compared to traditional Halwas and one of the best Halwas and always crowded. They deliver very quickly upon mentioning the requirements.",
+    name: "Lakshmipathy R",
+   
   },
   {
-    text: "ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    name: "Meenakshiiiiii, Madurai",
-    role: "Customer",
+    text: "I got an opportunity to taste this famous Halwa after darshan from temple. I like this taste and price. Packaging is fine. Overall good quality and great taste. I Appreciate the effort of this shop.",
+    name: "SaravanaKumar Kanagaraj",
+    
   },
   {
-    text: "ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    name: "Arvinddddd, Coimbatore",
-    role: "Customer",
+    text: "Special Halwa & very good taste. I have never had such delicious halwa",
+    name: "Vinodkumar",
+  
   },
 ];
 
