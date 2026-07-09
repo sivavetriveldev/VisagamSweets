@@ -133,6 +133,7 @@
 
   .rightImage img {
     width: min(100%, 260px);
+    height: 300px;
   }
 
   .centerText {
@@ -193,6 +194,7 @@
 
   .rightImage img {
     width: min(100%, 220px);
+    height: 260px;
   }
 
   .centerText {
@@ -244,6 +246,7 @@
 
   .rightImage img {
     width: min(100%, 280px);
+    height: 330px;
   }
 
   .centerText {
