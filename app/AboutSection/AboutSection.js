@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import styles from "./AboutSection.module.css";
+import ProductsSection from "../Product/ProductsSection";
 
 const stats = [
   {
@@ -100,7 +101,6 @@ export default function AboutSection() {
           </p>
           <h3 className={styles.heading}>
             A Heritage Sweet
-            <br />
             Since Generations
           </h3>
           <p className={styles.description}>
@@ -130,6 +130,9 @@ export default function AboutSection() {
             </div>
           ))}
         </div>
+      </div>
+      <div className={styles.productsWrap}>
+        <ProductsSection />
       </div>
     </section>
   );

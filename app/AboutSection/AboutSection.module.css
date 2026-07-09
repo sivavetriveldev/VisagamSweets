@@ -2,7 +2,11 @@
   width: 100%;
   /* padding: 18px 18px 28px; */
   background: #faf3e8;
-  scroll-margin-top: 110px;
+  max-width: 1600px;
+}
+
+.productsWrap {
+  width: 100%;
 }
 
 .aboutCard {
@@ -11,7 +15,7 @@
   gap: 26px;
   align-items: center;
   min-height: 320px;
-  padding: 46px 20px 20px;
+  padding: 32px 20px 26px;
   background:
     linear-gradient(180deg, rgba(255, 248, 235, 0.88), rgba(255, 247, 234, 0.96)),
     #faf3e8;
@@ -76,16 +80,15 @@
 }
 
 .centerContent {
-  padding: 6px 6px 6px 0;
+  padding: 0 6px 0 0;
 }
 
 .tag {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin: 0 0 10px;
+  /* margin: 0 0 10px; */
   color: #e1a12d;
-  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -100,21 +103,20 @@
 }
 
 .heading {
-  margin: 0 0 16px;
-  font-family: "Lora", serif;
+  margin: 0 0 8px;
   font-size: 34px;
-  line-height: 1.08;
+  line-height: 1.5;
   color: #7e2f25;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
 
 .description {
-  margin: 0 0 18px;
+  margin: 0 0 12px;
   /* max-width: 390px; */
-  /* font-family: "DM Sans", sans-serif; */
   font-size: 18px;
-  line-height: 1.65;
+  font-weight: 400;
+  line-height: 1.5;
   color: #4f443a;
   text-align: justify;
 }
@@ -125,7 +127,6 @@
   gap: 10px;
   text-decoration: none;
   color: #8f3c2a;
-  font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.02em;
@@ -175,19 +176,17 @@
 
 .statNumber {
   margin: 0;
-  font-family: "Lora", serif;
   font-size: 27px;
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.5;
   color: #7e2f25;
 }
 
 .statText {
   margin: 0;
-  font-family: "DM Sans", sans-serif;
   font-size: 18px;
-  color: #5c4d42;
-  line-height: 1.35;
+  color: #4f443a;
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
@@ -199,7 +198,7 @@
     grid-template-columns: 1fr;
     gap: 18px;
     min-height: auto;
-    padding: 18px 14px 20px;
+    padding: 16px 14px 18px;
     justify-items: center;
     text-align: center;
   }
@@ -220,14 +219,14 @@
 
   .heading {
     font-size: 28px;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
   }
 
   .description {
     max-width: 100%;
     font-size: 16px;
-    line-height: 1.55;
-    margin-bottom: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
   }
 
   .storyLink {
@@ -271,7 +270,7 @@
     grid-template-columns: 1fr;
     gap: 20px;
     min-height: auto;
-    padding: 20px 18px 22px;
+    padding: 18px 18px 20px;
     justify-items: center;
     text-align: center;
   }
@@ -327,7 +326,7 @@
   .aboutCard {
     grid-template-columns: 0.95fr 1.05fr 0.95fr;
     gap: 18px;
-    padding: 18px 16px 20px;
+    padding: 16px 16px 18px;
   }
 
   .leftImageBox {

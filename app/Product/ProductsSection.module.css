@@ -5,7 +5,7 @@
     linear-gradient(180deg, #fbf8f3 0%, #f8f1e5 100%); */
   /* padding: 18px 0 30px; */
   /* scroll-margin-top: 110px; */
-  padding: 52px 0px 42px;
+  padding: 40px 40px;
    background:
     linear-gradient(180deg, rgba(255, 250, 242, 0.98), rgba(249, 240, 226, 0.98)),
     #fcf8f2;
@@ -13,7 +13,6 @@
 
 .sectionTitle {
   margin: 0 0 14px;
-  font-family: "Georgia", "Times New Roman", serif;
   font-size: 28px;
   font-weight: 800;
   color: #111;
@@ -69,7 +68,6 @@
   position: relative;
   margin: 0 0 28px;
   text-align: center;
-  font-family: "Georgia", "Times New Roman", serif;
   font-size: 32px;
   color: #7b2d26;
   letter-spacing: 0.04em;
@@ -80,10 +78,9 @@
   margin: 0 auto 28px;
   max-width: 720px;
   text-align: center;
-  font-family: "DM Sans", sans-serif;
   font-size: 18px;
-  line-height: 1.55;
-  color: #6f5a4d;
+  line-height: 1.5;
+  color: #4f443a;
 }
 
 /* .collectionTitle::after {
@@ -214,9 +211,8 @@
 
 .productTitle {
   margin: 0 0 10px;
-  font-family: "Georgia", "Times New Roman", serif;
   font-size: 21px;
-  line-height: 1.15;
+  line-height: 1.5;
   color: #7b2d26;
   font-weight: 800;
   letter-spacing: 0.02em;
@@ -250,7 +246,6 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: rgba(95, 35, 15, 0.58);
@@ -268,7 +263,6 @@
 }
 
 .priceLabel {
-  font-family: "DM Sans", sans-serif;
   font-size: 11px;
   font-weight: 700;
   color: #a5741d;
@@ -276,11 +270,10 @@
 }
 
 .priceValue {
-  font-family: "DM Sans", sans-serif;
   font-size: 20px;
   font-weight: 800;
   color: #5f230f;
-  line-height: 1;
+  line-height: 1.5;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -296,9 +289,8 @@
 .productDesc {
   margin: 0 auto 18px;
   max-width: 250px;
-  font-family: "DM Sans", sans-serif;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #555;
 }
 
@@ -325,7 +317,6 @@
 }
 
 .metaLabel {
-  font-family: "DM Sans", sans-serif;
   font-size: 11px;
   font-weight: 700;
   color: #a5741d;
@@ -355,7 +346,7 @@
   color: #6b260f;
   font-size: 18px;
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.5;
   cursor: pointer;
   box-shadow: 0 6px 12px rgba(145, 90, 25, 0.12);
   display: inline-flex;
@@ -377,7 +368,6 @@
 .qtyValue {
   min-width: 18px;
   text-align: center;
-  font-family: "Georgia", "Times New Roman", serif;
   font-size: 17px;
   font-weight: 800;
   color: #7b2d26;
@@ -401,7 +391,6 @@
   padding: 11px 18px;
   border-radius: 999px;
   text-decoration: none;
-  font-family: "Georgia", "Times New Roman", serif;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.02em;

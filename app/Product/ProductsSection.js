@@ -175,7 +175,7 @@ export default function ProductsSection() {
                   <a href="#" className={styles.viewBtn}>
                     View
                   </a>
-                </div>
+        </div>
               </div>
             </div>
           ))}
