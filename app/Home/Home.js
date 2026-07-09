@@ -104,7 +104,7 @@ export default function Home() {
       <header className={styles.headerWrap}>
         <div className={styles.headerInner}>
           <a href="#home" className={styles.logoRow} aria-label="Iruttukadai Halwa home">
-            <img src="/irutukadai-logo.png" alt="Iruttukadai Halwa" className={styles.shopLogo} />
+            <img src="/irutukadai-logo.png" alt="Iruttukadai Halwa" title="Iruttukadai Halwa" width="280" height="76" loading="lazy" className={styles.shopLogo} />
           </a>
 
           <button
