@@ -49,12 +49,16 @@
   }
 
   .grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 12px;
   }
 
   .icon {
     width: 48px;
     height: 48px;
+  }
+
+  .title {
+    font-size: 16px;
   }
 }

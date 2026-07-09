@@ -1,5 +1,6 @@
 import Home from "./Home/Home";
 import AboutSection from "./AboutSection/AboutSection";
+import ProductsSection from "./Product/ProductsSection";
 import SpecialSection from "./SpecialSection/SpecialSection";
 import MakingSection from "./MakingSection/MakingSection";
 import LegacySection from "./LegacySection/LegacySection";
@@ -13,6 +14,7 @@ export default function HomePage() {
     <div id="top">
       <Home />
       <AboutSection />
+      <ProductsSection />
       <SpecialSection />
       <TestimonialSection />
       <LegacySection />

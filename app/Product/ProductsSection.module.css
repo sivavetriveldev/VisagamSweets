@@ -26,7 +26,7 @@
 
 .productsCard {
   position: relative;
-  padding: 30px 28px 30px;
+  padding: 4.5rem 0 4.5rem;
   background:
     linear-gradient(180deg, rgba(255, 250, 242, 0.98), rgba(249, 240, 226, 0.98)),
     #fcf8f2;
@@ -443,9 +443,9 @@
 }
 
 @media (min-width: 1201px) and (max-width: 1366px) {
-  .productsCard {
+  /* .productsCard {
     padding: 22px 18px 26px;
-  }
+  } */
 
   .productItem {
     max-width: 360px;
