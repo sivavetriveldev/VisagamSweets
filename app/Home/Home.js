@@ -56,7 +56,7 @@ export default function Home() {
   useEffect(() => {
     const interval = window.setInterval(() => {
       setActiveHeroSlide((current) => (current + 1) % heroSlides.length);
-    }, 3500);
+    }, 7500);
 
     return () => window.clearInterval(interval);
   }, []);
@@ -94,13 +94,18 @@ export default function Home() {
     setSubmitStatus("Your order request is ready. We will contact you soon.");
   };
 
+  const iconButtonProps = {
+    type: "button",
+    className: styles.iconBtn,
+  };
+
   return (
     <div className={styles.page}>
-      <div className={styles.headerWrap}>
+      <header className={styles.headerWrap}>
         <div className={styles.headerInner}>
-          <div className={styles.logoRow}>
-            <img src="/irutukadai-logo.png" alt="Shop Logo" className={styles.shopLogo} />
-          </div>
+          <a href="#home" className={styles.logoRow} aria-label="Iruttukadai Halwa home">
+            <img src="/irutukadai-logo.png" alt="Iruttukadai Halwa" className={styles.shopLogo} />
+          </a>
 
           <button
             type="button"
@@ -117,30 +122,93 @@ export default function Home() {
             />
           </button>
 
-          <div className={`${styles.navBar} ${isMobileMenuOpen ? styles.navBarOpen : ""}`}>
-            <a href="#home" className={styles.navLink} onClick={closeMobileMenu}>Home</a>
-            <a href="#about" className={styles.navLink} onClick={closeMobileMenu}>About Us</a>
-            <a href="#halwa" className={styles.navLink} onClick={closeMobileMenu}>Halwa</a>
-            <a href="#news" className={styles.navLink} onClick={closeMobileMenu}>News & Events</a>
-            <a href="#contact" className={styles.navLink} onClick={closeMobileMenu}>Contact Us</a>
+          <nav
+            className={`${styles.navBar} ${isMobileMenuOpen ? styles.navBarOpen : ""}`}
+            aria-label="Primary"
+          >
+            <ul className={styles.navList}>
+              <li>
+                <a href="#home" className={styles.navLink} onClick={closeMobileMenu}>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#about" className={styles.navLink} onClick={closeMobileMenu}>
+                  About 
+                </a>
+              </li>
+              <li>
+                <a href="#halwa" className={styles.navLink} onClick={closeMobileMenu}>
+                  Halwa
+                </a>
+              </li>
+              <li>
+                <a href="#news" className={styles.navLink} onClick={closeMobileMenu}>
+                  News & Events
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className={styles.navLink} onClick={closeMobileMenu}>
+                  Contact 
+                </a>
+              </li>
+         
+          
+            </ul>
+          </nav>
+
+          <div className={styles.headerActions}>
+            <button
+              {...iconButtonProps}
+              aria-label="Search"
+              onClick={() => {
+                closeMobileMenu();
+              }}
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" className={styles.actionIcon}>
+                <path
+                  d="M10.5 4a6.5 6.5 0 1 0 4.12 11.53l4.43 4.44 1.41-1.41-4.44-4.43A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+{/* 
+            <button
+              {...iconButtonProps}
+              aria-label="Account"
+              onClick={() => {
+                closeMobileMenu();
+              }}
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" className={styles.actionIcon}>
+                <path
+                  d="M12 12a4.5 4.5 0 1 0-4.5-4.5A4.5 4.5 0 0 0 12 12Zm0 2c-3.87 0-7 2.24-7 5v1h14v-1c0-2.76-3.13-5-7-5Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button> */}
+
             <a
               href="#"
-              className={styles.cartLink}
+              className={styles.iconLink}
               aria-label="Cart"
               onClick={(event) => {
                 event.preventDefault();
                 closeMobileMenu();
               }}
             >
+              <span className={styles.cartCount} aria-hidden="true">
+                0
+              </span>
               <img src="/asset/cart.svg" alt="" aria-hidden="true" className={styles.navIcon} />
             </a>
+
             <button type="button" className={styles.orderBtn} onClick={openOrderForm}>
-              <img src="/asset/bag.svg" alt="" aria-hidden="true" className={styles.orderIcon} />
               <span>Order Online</span>
             </button>
           </div>
         </div>
-      </div>
+      </header>
 
       <section id="home" className={styles.heroSection}>
         <div className={styles.heroContent}>
@@ -154,20 +222,19 @@ export default function Home() {
                   className={`${styles.heroSlide} ${index === activeHeroSlide ? styles.heroSlideActive : ""}`}
                 />
               ))}
+              <div className={styles.heroDots} role="tablist" aria-label="Hero image navigation">
+                {heroSlides.map((slide, index) => (
+                  <button
+                    key={slide.src}
+                    type="button"
+                    className={`${styles.heroDot} ${index === activeHeroSlide ? styles.heroDotActive : ""}`}
+                    onClick={() => setActiveHeroSlide(index)}
+                    aria-label={`Show image ${index + 1}`}
+                    aria-pressed={index === activeHeroSlide}
+                  />
+                ))}
+              </div>
             </div>
-
-            {/* <div className={styles.heroDots} role="tablist" aria-label="Hero image navigation">
-              {heroSlides.map((slide, index) => (
-                <button
-                  key={slide.src}
-                  type="button"
-                  className={`${styles.heroDot} ${index === activeHeroSlide ? styles.heroDotActive : ""}`}
-                  onClick={() => setActiveHeroSlide(index)}
-                  aria-label={`Show image ${index + 1}`}
-                  aria-pressed={index === activeHeroSlide}
-                />
-              ))}
-            </div> */}
           </div>
         </div>
       </section>
