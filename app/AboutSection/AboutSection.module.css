@@ -160,7 +160,7 @@
   height: 48px;
   object-fit: contain;
   pointer-events: auto;
-  cursor: pointer;
+  /* cursor: pointer; */
   transform-origin: center;
 }
 

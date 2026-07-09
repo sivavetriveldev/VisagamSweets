@@ -153,7 +153,7 @@
   font-size: 14px;
   font-weight: 800;
   color: #8a1f20;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   white-space: nowrap;
   cursor: pointer;
   vertical-align: baseline;
