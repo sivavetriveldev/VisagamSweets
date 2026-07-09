@@ -73,6 +73,12 @@ export default function FooterSection() {
                 </a>
               </li>
               <li>
+                <a href="#halwa" className={styles.footerLink}>
+                  Sweets & Savories
+                </a>
+              </li>
+              
+              <li>
                 <a href="#news" className={styles.footerLink}>
                   News & Events
                 </a>

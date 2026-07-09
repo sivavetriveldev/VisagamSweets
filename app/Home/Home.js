@@ -170,6 +170,11 @@ export default function Home() {
               </li>
               <li>
                 <a href="#" className={styles.navLink} onClick={closeMobileMenu}>
+                  Sweets & Savories
+                </a>
+              </li>
+              <li>
+                <a href="#" className={styles.navLink} onClick={closeMobileMenu}>
                   News & Events
                 </a>
               </li>

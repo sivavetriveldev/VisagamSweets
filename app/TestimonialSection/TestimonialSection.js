@@ -10,12 +10,12 @@ const testimonials = [
 
   },
   {
-    text: "It's an excellent halwa ever I had. No more words it's an Amrutham...😍",
+    text: "It's an excellent halwa ever I had. No more words it's an Amrutham.",
     name: "Sairam Bodana",
    
   },
   {
-    text: "A small shop😊 but we loved. We are from Kerala and travelled to Tirunelveli to visit this shop and eat halwa in vazha ila ( banana leaf ). We ate lot of halwa in vazha ilai and purchased nearly 7 kg halwa.. Superb 😍",
+    text: "A small shop but we loved. We are from Kerala and travelled to Tirunelveli to visit this shop and eat halwa in vazha ila ( banana leaf ). We ate lot of halwa in vazha ilai and purchased nearly 7 kg halwa.. Superb ",
     name: "Suja Sunny, Kerala",
  
   },
