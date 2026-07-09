@@ -584,9 +584,9 @@
 }
 
 @media (max-width: 768px) {
-  .productsSection {
+  /* .productsSection {
     padding: 16px 0px 24px;
-  }
+  } */
 
   .productsCard {
     padding: 18px 14px 22px;
@@ -656,8 +656,8 @@
   }
 
   .productItem {
-    padding: 16px 14px 18px;
-    max-width: none;
+    padding: 16px 0px 18px;
+    max-width: 400px;
     width: 100%;
     height: auto;
   }
@@ -670,8 +670,8 @@
   }
 
   .imageWrap {
-    width: 190px;
-    height: 190px;
+    width: 290px;
+    height: 290px;
   }
 
   .productDesc {
