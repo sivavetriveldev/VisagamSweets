@@ -26,7 +26,7 @@ export default function LegacySection() {
             methods, every piece carries a story of taste and trust.
           </p>
           <a href="#" className={styles.link}>
-            Our Story
+            Shop Now
           </a>
         </div>
 

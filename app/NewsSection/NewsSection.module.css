@@ -195,6 +195,10 @@
   right: 110px;
 }
 
+.mobileViewAllBtn {
+  display: none;
+}
+
 .viewAllBtn:hover {
   background-position: right center;
   color: #fff;
@@ -260,11 +264,33 @@
   }
 
   .viewAllBtn {
-    justify-self: start;
-    margin-top: 0;
-    right: 0;
+    display: none;
+  }
+
+  .mobileViewAllBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     min-width: 110px;
+    padding: 10px 12px;
+    margin: 0 0 16px;
+    background-image: linear-gradient(45deg, #8a1f20 0%, #6e1416 51%, #8a1f20 100%);
+    background-size: 200% auto;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 0;
+    font-family: "DM Sans", sans-serif;
     font-size: 15px;
+    font-weight: 800;
+    box-shadow: 0px 0px 14px -7px #f09819;
+    transition: 0.5s;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: fit-content;
+    align-self: flex-start;
   }
 
   .card {

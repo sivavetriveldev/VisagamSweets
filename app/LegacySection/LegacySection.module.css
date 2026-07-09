@@ -118,9 +118,9 @@
 }
 
 @media (max-width: 768px) {
-  .legacySection {
-    padding: 34px 14px 28px;
-  }
+  /* .legacySection {
+    padding: 34px 0px 28px;
+  } */
 
   .inner {
     width: 100%;

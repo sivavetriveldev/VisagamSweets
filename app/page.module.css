@@ -18,6 +18,38 @@
   background-color: var(--background);
 }
 
+.floatingContacts {
+  position: fixed;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 2000;
+}
+
+.floatingContactLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.floatingContactIcon {
+  width: 50px;
+  height: 50px;
+  display: block;
+  object-fit: contain;
+}
+
+.phoneContactLink {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
 .main {
   display: flex;
   flex: 1;
@@ -121,6 +153,15 @@ a.secondary {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: -1.92px;
+  }
+
+  .phoneContactLink {
+    display: inline-flex;
+  }
+
+  .floatingContactIcon {
+    width: 50px;
+    height: 50px;
   }
 }
 
