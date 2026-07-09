@@ -15,6 +15,11 @@ h5,
 h6 {
   font-family: "Lora", serif !important;
   text-transform: capitalize;
+  line-height: 1.5;
+  color: #7e2f25;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 34px;
 }
 
 p,
@@ -26,4 +31,8 @@ input,
 textarea,
 select {
   font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #4f443a;
 }
