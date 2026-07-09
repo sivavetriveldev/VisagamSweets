@@ -679,8 +679,16 @@
   }
 
   .metaRow {
-    grid-template-columns: 1fr;
-    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .priceBlock {
+    align-items: flex-start;
+    flex: 1 1 auto;
   }
 
   .priceRow {
@@ -688,7 +696,8 @@
   }
 
   .qtyBlock {
-    align-items: flex-start;
+    align-items: flex-end;
+    flex: 0 0 auto;
   }
 
   .addToCartBtn,

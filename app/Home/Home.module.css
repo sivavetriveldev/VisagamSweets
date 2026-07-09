@@ -67,6 +67,15 @@ body {
   margin-left: -8px;
 }
 
+.mobileLogo {
+  display: none;
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-left: -8px;
+}
+
 .navBar {
   display: flex;
   align-items: center;
@@ -322,6 +331,10 @@ body {
     radial-gradient(circle at center, rgba(255, 245, 230, 0.78), rgba(255, 245, 230, 0.08)),
     #f5ead8; */
   box-shadow: 0 24px 50px rgba(95, 44, 34, 0.14);
+}
+
+.mobileHeroCarousel {
+  display: none;
 }
 
 .heroSlide {
@@ -623,6 +636,16 @@ body {
     margin-left: 0;
   }
 
+  .mobileLogo {
+    display: block;
+    width: 140px;
+    margin-left: 0;
+  }
+
+  .shopLogo {
+    display: none;
+  }
+
   .menuBtn {
     display: inline-flex;
     align-items: center;
@@ -734,14 +757,14 @@ body {
   }
 
   .heroSection {
-    min-height: 420px;
+    min-height: 380px;
   }
 
   .heroContent {
     grid-template-columns: 1fr;
     gap: 0;
     min-height: auto;
-    padding: 14px 14px 22px;
+    /* padding: 14px 14px 22px; */
   }
 
   .heroRight {
@@ -750,9 +773,16 @@ body {
   }
 
   .heroCarousel {
-    width: 100%;
-    min-height: 300px;
-    border-radius: 22px;
+    width: 412px;
+    height: 570px;
+  }
+
+  .desktopHeroCarousel {
+    display: none;
+  }
+
+  .mobileHeroCarousel {
+    display: block;
   }
 
   .heroDots {
@@ -774,6 +804,16 @@ body {
   .shopLogo {
     width: 175px;
     margin-left: 0;
+  }
+
+  .mobileLogo {
+    display: block;
+    width: 150px;
+    margin-left: 0;
+  }
+
+  .shopLogo {
+    display: none;
   }
 
   .navBar {
@@ -821,7 +861,15 @@ body {
 
   .heroCarousel {
     width: 100%;
-    min-height: 340px;
+    min-height: 380px;
+  }
+
+  .desktopHeroCarousel {
+    display: block;
+  }
+
+  .mobileHeroCarousel {
+    display: none;
   }
 }
 
@@ -837,6 +885,10 @@ body {
   .shopLogo {
     width: 240px;
     margin-left: 0;
+  }
+
+  .mobileLogo {
+    display: none;
   }
 
   .navBar {
@@ -863,7 +915,15 @@ body {
 
   .heroCarousel {
     width: 100%;
-    min-height: 380px;
+    min-height: 400px;
+  }
+
+  .desktopHeroCarousel {
+    display: block;
+  }
+
+  .mobileHeroCarousel {
+    display: none;
   }
 }
 

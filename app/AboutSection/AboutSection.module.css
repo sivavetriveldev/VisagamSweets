@@ -195,21 +195,24 @@
   } */
 
   .aboutCard {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 18px;
     min-height: auto;
     padding: 16px 14px 18px;
-    justify-items: center;
     text-align: center;
-  }
-
-  .leftImageBox {
-    width: min(100%, 320px);
-    height: 320px;
+    align-items: center;
   }
 
   .centerContent {
+    order: 1;
     padding: 0;
+  }
+
+  .leftImageBox {
+    order: 2;
+    width: min(100%, 320px);
+    height: 320px;
   }
 
   .tag {
@@ -234,6 +237,7 @@
   }
 
   .rightStats {
+    order: 3;
     width: 100%;
     padding-left: 0;
     border-left: 0;

@@ -20,6 +20,17 @@ const heroSlides = [
   },
 ];
 
+const mobileHeroSlides = [
+  {
+    src: "/asset/mobile-image/iruttukadai-halwa-1.webp",
+    alt: "Iruttukadai Halwa Mobile Banner 1",
+  },
+  {
+    src: "/asset/mobile-image/iruttukadai-halwa-2.webp",
+    alt: "Iruttukadai Halwa Mobile Banner 2",
+  },
+];
+
 const initialForm = {
   name: "",
   phone: "",
@@ -104,7 +115,22 @@ export default function Home() {
       <header className={styles.headerWrap}>
         <div className={styles.headerInner}>
           <a href="#home" className={styles.logoRow} aria-label="Iruttukadai Halwa home">
-            <img src="/irutukadai-logo.png" alt="Iruttukadai Halwa" title="Iruttukadai Halwa" width="280" height="76" loading="lazy" className={styles.shopLogo} />
+            <img
+              src="/irutukadai-logo.png"
+              alt="Iruttukadai Halwa"
+              title="Iruttukadai Halwa"
+              width="280"
+              height="76"
+              loading="lazy"
+              className={styles.shopLogo}
+            />
+            <img
+              src="/asset/mobile-image/mobile-logo.webp"
+              alt="Iruttukadai Halwa"
+              title="Iruttukadai Halwa"
+              loading="lazy"
+              className={styles.mobileLogo}
+            />
           </a>
 
           <button
@@ -213,7 +239,10 @@ export default function Home() {
       <section id="home" className={styles.heroSection}>
         <div className={styles.heroContent}>
           <div className={styles.heroRight}>
-            <div className={styles.heroCarousel} aria-label="Featured halwa images">
+            <div
+              className={`${styles.heroCarousel} ${styles.desktopHeroCarousel}`}
+              aria-label="Featured halwa images"
+            >
               {heroSlides.map((slide, index) => (
                 <img
                   key={slide.src}
@@ -224,6 +253,32 @@ export default function Home() {
               ))}
               <div className={styles.heroDots} role="tablist" aria-label="Hero image navigation">
                 {heroSlides.map((slide, index) => (
+                  <button
+                    key={slide.src}
+                    type="button"
+                    className={`${styles.heroDot} ${index === activeHeroSlide ? styles.heroDotActive : ""}`}
+                    onClick={() => setActiveHeroSlide(index)}
+                    aria-label={`Show image ${index + 1}`}
+                    aria-pressed={index === activeHeroSlide}
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div
+              className={`${styles.heroCarousel} ${styles.mobileHeroCarousel}`}
+              aria-label="Featured halwa images"
+            >
+              {mobileHeroSlides.map((slide, index) => (
+                <img
+                  key={slide.src}
+                  src={slide.src}
+                  alt={slide.alt}
+                  className={`${styles.heroSlide} ${index === activeHeroSlide ? styles.heroSlideActive : ""}`}
+                />
+              ))}
+              <div className={styles.heroDots} role="tablist" aria-label="Hero image navigation">
+                {mobileHeroSlides.map((slide, index) => (
                   <button
                     key={slide.src}
                     type="button"
