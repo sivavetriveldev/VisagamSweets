@@ -21,7 +21,7 @@ export default function HomePage() {
       <Stip />
       <NewFooter />
       <a
-        href="https://wa.me/911234567890?text=Hello%20Iruttukadai%20Halwa"
+        href="https://wa.me/919629753355?text=Hello%20Iruttukadai%20Halwa"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"

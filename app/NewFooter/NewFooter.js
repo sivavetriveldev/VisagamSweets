@@ -89,13 +89,28 @@ export default function FooterSection() {
 
           <div className={styles.colRight}>
             <h3 className={styles.colTitle}>Visit Us</h3>
-            <p className={styles.info}>
-              Iruttukadai Halwa Shop
-              <br />
-              Tirunelveli, Tamil Nadu - 627001
-            </p>
-            <p className={styles.info}>+91 12345 67890</p>
-            <p className={styles.info}>info@iruttukadaihalwa.com</p>
+            <ul className={styles.contactList}>
+              <li className={styles.contactItem}>
+                <p className={styles.info}>
+                  Iruttukadai Halwa Shop
+                  <br />
+                  No 3, pon nagar, vannarpettai, tirunelveli 627003
+                </p>
+              </li>
+              <li className={styles.contactItem}>
+                <a href="tel:+919629753355" className={styles.contactLink}>
+                  +91 9629753355
+                </a>
+              </li>
+              <li className={styles.contactItem}>
+                <a
+                  href="mailto:info@iruttukadaihalwa.com"
+                  className={styles.contactLink}
+                >
+                  info@iruttukadaihalwa.com
+                </a>
+              </li>
+            </ul>
 
             {/* <div className={styles.visitLine}></div> */}
           </div>
