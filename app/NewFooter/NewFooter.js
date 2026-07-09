@@ -111,19 +111,6 @@ export default function FooterSection() {
             aria-hidden="true"
             className={styles.bottomSketch}
           />
-          <button
-            type="button"
-            className={styles.topArrowBtn}
-            onClick={scrollToTop}
-            aria-label="Scroll to top"
-          >
-            <img
-              src="/asset/Footer/top-arrow.svg"
-              alt=""
-              aria-hidden="true"
-              className={styles.topArrowIcon}
-            />
-          </button>
         </div>
 
         <div className={styles.bottomBar}>
@@ -143,7 +130,7 @@ export default function FooterSection() {
 
           <div className={styles.bottomRow}>
             <div className={styles.designedBy}>
-              <p>© Copyright - 2026 IRUTTUKADAI HALWA. All rights reserved.</p>
+              <p>Copyright - 2026 IRUTTUKADAI HALWA. All rights reserved.</p>
             </div>
 
             <div className={styles.designedBy}>
@@ -152,6 +139,20 @@ export default function FooterSection() {
               </a>
             </div>
           </div>
+
+          <button
+            type="button"
+            className={styles.topArrowBtn}
+            onClick={scrollToTop}
+            aria-label="Scroll to top"
+          >
+            <img
+              src="/asset/Footer/top-arrow.svg"
+              alt=""
+              aria-hidden="true"
+              className={styles.topArrowIcon}
+            />
+          </button>
         </div>
       </div>
     </footer>

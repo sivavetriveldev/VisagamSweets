@@ -12,7 +12,8 @@
 }
 
 .productsContainer {
-  width: min(100% - 32px, 1600px);
+  width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -25,10 +26,22 @@
 
 .productsCard {
   position: relative;
-  padding: 4rem 0 4rem;
-  background: transparent;
-  box-shadow: none;
-  overflow: visible;
+  padding: 4.5rem 0 4.5rem;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 242, 0.98), rgba(249, 240, 226, 0.98)),
+    #fcf8f2;
+  /* border-top: 1px solid rgba(201, 143, 47, 0.18); */
+  /* border-bottom: 1px solid rgba(201, 143, 47, 0.18); */
+  box-shadow: 0 18px 36px rgba(88, 52, 24, 0.06);
+  overflow: hidden;
+}
+
+.productsCard::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  /* border: 1px solid rgba(201, 143, 47, 0.1); */
+  pointer-events: none;
 }
 
 .tag {
@@ -430,13 +443,9 @@
 }
 
 @media (min-width: 1201px) and (max-width: 1366px) {
-  .productsContainer {
-    width: min(100% - 32px, 1600px);
-  }
-
-  .productsCard {
-    padding: 3rem 0 3rem;
-  }
+  /* .productsCard {
+    padding: 22px 18px 26px;
+  } */
 
   .productItem {
     max-width: 360px;
@@ -454,12 +463,8 @@
     padding: 22px 0px 30px;
   }
 
-  .productsContainer {
-    width: calc(100% - 24px);
-  }
-
   .productsCard {
-    padding: 8px 0 18px;
+    padding: 8px 4px 18px;
   }
 
   .collectionTitle {
@@ -532,12 +537,8 @@
     padding: 36px 18px 34px;
   }
 
-  .productsContainer {
-    width: min(100% - 32px, 1600px);
-  }
-
   .productsCard {
-    padding: 14px 0 20px;
+    padding: 14px 10px 20px;
   }
 
   .collectionTitle {
@@ -587,12 +588,8 @@
     padding: 16px 0px 24px;
   } */
 
-  .productsContainer {
-    width: calc(100% - 24px);
-  }
-
   .productsCard {
-    padding: 18px 0 22px;
+    padding: 18px 14px 22px;
   }
 
   .tag {
@@ -659,8 +656,8 @@
   }
 
   .productItem {
-    padding: 16px 12px 18px;
-    max-width: 100%;
+    padding: 16px 0px 18px;
+    max-width: 400px;
     width: 100%;
     height: auto;
   }
@@ -673,8 +670,8 @@
   }
 
   .imageWrap {
-    width: min(100%, 290px);
-    height: min(100vw, 290px);
+    width: 290px;
+    height: 290px;
   }
 
   .productDesc {

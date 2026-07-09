@@ -16,19 +16,22 @@
 }
 
 .footerContainer {
-  width: min(100% - 96px, 1600px);
+  width: 90%;
   max-width: 1600px;
   margin: 0 auto;
 }
 
 .bottomBar {
+  position: relative;
   padding: 0 26px 14px;
 }
 
 .policyRow {
   display: flex;
   justify-content: center;
-  padding: 0 0 12px;
+  align-items: center;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .bottomLine {
@@ -42,29 +45,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
+  gap: 16px;
   padding-top: 10px;
   flex-wrap: wrap;
-  text-align: center;
+  text-align: left;
 }
 
 .designedBy {
   font-size: 16px;
   color: #5d1414;
   white-space: nowrap;
-  flex: 0 0 auto;
+  text-align: left;
 }
 
 .policyLinks {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
   align-items: center;
   font-size: 15px;
   color: #5d1414;
-  flex: 0 1 auto;
-  white-space: nowrap;
+  text-align: center;
 }
 
 .policyLinks a {
@@ -101,11 +103,11 @@
 .wrapper {
   position: relative;
   display: grid;
-  grid-template-columns: 1.05fr 0.02fr 0.95fr 0.02fr 1fr;
+  grid-template-columns: 1.15fr 0.02fr 0.85fr 0.02fr 1fr;
   align-items: start;
   gap: 0;
   /* min-height: 330px; */
-  padding: 34px 26px 48px;
+  padding: 34px 26px 0px;
   background: transparent;
   /* border: 1px solid rgba(232, 181, 74, 0.28); */
   box-shadow: inset 0 0 0 1px rgba(255, 230, 180, 0.04);
@@ -249,8 +251,8 @@
   max-width: 300px;
   /* font-family: "DM Sans", sans-serif; */
   font-size: 16px;
-  line-height: 1.5;
-  color: #571117;
+  line-height: 1.6;
+  color: #502f14;
   font-weight: 400;
 }
 
@@ -299,7 +301,7 @@
 
 .topArrowBtn {
   position: absolute;
-  right: -48px;
+  right: -40px;
   bottom: 18px;
   width: 52px;
   height: 52px;
@@ -366,7 +368,7 @@
   .wrapper {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 24px 16px 58px;
+    padding: 24px 0px 0px;
     justify-items: start;
   }
 
@@ -435,34 +437,35 @@
   }
 
   .bottomBar {
-    padding: 0 16px 12px;
+    padding: 0 16px 16px;
   }
 
   .bottomRow {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    flex-wrap: nowrap;
-  }
-
-  .policyLinks {
-    white-space: nowrap;
-    overflow-x: auto;
-    max-width: 100%;
+    gap: 8px;
   }
 
   .policyLinks {
     justify-content: center;
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
+    line-height: 1.45;
   }
 
   .designedBy {
-    font-size: 14px;
+    font-size: 12px;
+    white-space: normal;
+    line-height: 1.45;
+    max-width: 100%;
   }
 
-  .policyRow {
-    padding-bottom: 10px;
+  .topArrowBtn {
+    right: 10px;
+    bottom: 54px;
+    width: 42px;
+    height: 42px;
   }
 }
 
@@ -497,8 +500,8 @@
 
 @media (min-width: 901px) and (max-width: 1200px) {
   .wrapper {
-    grid-template-columns: 1fr 0.02fr 0.95fr 0.02fr 0.95fr;
-    padding: 30px 22px 44px;
+    grid-template-columns: 1.05fr 0.02fr 0.9fr 0.02fr 0.95fr;
+    padding: 30px 22px 0px;
   }
 
   .brandRow img {
