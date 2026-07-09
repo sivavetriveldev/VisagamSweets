@@ -139,9 +139,9 @@ export default function TestimonialSection() {
               aria-hidden="true"
               className={styles.tagIcon}
             />
-            <span>Customer Stories</span>
+            <span>Testimonials</span>
           </p>
-          <h2 className={styles.title}>Testimonials</h2>
+          <h2 className={styles.title}>Sweet Memories Shared by Our Customers</h2>
           <p className={styles.subtitle}>Loved by generations</p>
         </div>
         <div className={styles.carouselShell}>

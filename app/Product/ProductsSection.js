@@ -66,10 +66,10 @@ export default function ProductsSection() {
               aria-hidden="true"
               className={styles.tagIcon}
             />
-            <span>Products</span>
+            <span>Buy Halwa</span>
           </p>
 
-          <h3 className={styles.collectionTitle}>Signature Collection</h3>
+          <h3 className={styles.collectionTitle}>Our Signature Collection of Authentic Tirunelveli Halwa</h3>
           <p className={styles.collectionSubtitle}>
             Handpicked favorites prepared with our authentic taste and tradition.
           </p>

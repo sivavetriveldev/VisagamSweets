@@ -69,7 +69,7 @@ export default function SpecialSection() {
           
             <span>Our Speciality</span>
           </p>
-          <h2 className={styles.sectionTitle}>Crafted With Tradition And Care</h2>
+          <h2 className={styles.sectionTitle}>What Makes Our Tirunelveli Halwa Special</h2>
           <p className={styles.sectionSubtitle}>
             Every batch is prepared with the same authentic process, premium
             ingredients, and patient cooking that define our heritage.

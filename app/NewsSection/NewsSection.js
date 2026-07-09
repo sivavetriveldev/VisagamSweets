@@ -49,7 +49,7 @@ export default function NewsSection() {
                   aria-hidden="true"
                   className={styles.tagIcon}
                 />
-                <span>Latest Updates</span>
+                <span>Stay Updated with Our Latest News & Celebrations</span>
               </p>
               <h2 className={styles.title}>News & Events</h2>
               <p className={styles.subtitle}>

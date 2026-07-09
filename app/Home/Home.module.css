@@ -31,7 +31,7 @@ body {
 }
 
 .headerInner {
-  width: 90%;
+  width: min(100% - 32px, 1600px);
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -835,6 +835,7 @@ body {
     padding: 68px 0px 0px;
   }
   .headerInner {
+    width: calc(100% - 28px);
     gap: 10px;
   }
   .shopLogo {
@@ -915,6 +916,7 @@ body {
   } */
 
   .headerInner {
+    width: min(100% - 32px, 1600px);
     gap: 12px;
   }
 

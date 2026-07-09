@@ -100,11 +100,11 @@ export default function AboutSection() {
               aria-hidden="true"
               className={styles.tagIcon}
             />
-            <span>About</span>
+            <span>About Iruttukadai Halwa Shop</span>
           </p>
           <h3 className={styles.heading}>
-            A Heritage Sweet
-            Since Generations
+            Legacy of Authentic 
+            Iruttukadai Tirunelveli Halwa 
           </h3>
           <p className={styles.description}>
             For over a century, our halwa has been part of Tirunelveli&apos;s

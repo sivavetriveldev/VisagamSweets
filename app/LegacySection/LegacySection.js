@@ -35,7 +35,7 @@ export default function LegacySection() {
             <img src="/asset/visakam-sweets.webp" alt="Heritage shop" />
           </div>
           <div className={styles.rightImage}>
-            <img src="/asset/OurLegacy/visakam.webp" alt="Heritage shop" />
+            <img src="/asset/OurLegacy/visagam-Product.webp" alt="Heritage shop" />
           </div>
         </div>
       </div>
