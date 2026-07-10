@@ -1,10 +1,10 @@
-import Home from "./Home/Home";
+import NewHome from "./NewHome/NewHome";
 import AboutSection from "./AboutSection/AboutSection";
 import ProductsSection from "./Product/ProductsSection";
 import SpecialSection from "./SpecialSection/SpecialSection";
-import MakingSection from "./MakingSection/MakingSection";
 import LegacySection from "./LegacySection/LegacySection";
 import TestimonialSection from "./TestimonialSection/TestimonialSection";
+import YouTubeSection from "./YouTubeSection/YouTubeSection";
 import NewsSection from "./NewsSection/NewsSection";
 import Stip from "./Stip/Stip";
 import NewFooter from "./NewFooter/NewFooter";
@@ -12,7 +12,7 @@ import styles from "./page.module.css";
 export default function HomePage() {
   return (
     <div id="top">
-      <Home />
+      <NewHome />
       <AboutSection />
       <ProductsSection />
       <SpecialSection />
@@ -20,10 +20,24 @@ export default function HomePage() {
       <LegacySection />
       {/* <MakingSection /> */}
 
+      <YouTubeSection />
       <NewsSection />
       <Stip />
       <NewFooter />
       <div className={styles.floatingContacts}>
+        <a
+          href="#order-online"
+          aria-label="Order online"
+          className={styles.orderGifLink}
+        >
+          <img
+            src="/asset/order-now.gif"
+            alt=""
+            aria-hidden="true"
+            className={styles.orderGif}
+          />
+        </a>
+
         <a
           href="https://wa.me/919629753355?text=Hello%20Iruttukadai%20Halwa"
           target="_blank"

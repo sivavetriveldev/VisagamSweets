@@ -20,7 +20,7 @@
 
 .floatingContacts {
   position: fixed;
-  right: 8px;
+  right: 1px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -31,9 +31,24 @@
 
 .floatingContactLink {
   display: inline-flex;
+  align-items: end;
+  justify-content: end;
+  text-decoration: none;
+}
+
+.orderGifLink {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  margin-bottom: 2px;
+}
+
+.orderGif {
+  width: 200px;
+  height: 200px;
+  display: block;
+  /* object-fit: contain; */
 }
 
 .floatingContactIcon {
@@ -149,6 +164,9 @@ a.secondary {
     gap: 16px;
   }
 
+  .orderGif{
+    display:none;
+  }
   .intro h1 {
     font-size: 32px;
     line-height: 40px;
@@ -159,9 +177,23 @@ a.secondary {
     display: inline-flex;
   }
 
+  .floatingContacts {
+    top: auto;
+    bottom: 16px;
+    right: 12px;
+    transform: none;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
   .floatingContactIcon {
     width: 50px;
     height: 50px;
+  }
+
+  .orderGif {
+    width: 56px;
+    height: 56px;
   }
 }
 

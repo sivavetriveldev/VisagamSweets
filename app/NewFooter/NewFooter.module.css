@@ -23,7 +23,7 @@
 
 .bottomBar {
   position: relative;
-  padding: 0 26px 14px;
+  padding: 0 26px 10px;
 }
 
 .policyRow {
@@ -437,28 +437,35 @@
   }
 
   .bottomBar {
-    padding: 0 16px 16px;
+    padding: 0 0 16px;
   }
 
   .bottomRow {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     gap: 8px;
   }
 
+  .policyRow {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+
   .policyLinks {
-    justify-content: center;
-    text-align: center;
-    font-size: 12px;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 16px;
     line-height: 1.45;
   }
 
   .designedBy {
-    font-size: 12px;
+    font-size: 16px;
     white-space: normal;
     line-height: 1.45;
     max-width: 100%;
+    text-align: left;
   }
 
   .topArrowBtn {

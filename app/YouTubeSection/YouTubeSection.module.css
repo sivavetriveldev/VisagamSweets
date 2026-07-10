@@ -1,0 +1,140 @@
+.youtubeSection {
+  width: 100%;
+  background: #fbf8f3;
+  padding: 48px 20px 40px;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: fit-content;
+  margin: 0;
+  color: #d89428;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.tagIcon {
+  display: block;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+  font-family: "Lora", serif;
+  font-size: 34px;
+  line-height: 1.15;
+  color: #a13c2f;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.subtitle {
+  margin: 0;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #7a6055;
+}
+
+.videoShell {
+  display: flex;
+  justify-content: center;
+}
+
+.videoFrame {
+  width: min(100%, 980px);
+  aspect-ratio: 16 / 9;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 16px 38px rgba(93, 20, 20, 0.12);
+  border: 1px solid rgba(145, 103, 54, 0.14);
+  background: #000;
+}
+
+.videoFrame iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .youtubeSection {
+    padding: 40px 0px 32px;
+  }
+
+  .sectionHeader {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .tag {
+    font-size: 16px;
+    gap: 8px;
+  }
+
+  .tagIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .videoFrame {
+    width: 100%;
+    border-radius: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .youtubeSection {
+    padding: 44px 16px 36px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .youtubeSection {
+    padding: 46px 18px 38px;
+  }
+
+  .videoFrame {
+    width: min(100%, 860px);
+  }
+}
