@@ -69,16 +69,7 @@ export default function NewHome() {
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <a href="/" className={styles.logoLink} aria-label="Iruttukadai Halwa home">
-            <img
-              src="/irutukadai-logo.png"
-              alt="Iruttukadai Halwa"
-              className={`${styles.logo} ${styles.desktopLogo}`}
-            />
-            <img
-              src="/asset/mobile-image/mobile-logo.webp"
-              alt="Iruttukadai Halwa"
-              className={`${styles.logo} ${styles.mobileLogo}`}
-            />
+            <img src="/irutukadai-logo.png" alt="Iruttukadai Halwa" className={styles.logo} />
           </a>
 
           <button
