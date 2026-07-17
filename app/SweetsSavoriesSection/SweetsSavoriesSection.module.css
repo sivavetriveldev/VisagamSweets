@@ -1,0 +1,44 @@
+.section {
+  width: 100%;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(138, 31, 32, 0.08), transparent 35%),
+    linear-gradient(180deg, #fbf8f3 0%, #f7efe4 100%);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.block {
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .section {
+    padding: 16px;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 12px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .block {
+    width: 100%;
+  }
+}

@@ -3,36 +3,60 @@ import styles from "./SpecialSection.module.css";
 const leftFeatures = [
   {
     icon: "/asset/plate.svg",
-    title: "Traditional Recipe",
-    subtitle: ["Passed down through generations", "with the same authentic taste", "and timeless home-style care."],
+    title: "Traditional Recipes",
+    subtitle: [
+      "Authentic recipes crafted",
+      "with traditional methods",
+      "for timeless taste."
+    ],
   },
   {
     icon: "/asset/ghee.svg",
-    title: "Pure Ghee",
-    subtitle: ["Made with rich pure ghee", "for a deep aromatic flavor", "and a smooth melt-in-mouth finish."],
+    title: "Premium Quality",
+    subtitle: [
+      "Finest ingredients selected",
+      "to deliver rich flavour",
+      "in every bite."
+    ],
   },
   {
     icon: "/asset/wheat-icon.svg",
-    title: "Premium Ingredients",
-    subtitle: ["Carefully chosen premium ingredients", "combined fresh for every batch", "to keep quality at its best."],
+    title: "Fresh Ingredients",
+    subtitle: [
+      "Prepared using fresh",
+      "carefully sourced ingredients",
+      "every single day."
+    ],
   },
 ];
 
 const rightFeatures = [
   {
     icon: "/asset/cook.svg",
-    title: "Slow Cooked",
-    subtitle: ["Slow cooked with patience", "to build the perfect texture", "and a rich traditional finish."],
+    title: "Expertly Crafted",
+    subtitle: [
+      "Prepared with passion",
+      "by experienced sweet makers",
+      "for authentic quality."
+    ],
   },
   {
     icon: "/asset/freshly-prepared.svg",
-    title: "Freshly Prepared",
-    subtitle: ["Prepared fresh in small batches", "so every serving stays bright", "soft, and full of flavor."],
+    title: "Freshly Made",
+    subtitle: [
+      "Every order is prepared",
+      "fresh to preserve",
+      "taste and freshness."
+    ],
   },
   {
     icon: "/asset/Trust-customer.svg",
-    title: "Trusted for Generations",
-    subtitle: ["Loved by families for years", "trusted across generations", "with the same consistent taste."],
+    title: "Loved by Families",
+    subtitle: [
+      "Trusted by customers",
+      "for delicious sweets",
+      "and crispy savouries."
+    ],
   },
 ];
 
@@ -69,11 +93,12 @@ export default function SpecialSection() {
           
             <span>Our Speciality</span>
           </p>
-          <h2 className={styles.sectionTitle}>What Makes Our Tirunelveli Halwa Special</h2>
+          <h2 className={styles.sectionTitle}>  What Makes Visakam Sweets Special</h2>
           <p className={styles.sectionSubtitle}>
-            Every batch is prepared with the same authentic process, premium
-            ingredients, and patient cooking that define our heritage.
-          </p>
+  From traditional sweets to crispy savouries, every product is prepared with
+  premium ingredients, authentic recipes, and the same dedication to quality
+  that has delighted our customers for years.
+</p>
         </div>
 
         <div

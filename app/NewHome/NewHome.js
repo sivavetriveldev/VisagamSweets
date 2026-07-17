@@ -5,10 +5,9 @@ import styles from "./NewHome.module.css";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "About", href: "#about" },
-  { label: "Halwa", href: "#halwa" },
   { label: "Sweets & Savories", href: "#sweets-savories" },
-  { label: "News & Events", href: "#news-events" },
+  { label: "Halwa", href: "#halwa" },
+  { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -69,7 +68,7 @@ export default function NewHome() {
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <a href="/" className={styles.logoLink} aria-label="Iruttukadai Halwa home">
-            <img src="/irutukadai-logo.png" alt="Iruttukadai Halwa" className={styles.logo} />
+            <img src="/asset/logo.png" alt="Iruttukadai Halwa" className={styles.logo} />
           </a>
 
           <button
@@ -87,7 +86,12 @@ export default function NewHome() {
           <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ""}`} aria-label="Primary">
             <ul className={styles.navList}>
               {navItems.map((item) => (
-                <li key={item.label} className={styles.navItem}>
+                <li
+                  key={item.label}
+                  className={`${styles.navItem} ${
+                    item.label === "News & Events" ? styles.hiddenNavItem : ""
+                  }`}
+                >
                   <a href={item.href} className={styles.navLink} onClick={() => setIsMenuOpen(false)}>
                     {item.label}
                   </a>
@@ -173,6 +177,7 @@ export default function NewHome() {
           </div>
         </div>
       </div>
+
     </section>
   );
 }

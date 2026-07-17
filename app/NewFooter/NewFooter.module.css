@@ -205,6 +205,10 @@
   margin: 0;
 }
 
+.hiddenLinkItem {
+  display: none;
+}
+
 .linkList li {
   margin-bottom: 14px;
 }

@@ -16,7 +16,7 @@ export default function FooterSection() {
         <div className={styles.wrapper}>
           <div className={styles.colLeft}>
             <div className={styles.brandRow}>
-              <img src="/irutukadai-logo.png" alt="Iruttukadai Halwa" />
+              <img src="/asset/logo.png" alt="Iruttukadai Halwa" />
             </div>
 
             <p className={styles.tagline}>
@@ -51,7 +51,7 @@ export default function FooterSection() {
               </li>
               <li>
                 <a href="#about" className={styles.footerLink}>
-                  About
+                 Sweets & Savories
                 </a>
               </li>
               <li>
@@ -61,14 +61,10 @@ export default function FooterSection() {
               </li>
               <li>
                 <a href="#halwa" className={styles.footerLink}>
-                  Sweets & Savories
+                 About 
                 </a>
               </li>
-              <li>
-                <a href="#news" className={styles.footerLink}>
-                  News & Events
-                </a>
-              </li>
+          
               <li>
                 <a href="#contact" className={styles.footerLink}>
                   Contact
@@ -84,14 +80,14 @@ export default function FooterSection() {
             <ul className={styles.contactList}>
               <li className={styles.contactItem}>
                 <p className={styles.info}>
-                  Iruttukadai Halwa Shop
+                 Visakam sweets and Savouries,
                   <br />
-                  No 3, pon nagar, vannarpettai, tirunelveli 627003
+                 29 East car street, Tirunelveli Town. 627006.
                 </p>
               </li>
               <li className={styles.contactItem}>
                 <a href="tel:+919629753355" className={styles.contactLink}>
-                  +91 9629753355
+                  +91 96298 43355
                 </a>
               </li>
               <li className={styles.contactItem}>
@@ -99,7 +95,7 @@ export default function FooterSection() {
                   href="mailto:info@iruttukadaihalwa.com"
                   className={styles.contactLink}
                 >
-                  info@iruttukadaihalwa.com
+                  visakamsweetsandsavouries@gmail.com
                 </a>
               </li>
             </ul>
@@ -130,7 +126,7 @@ export default function FooterSection() {
 
           <div className={styles.bottomRow}>
             <div className={styles.designedBy}>
-              <p>Copyright - 2026 IRUTTUKADAI HALWA. All rights reserved.</p>
+              <p>Copyright - 2026 Visakam Sweets and Savouries. All rights reserved.</p>
             </div>
 
             <div className={styles.designedBy}>

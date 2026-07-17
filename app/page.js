@@ -1,11 +1,11 @@
 import NewHome from "./NewHome/NewHome";
+import SweetsSavoriesSection from "./SweetsSavoriesSection/SweetsSavoriesSection";
 import AboutSection from "./AboutSection/AboutSection";
 import ProductsSection from "./Product/ProductsSection";
 import SpecialSection from "./SpecialSection/SpecialSection";
 import LegacySection from "./LegacySection/LegacySection";
 import TestimonialSection from "./TestimonialSection/TestimonialSection";
 import YouTubeSection from "./YouTubeSection/YouTubeSection";
-import NewsSection from "./NewsSection/NewsSection";
 import Stip from "./Stip/Stip";
 import NewFooter from "./NewFooter/NewFooter";
 import styles from "./page.module.css";
@@ -13,6 +13,7 @@ export default function HomePage() {
   return (
     <div id="top">
       <NewHome />
+      <SweetsSavoriesSection />
       <AboutSection />
       <ProductsSection />
       <SpecialSection />
@@ -21,7 +22,6 @@ export default function HomePage() {
       {/* <MakingSection /> */}
 
       <YouTubeSection />
-      <NewsSection />
       <Stip />
       <NewFooter />
       <div className={styles.floatingContacts}>

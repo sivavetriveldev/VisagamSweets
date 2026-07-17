@@ -19,11 +19,11 @@ export default function LegacySection() {
             />
             <span>Our Legacy</span>
           </p>
-          <h2 className={styles.title}>Visakam Sweets & Savouries</h2>
+          <h2 className={styles.title}>Iruttukadai Halwa</h2>
           <p className={styles.desc}>
-            For more than a century, our halwa has been a part of Tirunelveli&apos;s
-            culture and pride. Prepared with the same devotion and traditional
-            methods, every piece carries a story of taste and trust.
+           For generations, our Iruttukadai Halwa has been crafted using time-honored recipes and traditional methods.
+Made with pure ghee and carefully selected ingredients, every batch delivers an authentic taste.
+Experience the rich heritage of Tirunelveli in every delicious bite.
           </p>
           <a href="#" className={styles.link}>
             Shop Now
@@ -32,10 +32,10 @@ export default function LegacySection() {
 
         <div className={styles.rightImages}>
           <div className={styles.rightImage}>
-            <img src="/asset/visakam-sweets.webp" alt="Heritage shop" />
+            <img src="/asset/OurLegacy/legacy1.jpg" alt="Heritage shop" />
           </div>
           <div className={styles.rightImage}>
-            <img src="/asset/OurLegacy/visagam-Product.webp" alt="Heritage shop" />
+            <img src="/asset/OurLegacy/legacy2.jpg" alt="Heritage shop" />
           </div>
         </div>
       </div>

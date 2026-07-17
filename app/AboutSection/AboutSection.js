@@ -86,7 +86,7 @@ export default function AboutSection() {
         >
           {/* <img src="/asset/wheat.svg" alt="" aria-hidden="true" className={styles.wheatIcon} /> */}
           <img
-            src="/asset/About/Shopimage.webp"
+            src="/asset/About/visakam-sweets.png"
             alt="Heritage Shop"
             className={styles.heritageImage}
           />
@@ -100,16 +100,14 @@ export default function AboutSection() {
               aria-hidden="true"
               className={styles.tagIcon}
             />
-            <span>About Iruttukadai Halwa Shop</span>
+            <span>About Visakamsweets Shop</span>
           </p>
           <h3 className={styles.heading}>
-            Legacy of Authentic 
-            Iruttukadai Tirunelveli Halwa 
+           Crafted with Tradition,
+            Made for Every Celebration
           </h3>
           <p className={styles.description}>
-            For over a century, our halwa has been part of Tirunelveli&apos;s
-            identity. Prepared with the same devotion and traditional methods,
-            every batch carries the taste that generations have cherished.
+            At Visakam Sweets, every bite is crafted with tradition, care, and the finest ingredients. Our Premium Ghee Halwa is freshly prepared using pure ghee to deliver an authentic taste that's rich, soft, and unforgettable. Made without artificial preservatives or colours, it's a sweet experience you can truly trust.
           </p>
 
           <a href="#" className={styles.storyLink}>

@@ -11,16 +11,16 @@ export default function YouTubeSection() {
             <img src="/asset/heading-icon.svg" alt="" aria-hidden="true" className={styles.tagIcon} />
             <span>Video</span>
           </p>
-          <h2 className={styles.title}>Watch Our Story</h2>
+          <h2 className={styles.title}>A Journey of Authentic Flavours</h2>
           <p className={styles.subtitle}>
-            A quick look at the taste, tradition, and legacy behind Iruttukadai Halwa.
+           Take a closer look at the passion and tradition behind every sweet and savoury.
           </p>
         </div>
 
         <div className={styles.videoShell}>
           <div className={styles.videoFrame}>
             <iframe
-              src="https://www.youtube.com/embed/cOlI8cT8QrU?si=QzyBDCB2SjuBTp-8"
+              src="https://www.youtube.com/embed/8foAeBTAR68"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -32,7 +32,7 @@
 }
 
 .logo {
-  width: 260px;
+  width: 220px;
   height: auto;
   display: block;
   object-fit: contain;
@@ -65,6 +65,10 @@
 
 .navItem {
   margin: 0;
+}
+
+.hiddenNavItem {
+  display: none;
 }
 
 .navLink {
@@ -218,6 +222,34 @@
   background: #2a0909;
 }
 
+.categorySection {
+  width: 100%;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(138, 31, 32, 0.08), transparent 35%),
+    linear-gradient(180deg, #fbf8f3 0%, #f7efe4 100%);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.categoryBlock {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 0;
+  background: transparent;
+}
+
+.categoryImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
 .bannerCarousel {
   position: relative;
   width: 100%;
@@ -286,7 +318,7 @@
   }
 
   .logo {
-    width: 210px;
+    width: 190px;
   }
 
   .navList {
@@ -336,7 +368,7 @@
   }
 
   .logo {
-    width: 138px;
+    width: 150px;
   }
 
   .desktopLogo {
@@ -404,6 +436,11 @@
   .mobileBanner {
     display: block;
   }
+
+  .categorySection {
+    padding: 16px;
+    gap: 14px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -438,7 +475,7 @@
   }
 
   .logo {
-    width: 122px;
+    width: 132px;
   }
 
   .desktopLogo {
@@ -519,5 +556,14 @@
 
   .mobileBanner {
     display: block;
+  }
+
+  .categorySection {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .categoryBlock {
+    width: 100%;
   }
 }
