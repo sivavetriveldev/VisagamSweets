@@ -1,10 +1,21 @@
 html,
 body {
   overflow-x: hidden;
-  background: #fbf8f3;
+  background: #FBF7F1;
   margin: 0;
   scroll-behavior: smooth;
   font-family: "DM Sans", sans-serif;
+  color: #2E1A24;
+  background-image: linear-gradient(180deg, #FBF7F1 0%, #F6E7C8 100%);
+  --brand-purple: #7A1F6B;
+  --brand-purple-dark: #5A124D;
+  --brand-gold: #D8A14A;
+  --brand-cream: #F6E7C8;
+  --brand-bg: #FBF7F1;
+  --brand-pink: #C63E92;
+  --brand-white: #FFFFFF;
+  --brand-text: #2E1A24;
+  --brand-border: #E8D5B5;
 }
 
 h1,
@@ -19,18 +30,7 @@ h6 {
   font-weight: 700;
   letter-spacing: 0.02em;
   font-size: 34px;
-}
-
-h1,
-h2 {
-  color: #5C0E33;
-}
-
-h3,
-h4,
-h5,
-h6 {
-  color: #5C0E33;
+  color: #5A124D;
 }
 
 p,
@@ -45,5 +45,5 @@ select {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
-  color: #4f443a;
+  color: #2E1A24;
 }

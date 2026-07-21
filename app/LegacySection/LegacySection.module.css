@@ -69,7 +69,7 @@
   width: fit-content;
   margin: 0;
   font-family: "DM Sans", sans-serif;
-  color: #5C0E33;
+  color: #5A124D;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -90,7 +90,7 @@
 .title {
   margin: 0;
   font-family: "Lora", serif;
-  color: #5C0E33;
+  color: #7A1F6B;
   font-size: 32px;
   line-height: 1.15;
   font-weight: 700;
@@ -111,7 +111,7 @@
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  color: #5C0E33;
+  color: #5A124D;
   font-family: "DM Sans", sans-serif;
   font-size: 18px;
   font-weight: 800;

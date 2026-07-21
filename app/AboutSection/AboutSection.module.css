@@ -90,7 +90,7 @@
 }
 
 .tagText {
-  color: #e1a12d;
+  color: #D8A14A;
 }
 
 .tagIcon {
@@ -105,7 +105,7 @@
   margin: 0 0 8px;
   font-size: 34px;
   line-height: 1.2;
-  color: #5C0E33;
+  color: #7A1F6B;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
@@ -116,7 +116,7 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
-  color: #4f443a;
+  color: #5F5F5F;
   text-align: justify;
 }
 
@@ -125,7 +125,7 @@
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  color: #5C0E33;
+  color: #5A124D;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.02em;
@@ -178,7 +178,7 @@
   font-size: 27px;
   font-weight: 800;
   line-height: 1.5;
-  color: #5C0E33;
+  color: #5A124D;
 }
 
 .statText {

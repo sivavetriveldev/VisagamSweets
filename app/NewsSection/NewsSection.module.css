@@ -1,6 +1,6 @@
 .newsSection {
   width: 100%;
-  background: #fbf8f3;
+  background: #FBF7F1;
   padding: 52px 20px 42px;
   /* scroll-margin-top: 110px; */
 }
@@ -48,7 +48,7 @@
   gap: 10px;
   width: fit-content;
   margin: 0;
-  color: #5C0E33;
+  color: #D8A14A;
   font-family: "DM Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -68,7 +68,7 @@
   text-align: left;
   font-family: "Lora", serif;
   font-size: 30px;
-  color: #5C0E33;
+  color: #5A124D;
   font-weight: 700;
   letter-spacing: 0.04em;
 }
@@ -79,7 +79,7 @@
   font-family: "DM Sans", sans-serif;
   font-size: 18px;
   line-height: 1.45;
-  color: #4f443a;
+  color: #5F5F5F;
 }
 
 .grid {
@@ -96,7 +96,7 @@
 
 .card {
   width: 100%;
-  background: #fff7ec;
+  background: #FFFFFF;
   border: 1px solid rgba(145, 103, 54, 0.16);
   border-radius: 10px;
   overflow: hidden;
@@ -128,7 +128,7 @@
   font-size: 18px;
   line-height: 1.35;
   font-weight: 700;
-  color: #5C0E33;
+  color: #5A124D;
 }
 
 .description {
@@ -136,7 +136,7 @@
   font-family: "DM Sans", sans-serif;
   font-size: 18px;
   line-height: 1.5;
-  color: #5b4a41;
+  color: #5F5F5F;
   display: block;
 }
 
@@ -152,7 +152,7 @@
   background: transparent;
   font-size: 14px;
   font-weight: 800;
-  color: #5C0E33;
+  color: #7A1F6B;
   /* text-decoration: underline; */
   white-space: nowrap;
   cursor: pointer;
@@ -164,7 +164,7 @@
   margin: 0;
   font-size: 18px;
   font-weight: 600;
-  color: #5C0E33;
+  color: #D8A14A;
 }
 
 .viewAllBtn {
@@ -173,9 +173,9 @@
   justify-content: center;
   min-width: 120px;
   padding: 10px 12px;
-  background-image: linear-gradient(45deg, #8a1f20 0%, #6e1416 51%, #8a1f20 100%);
+  background-image: linear-gradient(45deg, #7A1F6B 0%, #5A124D 51%, #7A1F6B 100%);
   background-size: 200% auto;
-  color: #fff;
+  color: #FFFFFF;
   text-decoration: none;
   border-radius: 10px;
   border: 0;
@@ -201,7 +201,7 @@
 
 .viewAllBtn:hover {
   background-position: right center;
-  color: #fff;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
@@ -267,16 +267,16 @@
     display: none;
   }
 
-  .mobileViewAllBtn {
+.mobileViewAllBtn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     min-width: 110px;
     padding: 10px 12px;
     margin: 0 0 16px;
-    background-image: linear-gradient(45deg, #8a1f20 0%, #6e1416 51%, #8a1f20 100%);
+    background-image: linear-gradient(45deg, #7A1F6B 0%, #5A124D 51%, #7A1F6B 100%);
     background-size: 200% auto;
-    color: #fff;
+    color: #FFFFFF;
     text-decoration: none;
     border-radius: 10px;
     border: 0;
