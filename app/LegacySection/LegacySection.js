@@ -17,7 +17,7 @@ export default function LegacySection() {
               aria-hidden="true"
               className={styles.tagIcon}
             />
-            <span>Our Legacy</span>
+            <span className={styles.tagText}>Our Legacy</span>
           </p>
           <h2 className={styles.title}>Iruttukadai Halwa</h2>
           <p className={styles.desc}>

@@ -9,7 +9,7 @@ export default function YouTubeSection() {
         <div className={styles.sectionHeader}>
           <p className={styles.tag}>
             <img src="/asset/heading-icon.svg" alt="" aria-hidden="true" className={styles.tagIcon} />
-            <span>Video</span>
+            <span className={styles.tagText}>Video</span>
           </p>
           <h2 className={styles.title}>A Journey of Authentic Flavours</h2>
           <p className={styles.subtitle}>

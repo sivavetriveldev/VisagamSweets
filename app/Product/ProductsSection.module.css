@@ -51,7 +51,7 @@
   gap: 10px;
   width: fit-content;
   margin: 0 auto 10px;
-  color: #e1a12d;
+  color: #5C0E33;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -67,12 +67,16 @@
   flex-shrink: 0;
 }
 
+.tagText {
+  color: #e1a12d;
+}
+
 .collectionTitle {
   position: relative;
   margin: 0 0 28px;
   text-align: center;
   font-size: 32px;
-  color: #7b2d26;
+  color: #5C0E33;
   letter-spacing: 0.04em;
   font-weight: 800;
 }
@@ -106,16 +110,24 @@
 
 .categoryHeader {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
   margin-bottom: 18px;
   flex-wrap: wrap;
+  text-align: center;
+}
+
+.categoryHeader > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .categoryLabel {
   margin: 0 0 4px;
-  color: #c98f2f;
+  color: #5C0E33;
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
@@ -126,40 +138,42 @@
   margin: 0 0 6px;
   font-size: 24px;
   font-weight: 800;
-  color: #7b2d26;
+  color: #5C0E33;
 }
 
 .categorySubtitle {
   margin: 0;
   font-size: 15px;
-  color: #655b54;
+  color: #4f443a;
   max-width: 420px;
 }
 
-.carouselControls {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 10px;
-  border-radius: 999px;
-  background: rgba(255, 250, 242, 0.9);
-  border: 1px solid rgba(201, 143, 47, 0.16);
-  box-shadow: 0 8px 18px rgba(80, 47, 20, 0.06);
-}
-
 .carouselBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
   width: 38px;
   height: 38px;
   border: none;
   border-radius: 50%;
   background: linear-gradient(180deg, #f2b24a 0%, #e39a1f 100%);
-  color: #5f230f;
+  color: #5C0E33;
   font-size: 18px;
   font-weight: 800;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transform: translateY(-50%);
+  box-shadow: 0 8px 18px rgba(80, 47, 20, 0.12);
+}
+
+.carouselBtnLeft {
+  left: 8px;
+}
+
+.carouselBtnRight {
+  right: 8px;
 }
 
 .carouselBtn:disabled {
@@ -167,19 +181,13 @@
   cursor: not-allowed;
 }
 
-.carouselStatus {
-  min-width: 54px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 700;
-  color: #7b2d26;
-}
-
 .productGrid {
   overflow: hidden;
   position: relative;
   z-index: 1;
   width: 100%;
+  padding: 0 62px;
+  box-sizing: border-box;
 }
 
 .productTrack {
@@ -194,6 +202,7 @@
   gap: 22px;
   flex: 0 0 100%;
   min-width: 0;
+  justify-items: center;
 }
 
 .productAosWrap {
@@ -307,7 +316,7 @@
   margin: 0 0 10px;
   font-size: 21px;
   line-height: 1.5;
-  color: #7b2d26;
+  color: #5C0E33;
   font-weight: 800;
   letter-spacing: 0.02em;
 }
@@ -366,7 +375,7 @@
 .priceValue {
   font-size: 20px;
   font-weight: 800;
-  color: #5f230f;
+  color: #5C0E33;
   line-height: 1.5;
   display: inline-flex;
   align-items: center;
@@ -413,7 +422,7 @@
 .metaLabel {
   font-size: 11px;
   font-weight: 700;
-  color: #a5741d;
+  color: #5C0E33;
   letter-spacing: 0.12em;
 }
 
@@ -464,7 +473,7 @@
   text-align: center;
   font-size: 17px;
   font-weight: 800;
-  color: #7b2d26;
+  color: #5C0E33;
 }
 
 .actionRow {
@@ -502,7 +511,7 @@
 
 .viewBtn {
   background: #fbf3e4;
-  color: #7b2d26;
+  color: #5C0E33;
   border: 1px solid rgba(123, 45, 38, 0.22);
   box-shadow: 0 8px 16px rgba(145, 90, 25, 0.08);
   cursor: pointer;

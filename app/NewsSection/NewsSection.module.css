@@ -48,7 +48,7 @@
   gap: 10px;
   width: fit-content;
   margin: 0;
-  color: #d89428;
+  color: #5C0E33;
   font-family: "DM Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -68,7 +68,7 @@
   text-align: left;
   font-family: "Lora", serif;
   font-size: 30px;
-  color: #6f1b1b;
+  color: #5C0E33;
   font-weight: 700;
   letter-spacing: 0.04em;
 }
@@ -79,7 +79,7 @@
   font-family: "DM Sans", sans-serif;
   font-size: 18px;
   line-height: 1.45;
-  color: #7a6055;
+  color: #4f443a;
 }
 
 .grid {
@@ -128,7 +128,7 @@
   font-size: 18px;
   line-height: 1.35;
   font-weight: 700;
-  color: #3a2a20;
+  color: #5C0E33;
 }
 
 .description {
@@ -152,7 +152,7 @@
   background: transparent;
   font-size: 14px;
   font-weight: 800;
-  color: #8a1f20;
+  color: #5C0E33;
   /* text-decoration: underline; */
   white-space: nowrap;
   cursor: pointer;
@@ -164,7 +164,7 @@
   margin: 0;
   font-size: 18px;
   font-weight: 600;
-  color: #c98f2f;
+  color: #5C0E33;
 }
 
 .viewAllBtn {

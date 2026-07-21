@@ -8,10 +8,10 @@
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 1000;
-  background: rgba(251, 248, 243, 0.98);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(99, 48, 37, 0.08);
-  box-shadow: 0 10px 30px rgba(54, 25, 17, 0.08);
+  background: #6A053C;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(232, 181, 74, 0.22);
+  box-shadow: 0 10px 28px rgba(42, 8, 10, 0.22);
 }
 
 .headerInner {
@@ -21,7 +21,7 @@
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 
 .logoLink {
@@ -32,10 +32,11 @@
 }
 
 .logo {
-  width: 220px;
+  width: 208px;
   height: auto;
   display: block;
   object-fit: contain;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.18));
 }
 
 .desktopLogo {
@@ -76,12 +77,12 @@
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: #6f3a2f;
+  color: rgba(255, 244, 220, 0.92);
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.01em;
   padding: 10px 0;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .navLink::after {
@@ -99,7 +100,8 @@
 }
 
 .navLink:hover {
-  color: #6f3a2f;
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .navLink:hover::after {
@@ -123,8 +125,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  background: #f3e9df;
-  color: #7d3a2e;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f7e7c1;
   cursor: pointer;
   text-decoration: none;
   position: relative;
@@ -134,7 +136,7 @@
 .iconButton:hover,
 .cartButton:hover {
   transform: translateY(-1px);
-  background: #ecdcc8;
+  background: rgba(255, 255, 255, 0.14);
 }
 
 .icon {
@@ -157,7 +159,7 @@
   height: 18px;
   padding: 0 4px;
   border-radius: 999px;
-  background: #8a1f20;
+  background: #f0b429;
   color: #fff;
   font-size: 10px;
   font-weight: 700;
@@ -173,20 +175,20 @@
   justify-content: center;
   min-height: 42px;
   padding: 0 18px;
-  border-radius: 12px;
+  border-radius: 10px;
   text-decoration: none;
-  color: #fff;
-  background: linear-gradient(135deg, #8a1f20 0%, #651719 100%);
+  color: #4c2602;
+  background: linear-gradient(180deg, #ffd56a 0%, #f0b429 100%);
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.01em;
-  box-shadow: 0 10px 18px rgba(93, 20, 20, 0.18);
+  box-shadow: 0 10px 20px rgba(240, 180, 41, 0.26);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .orderButton:hover {
   transform: translateY(-1px);
-  box-shadow: 0 14px 22px rgba(93, 20, 20, 0.22);
+  box-shadow: 0 14px 24px rgba(240, 180, 41, 0.34);
 }
 
 .menuButton {
@@ -196,7 +198,7 @@
   padding: 0;
   border: none;
   border-radius: 50%;
-  background: #f4eadf;
+  background: rgba(255, 255, 255, 0.08);
   cursor: pointer;
   justify-content: center;
   align-items: center;
@@ -209,7 +211,7 @@
   width: 18px;
   height: 2px;
   border-radius: 999px;
-  background: #7d3a2e;
+  background: #f7e7c1;
 }
 
 .bannerWrap {
@@ -388,8 +390,8 @@
     padding: 0 14px;
     max-height: 0;
     overflow: hidden;
-    background: rgba(251, 248, 243, 0.98);
-    border-bottom: 1px solid rgba(99, 48, 37, 0.08);
+    background: linear-gradient(180deg, rgba(92, 12, 18, 0.99) 0%, rgba(74, 8, 12, 0.99) 100%);
+    border-bottom: 1px solid rgba(232, 181, 74, 0.22);
     transition: max-height 0.28s ease;
   }
 
@@ -408,6 +410,7 @@
     width: 100%;
     padding: 12px 0;
     font-size: 15px;
+    color: rgba(255, 244, 220, 0.94);
   }
 
   .iconButton,
@@ -495,8 +498,8 @@
     padding: 0 14px;
     max-height: 0;
     overflow: hidden;
-    background: rgba(251, 248, 243, 0.98);
-    border-bottom: 1px solid rgba(99, 48, 37, 0.08);
+    background: linear-gradient(180deg, rgba(92, 12, 18, 0.99) 0%, rgba(74, 8, 12, 0.99) 100%);
+    border-bottom: 1px solid rgba(232, 181, 74, 0.22);
     transition: max-height 0.28s ease;
   }
 
@@ -515,6 +518,7 @@
     width: 100%;
     padding: 12px 0;
     font-size: 15px;
+    color: rgba(255, 244, 220, 0.94);
   }
 
   .iconButton,

@@ -16,10 +16,21 @@ h6 {
   font-family: "Lora", serif !important;
   text-transform: capitalize;
   line-height: 1.5;
-  color: #7e2f25;
   font-weight: 700;
   letter-spacing: 0.02em;
   font-size: 34px;
+}
+
+h1,
+h2 {
+  color: #5C0E33;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  color: #5C0E33;
 }
 
 p,

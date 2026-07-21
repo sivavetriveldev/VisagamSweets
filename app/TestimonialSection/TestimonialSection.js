@@ -139,7 +139,7 @@ export default function TestimonialSection() {
               aria-hidden="true"
               className={styles.tagIcon}
             />
-            <span>Testimonials</span>
+            <span className={styles.tagText}>Testimonials</span>
           </p>
           <h2 className={styles.title}>Sweet Memories Shared by Our Customers</h2>
           <p className={styles.subtitle}>Loved by generations</p>

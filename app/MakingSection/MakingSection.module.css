@@ -27,7 +27,7 @@
   gap: 10px;
   width: fit-content;
   margin: 0;
-  color: #d89428;
+  color: #5C0E33;
   font-family: "DM Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -46,7 +46,7 @@
   margin: 0;
   font-family: "Lora", serif;
   font-size: 32px;
-  color: #6f1b1b;
+  color: #5C0E33;
   font-weight: 700;
   letter-spacing: 0.03em;
 }
@@ -57,7 +57,7 @@
   font-family: "DM Sans", sans-serif;
   font-size: 18px;
   line-height: 1.55;
-  color: #6f5a4d;
+  color: #4f443a;
 }
 
 .timeline {
@@ -121,7 +121,7 @@
   font-family: "Lora", serif;
   font-size: 18px;
   font-weight: 800;
-  color: #6f1b1b;
+  color: #5C0E33;
   line-height: 1.25;
 }
 
@@ -130,7 +130,7 @@
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #3b2c24;
+  color: #4f443a;
 }
 /* 
 @media (max-width: 1200px) {

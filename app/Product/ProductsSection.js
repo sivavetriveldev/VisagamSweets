@@ -15,7 +15,7 @@ const productCategories = [
   {
     key: "sweets",
     title: "Sweets",
-    subtitle: "Classic sweets prepared with rich ghee, tradition, and festive charm.",
+    subtitle: " ",
     products: [
       {
         id: "sweets-1",
@@ -70,7 +70,7 @@ const productCategories = [
   {
     key: "savories",
     title: "Savories",
-    subtitle: "Crunchy, spicy, and perfectly seasoned snacks for every table.",
+    subtitle: " ",
     products: [
       {
         id: "savories-1",
@@ -174,7 +174,7 @@ export default function ProductsSection() {
               aria-hidden="true"
               className={styles.tagIcon}
             />
-            <span>Products</span>
+            <span className={styles.tagText}>Products</span>
           </p>
 
           <h3 className={styles.collectionTitle}>Signature Collection</h3>
@@ -196,37 +196,23 @@ export default function ProductsSection() {
               <div key={group.key} className={styles.categorySection}>
                 <div className={styles.categoryHeader}>
                   <div>
-                    <p className={styles.categoryLabel}>Category</p>
+                    <p className={styles.categoryLabel}> </p>
                     <h4 className={styles.categoryTitle}>{group.title}</h4>
                     <p className={styles.categorySubtitle}>{group.subtitle}</p>
-                  </div>
-
-                  <div className={styles.carouselControls}>
-                    <button
-                      type="button"
-                      className={styles.carouselBtn}
-                      onClick={() => changeSlide(group.key, -1)}
-                      aria-label={`Previous ${group.title} products`}
-                      disabled={activeIndex === 0}
-                    >
-                      {"<"}
-                    </button>
-                    <span className={styles.carouselStatus}>
-                      {activeIndex + 1}/{totalPages}
-                    </span>
-                    <button
-                      type="button"
-                      className={styles.carouselBtn}
-                      onClick={() => changeSlide(group.key, 1)}
-                      aria-label={`Next ${group.title} products`}
-                      disabled={activeIndex >= totalPages - 1}
-                    >
-                      {">"}
-                    </button>
                   </div>
                 </div>
 
                 <div className={styles.productGrid}>
+                  <button
+                    type="button"
+                    className={`${styles.carouselBtn} ${styles.carouselBtnLeft}`}
+                    onClick={() => changeSlide(group.key, -1)}
+                    aria-label={`Previous ${group.title} products`}
+                    disabled={activeIndex === 0}
+                  >
+                    {"<"}
+                  </button>
+
                   <div
                     className={styles.productTrack}
                     style={{ transform: `translateX(-${activeIndex * 100}%)` }}
@@ -341,6 +327,16 @@ export default function ProductsSection() {
                       </div>
                     ))}
                   </div>
+
+                  <button
+                    type="button"
+                    className={`${styles.carouselBtn} ${styles.carouselBtnRight}`}
+                    onClick={() => changeSlide(group.key, 1)}
+                    aria-label={`Next ${group.title} products`}
+                    disabled={activeIndex >= totalPages - 1}
+                  >
+                    {">"}
+                  </button>
                 </div>
               </div>
             );

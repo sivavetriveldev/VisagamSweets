@@ -100,7 +100,7 @@ export default function AboutSection() {
               aria-hidden="true"
               className={styles.tagIcon}
             />
-            <span>About Visakamsweets Shop</span>
+            <span className={styles.tagText}>About Visakamsweets Shop</span>
           </p>
           <h3 className={styles.heading}>
            Crafted with Tradition,

@@ -13,23 +13,15 @@ const navItems = [
 
 const desktopHeroSlides = [
   {
-    src: "/asset/iruttukadai-halwa.webp",
-    alt: "Iruttukadai Halwa banner",
-  },
-  {
-    src: "/asset/tirunelveli-iruttukadai-halwa.webp",
-    alt: "Tirunelveli Iruttukadai Halwa banner",
+    src: "/asset/Homepage/Baner1.webp",
+    alt: "Homepage banner 1",
   },
 ];
 
 const mobileHeroSlides = [
   {
-    src: "/asset/mobile-image/iruttukadai-halwa-1.webp",
-    alt: "Iruttukadai Halwa mobile banner 1",
-  },
-  {
-    src: "/asset/mobile-image/iruttukadai-halwa-2.webp",
-    alt: "Iruttukadai Halwa mobile banner 2",
+    src: "/asset/Homepage/Baner1.webp",
+    alt: "Homepage banner 1",
   },
 ];
 
