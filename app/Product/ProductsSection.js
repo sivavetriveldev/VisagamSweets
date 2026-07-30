@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./ProductsSection.module.css";
 
 const imagePool = [
@@ -9,12 +9,10 @@ const imagePool = [
   "/asset/Product-image/halwa-400g.webp",
 ];
 
-const ITEMS_PER_PAGE = 3;
-
 const productCategories = [
   {
     key: "sweets",
-    title: "Sweets",
+    // title: "Sweets",
     subtitle: " ",
     products: [
       {
@@ -70,7 +68,7 @@ const productCategories = [
   {
     key: "savories",
     title: "Savories",
-    subtitle: " ",
+    subtitle: "Crisp, savory bites made for everyday snacking and sharing.",
     products: [
       {
         id: "savories-1",
@@ -130,10 +128,17 @@ const createStateMap = (defaultValue) =>
     return acc;
   }, {});
 
+const createCarouselBounds = () =>
+  productCategories.reduce((acc, group) => {
+    acc[group.key] = { canPrev: false, canNext: true };
+    return acc;
+  }, {});
+
 export default function ProductsSection() {
   const [quantities, setQuantities] = useState(() => createStateMap(1));
   const [wishlist, setWishlist] = useState(() => createStateMap(false));
-  const [carouselIndex, setCarouselIndex] = useState({ sweets: 0, savories: 0 });
+  const [carouselBounds, setCarouselBounds] = useState(() => createCarouselBounds());
+  const carouselRefs = useRef({});
 
   const updateQuantity = (productId, delta) => {
     setQuantities((current) => ({
@@ -149,54 +154,90 @@ export default function ProductsSection() {
     }));
   };
 
-  const changeSlide = (categoryKey, direction) => {
-    setCarouselIndex((current) => {
-      const group = productCategories.find((item) => item.key === categoryKey);
-      const totalPages = Math.max(1, Math.ceil((group?.products?.length || 0) / ITEMS_PER_PAGE));
-      const nextPage = (current[categoryKey] || 0) + direction;
-      const safePage = Math.max(0, Math.min(nextPage, totalPages - 1));
+  const syncCarouselState = (categoryKey) => {
+    const container = carouselRefs.current[categoryKey];
 
-      return {
+    if (!container) {
+      return;
+    }
+
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+    const canPrev = container.scrollLeft > 4;
+    const canNext = container.scrollLeft < maxScrollLeft - 4;
+
+    setCarouselBounds((current) => {
+      const nextState = {
         ...current,
-        [categoryKey]: safePage,
+        [categoryKey]: { canPrev, canNext },
       };
+
+      return nextState;
     });
   };
+
+  const changeSlide = (categoryKey, direction) => {
+    const container = carouselRefs.current[categoryKey];
+
+    if (!container) {
+      return;
+    }
+
+    const firstCard = container.querySelector("[data-carousel-card]");
+
+    if (!firstCard) {
+      return;
+    }
+
+    const cardWidth = firstCard.getBoundingClientRect().width;
+    const styles = window.getComputedStyle(container);
+    const gap = Number.parseFloat(styles.columnGap || styles.gap || "0") || 0;
+
+    container.scrollBy({
+      left: direction * (cardWidth + gap),
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    const raf = window.requestAnimationFrame(() => {
+      productCategories.forEach((group) => syncCarouselState(group.key));
+    });
+
+    const handleResize = () => {
+      productCategories.forEach((group) => syncCarouselState(group.key));
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.cancelAnimationFrame(raf);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <section id="halwa" className={styles.productsSection}>
       <div className={styles.productsContainer}>
         <div className={styles.productsCard}>
           <p className={styles.tag}>
-            <img
-              src="/asset/heading-icon.svg"
-              alt=""
-              aria-hidden="true"
-              className={styles.tagIcon}
-            />
             <span className={styles.tagText}>Products</span>
           </p>
 
-          <h3 className={styles.collectionTitle}>Signature Collection</h3>
+          <h3 className={styles.collectionTitle}>Sweets</h3>
           <p className={styles.collectionSubtitle}>
             Handpicked favorites prepared with our authentic taste and tradition.
           </p>
 
           {productCategories.map((group) => {
-            const activeIndex = carouselIndex[group.key] || 0;
-            const totalPages = Math.max(1, Math.ceil(group.products.length / ITEMS_PER_PAGE));
-            const productPages = Array.from({ length: totalPages }, (_, pageIndex) =>
-              group.products.slice(
-                pageIndex * ITEMS_PER_PAGE,
-                pageIndex * ITEMS_PER_PAGE + ITEMS_PER_PAGE
-              )
-            );
+            const bounds = carouselBounds[group.key] || { canPrev: false, canNext: false };
 
             return (
-              <div key={group.key} className={styles.categorySection}>
+              <div key={group.key} id={group.key} className={styles.categorySection}>
                 <div className={styles.categoryHeader}>
                   <div>
-                    <p className={styles.categoryLabel}> </p>
+                    {group.key === "savories" ? (
+                      <p className={styles.categoryLabel}>Products</p>
+                    ) : null}
                     <h4 className={styles.categoryTitle}>{group.title}</h4>
                     <p className={styles.categorySubtitle}>{group.subtitle}</p>
                   </div>
@@ -208,122 +249,122 @@ export default function ProductsSection() {
                     className={`${styles.carouselBtn} ${styles.carouselBtnLeft}`}
                     onClick={() => changeSlide(group.key, -1)}
                     aria-label={`Previous ${group.title} products`}
-                    disabled={activeIndex === 0}
+                    disabled={!bounds.canPrev}
                   >
                     {"<"}
                   </button>
 
                   <div
+                    ref={(node) => {
+                      carouselRefs.current[group.key] = node;
+                    }}
                     className={styles.productTrack}
-                    style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+                    onScroll={() => syncCarouselState(group.key)}
                   >
-                    {productPages.map((page, pageIndex) => (
-                      <div className={styles.productPage} key={`${group.key}-page-${pageIndex}`}>
-                        {page.map((item, index) => (
-                          <div
-                            key={item.id}
-                            className={styles.productAosWrap}
-                            data-aos="fade-up"
-                            data-aos-easing="ease-in-out"
-                            data-aos-duration={`${700 + index * 120}`}
-                            data-aos-delay={`${index * 90}`}
-                          >
-                            <div className={styles.productItem}>
-                              <div className={styles.imageWrap}>
-                                <img src={item.image} alt={item.title} className={styles.productImage} />
-                              </div>
+                    {group.products.map((item, index) => (
+                      <div
+                        key={item.id}
+                        className={styles.productAosWrap}
+                        data-carousel-card
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-out"
+                        data-aos-duration={`${700 + index * 120}`}
+                        data-aos-delay={`${index * 90}`}
+                      >
+                        <div className={styles.productItem}>
+                          <div className={styles.imageWrap}>
+                            <img src={item.image} alt={item.title} className={styles.productImage} />
+                          </div>
 
-                              <button
-                                type="button"
-                                className={`${styles.heartBtn} ${wishlist[item.id] ? styles.heartBtnActive : ""}`}
-                                onClick={() => toggleWishlist(item.id)}
-                                aria-pressed={wishlist[item.id]}
-                                aria-label={
-                                  wishlist[item.id]
-                                    ? `Remove ${item.title} from wishlist`
-                                    : `Add ${item.title} to wishlist`
-                                }
-                              >
+                          <button
+                            type="button"
+                            className={`${styles.heartBtn} ${wishlist[item.id] ? styles.heartBtnActive : ""}`}
+                            onClick={() => toggleWishlist(item.id)}
+                            aria-pressed={wishlist[item.id]}
+                            aria-label={
+                              wishlist[item.id]
+                                ? `Remove ${item.title} from wishlist`
+                                : `Add ${item.title} to wishlist`
+                            }
+                          >
+                            <img
+                              src="/asset/heart.svg"
+                              alt=""
+                              aria-hidden="true"
+                              className={styles.heartIcon}
+                            />
+                          </button>
+
+                          <h4 className={styles.productTitle}>{item.title}</h4>
+                          <p className={styles.productDesc}>{item.desc}</p>
+
+                          <div className={styles.metaRow}>
+                            <div className={styles.priceBlock}>
+                              <span className={styles.oldPrice}>
                                 <img
-                                  src="/asset/heart.svg"
+                                  src="/asset/rupees.svg"
                                   alt=""
                                   aria-hidden="true"
-                                  className={styles.heartIcon}
+                                  className={styles.oldPriceIcon}
                                 />
-                              </button>
-
-                              <h4 className={styles.productTitle}>{item.title}</h4>
-                              <p className={styles.productDesc}>{item.desc}</p>
-
-                              <div className={styles.metaRow}>
-                                <div className={styles.priceBlock}>
-                                  <span className={styles.oldPrice}>
-                                    <img
-                                      src="/asset/rupees.svg"
-                                      alt=""
-                                      aria-hidden="true"
-                                      className={styles.oldPriceIcon}
-                                    />
-                                    <span>{item.oldPrice.toFixed(2)}</span>
-                                  </span>
-                                  <div className={styles.priceRow}>
-                                    <div className={styles.priceValue}>
-                                      <img
-                                        src="/asset/rupees.svg"
-                                        alt=""
-                                        aria-hidden="true"
-                                        className={styles.priceIcon}
-                                      />
-                                      <span>{item.price.toFixed(2)}</span>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <div className={styles.qtyBlock}>
-                                  <span className={styles.metaLabel}>Qty</span>
-                                  <div className={styles.qtySelector} aria-label={`Quantity for ${item.title}`}>
-                                    <button
-                                      type="button"
-                                      className={styles.qtyBtn}
-                                      onClick={() => updateQuantity(item.id, -1)}
-                                      aria-label={`Decrease quantity for ${item.title}`}
-                                    >
-                                      <img
-                                        src="/asset/minus.svg"
-                                        alt=""
-                                        aria-hidden="true"
-                                        className={styles.qtyIcon}
-                                      />
-                                    </button>
-                                    <span className={styles.qtyValue}>{quantities[item.id] || 1}</span>
-                                    <button
-                                      type="button"
-                                      className={styles.qtyBtn}
-                                      onClick={() => updateQuantity(item.id, 1)}
-                                      aria-label={`Increase quantity for ${item.title}`}
-                                    >
-                                      <img
-                                        src="/asset/plus.svg"
-                                        alt=""
-                                        aria-hidden="true"
-                                        className={styles.qtyIcon}
-                                      />
-                                    </button>
-                                  </div>
+                                <span>{item.oldPrice.toFixed(2)}</span>
+                              </span>
+                              <div className={styles.priceRow}>
+                                <div className={styles.priceValue}>
+                                  <img
+                                    src="/asset/rupees.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    className={styles.priceIcon}
+                                  />
+                                  <span>{item.price.toFixed(2)}</span>
                                 </div>
                               </div>
+                            </div>
 
-                              <div className={styles.actionRow}>
-                                <button type="button" className={styles.addToCartBtn}>
-                                  Add to Cart
+                            <div className={styles.qtyBlock}>
+                              <span className={styles.metaLabel}>Qty</span>
+                              <div className={styles.qtySelector} aria-label={`Quantity for ${item.title}`}>
+                                <button
+                                  type="button"
+                                  className={styles.qtyBtn}
+                                  onClick={() => updateQuantity(item.id, -1)}
+                                  aria-label={`Decrease quantity for ${item.title}`}
+                                >
+                                  <img
+                                    src="/asset/minus.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    className={styles.qtyIcon}
+                                  />
                                 </button>
-                                <a href="#" className={styles.viewBtn}>
-                                  View
-                                </a>
+                                <span className={styles.qtyValue}>{quantities[item.id] || 1}</span>
+                                <button
+                                  type="button"
+                                  className={styles.qtyBtn}
+                                  onClick={() => updateQuantity(item.id, 1)}
+                                  aria-label={`Increase quantity for ${item.title}`}
+                                >
+                                  <img
+                                    src="/asset/plus.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    className={styles.qtyIcon}
+                                  />
+                                </button>
                               </div>
                             </div>
                           </div>
-                        ))}
+
+                          <div className={styles.actionRow}>
+                            <button type="button" className={styles.addToCartBtn}>
+                              Add to Cart
+                            </button>
+                            <a href="#" className={styles.viewBtn}>
+                              View
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -333,7 +374,7 @@ export default function ProductsSection() {
                     className={`${styles.carouselBtn} ${styles.carouselBtnRight}`}
                     onClick={() => changeSlide(group.key, 1)}
                     aria-label={`Next ${group.title} products`}
-                    disabled={activeIndex >= totalPages - 1}
+                    disabled={!bounds.canNext}
                   >
                     {">"}
                   </button>

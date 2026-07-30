@@ -79,15 +79,29 @@ export default function FooterSection() {
             <h3 className={styles.colTitle}>Visit Us</h3>
             <ul className={styles.contactList}>
               <li className={styles.contactItem}>
-                <p className={styles.info}>
-                 Visakam sweets and Savouries,
-                  <br />
-                 29 East car street, Tirunelveli Town. 627006.
-                </p>
+                <div className={styles.addressRow}>
+                  <img
+                    src="/asset/Footer/location.svg"
+                    alt=""
+                    aria-hidden="true"
+                    className={styles.addressIcon}
+                  />
+                  <p className={styles.info}>
+                    Visakam sweets and Savouries,
+                    <br />
+                    29 East car street, Tirunelveli Town. 627006.
+                  </p>
+                </div>
               </li>
               <li className={styles.contactItem}>
                 <a href="tel:+919629753355" className={styles.contactLink}>
-                  +91 96298 43355
+                  <img
+                    src="/asset/Footer/phone.svg"
+                    alt=""
+                    aria-hidden="true"
+                    className={styles.contactIcon}
+                  />
+                  <span>+91 96298 43355</span>
                 </a>
               </li>
               <li className={styles.contactItem}>
@@ -95,24 +109,30 @@ export default function FooterSection() {
                   href="mailto:info@iruttukadaihalwa.com"
                   className={styles.contactLink}
                 >
-                  visakamsweetsandsavouries@gmail.com
+                  <img
+                    src="/asset/Footer/mail.svg"
+                    alt=""
+                    aria-hidden="true"
+                    className={styles.contactIcon}
+                  />
+                  <span>visakamsweetsandsavouries@gmail.com</span>
                 </a>
               </li>
             </ul>
           </div>
 
-          <img
+          {/* <img
             src="/asset/Footer/Footertemple.svg"
             alt="Temple"
             aria-hidden="true"
             className={styles.bottomSketch}
-          />
+          /> */}
         </div>
 
         <div className={styles.bottomBar}>
           <div className={styles.policyRow}>
             <div className={styles.policyLinks}>
-              <a href="#">Terms &amp; Condition</a>
+              <a href="#">Terms & Condition</a>
               <span>|</span>
               <a href="#">Privacy Policy</a>
               <span>|</span>
@@ -130,7 +150,12 @@ export default function FooterSection() {
             </div>
 
             <div className={styles.designedBy}>
-              <a href="https://www.xcodefix.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.xcodefix.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.noUnderlineLink}
+              >
                 Website Design & SEO By Xcodefix
               </a>
             </div>

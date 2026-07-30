@@ -1,11 +1,13 @@
 .page {
-  --background: #FBF7F1;
-  --foreground: #FFFFFF;
-  --text-primary: #2E1A24;
-  --text-secondary: #5A124D;
-  --button-primary-hover: #5A124D;
-  --button-secondary-hover: #F6E7C8;
-  --button-secondary-border: #E8D5B5;
+  --background: #fafafa;
+  --foreground: #fff;
+
+  --text-primary: #000;
+  --text-secondary: #666;
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+  --button-secondary-border: #ebebeb;
 
   display: flex;
   flex: 1;
@@ -13,9 +15,7 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-geist-sans);
-  background:
-    linear-gradient(180deg, rgba(251, 247, 241, 0.92), rgba(251, 247, 241, 0.98)),
-    var(--background);
+  background-color: var(--background);
 }
 
 .floatingContacts {
@@ -26,6 +26,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: flex-end;
   z-index: 2000;
 }
 
@@ -33,6 +34,8 @@
   display: inline-flex;
   align-items: end;
   justify-content: end;
+  width: fit-content;
+  height: fit-content;
   text-decoration: none;
 }
 
@@ -178,11 +181,11 @@ a.secondary {
   }
 
   .floatingContacts {
-    top: auto;
-    bottom: 16px;
-    right: 12px;
+    /* top: auto; */
+    /* bottom: 16px; */
+    /* right: 12px; */
     transform: none;
-    align-items: flex-end;
+    align-items: center;
     gap: 8px;
   }
 
@@ -203,12 +206,14 @@ a.secondary {
   }
 
   .page {
-    --background: #FBF7F1;
-    --foreground: #FFFFFF;
-    --text-primary: #2E1A24;
-    --text-secondary: #5A124D;
-    --button-primary-hover: #5A124D;
-    --button-secondary-hover: #F6E7C8;
-    --button-secondary-border: #E8D5B5;
+    --background: #000;
+    --foreground: #000;
+
+    --text-primary: #ededed;
+    --text-secondary: #999;
+
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+    --button-secondary-border: #1a1a1a;
   }
 }

@@ -821,6 +821,11 @@ body {
     display: block;
   }
 
+  .mobileHeroCarousel .heroSlide {
+    object-fit: contain;
+    object-position: center center;
+  }
+
   .heroDots {
     bottom: 14px;
   }

@@ -93,15 +93,9 @@ export default function AboutSection() {
         </div>
 
         <div className={styles.centerContent}>
-          <p className={styles.tag}>
-            <img
-              src="/asset/heading-icon.svg"
-              alt=""
-              aria-hidden="true"
-              className={styles.tagIcon}
-            />
-            <span className={styles.tagText}>About Visakamsweets Shop</span>
-          </p>
+            <p className={styles.tag}>
+              <span className={styles.tagText}>About Visakamsweets Shop</span>
+            </p>
           <h3 className={styles.heading}>
            Crafted with Tradition,
             Made for Every Celebration
@@ -115,7 +109,7 @@ export default function AboutSection() {
           </a>
         </div>
 
-        <div
+        {/* <div
           className={styles.rightStats}
           data-aos="zoom-in-up"
           data-aos-duration="1100"
@@ -130,7 +124,7 @@ export default function AboutSection() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

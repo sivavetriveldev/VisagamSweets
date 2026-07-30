@@ -25,7 +25,7 @@ export default function HomePage() {
       <Stip />
       <NewFooter />
       <div className={styles.floatingContacts}>
-        <a
+        {/* <a
           href="#order-online"
           aria-label="Order online"
           className={styles.orderGifLink}
@@ -36,14 +36,14 @@ export default function HomePage() {
             aria-hidden="true"
             className={styles.orderGif}
           />
-        </a>
+        </a> */}
 
         <a
           href="https://wa.me/919629753355?text=Hello%20Iruttukadai%20Halwa"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
-          className={styles.floatingContactLink}
+          className={`${styles.floatingContactLink} ${styles.whatsappContactLink}`}
         >
           <img
             src="/asset/whatsapp.svg"

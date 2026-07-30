@@ -10,7 +10,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-  /* padding: 18px 16px 10px; */
+  /* padding: 4rem 0 4rem; */
   background: #5A124D;
   scroll-margin-top: 110px;
 }
@@ -23,7 +23,7 @@
 
 .bottomBar {
   position: relative;
-  padding: 0 26px 10px;
+  padding: 20px 26px 10px;
 }
 
 .policyRow {
@@ -34,12 +34,12 @@
   padding-top: 10px;
 }
 
-.bottomLine {
+/* .bottomLine {
   width: 100%;
   height: 3px;
   background: #D8A14A;
   border-radius: 999px;
-}
+} */
 
 .bottomRow {
   display: flex;
@@ -64,6 +64,10 @@
   color: inherit;
 }
 
+.noUnderlineLink {
+  text-decoration: none;
+}
+
 .policyLinks {
   display: flex;
   flex-wrap: wrap;
@@ -85,10 +89,10 @@
   color: #F6E7C8;
 }
 
-.policyLinks a:hover,
+/* .policyLinks a:hover,
 .policyLinks a:focus-visible {
   text-decoration: underline;
-}
+} */
 
 .cornerTopLeft,
 .cornerTopRight {
@@ -120,7 +124,6 @@
   padding: 34px 26px 0px;
   background: transparent;
   /* border: 1px solid rgba(232, 181, 74, 0.28); */
-  box-shadow: inset 0 0 0 1px rgba(255, 230, 180, 0.04);
 }
 
 .brandRow {
@@ -188,8 +191,8 @@
 }
 
 .socialIcon img {
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
   display: block;
 }
@@ -270,6 +273,27 @@
   font-weight: 400;
 }
 
+.addressRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.addressIcon {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 18px;
+  margin-top: 4px;
+  object-fit: contain;
+}
+
+.contactIcon {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 18px;
+  object-fit: contain;
+}
+
 .contactList {
   list-style: none;
   padding: 0;
@@ -283,6 +307,7 @@
 .contactLink {
   display: inline-flex;
   align-items: center;
+  gap: 10px;
   color: #F6E7C8;
   text-decoration: none;
   font-size: 16px;
@@ -290,16 +315,16 @@
   font-weight: 400;
 }
 
-.contactLink:hover,
+/* .contactLink:hover,
 .contactLink:focus-visible {
   text-decoration: underline;
-}
+} */
 
 .footerSection p,
 .footerSection a,
 .footerSection li,
 .footerSection span {
-  color: #F6E7C8;
+  color: #ffffff;
 }
 
 .visitLine {
@@ -331,7 +356,7 @@
   justify-content: center;
   border: none;
   border-radius: 50%;
-  background: #D8A14A;
+  background: #5A124D;
   box-shadow:
     0 0 0 1px #D8A14A,
     0 8px 18px rgba(0, 0, 0, 0.16);

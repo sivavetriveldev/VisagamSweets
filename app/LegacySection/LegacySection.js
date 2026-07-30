@@ -10,15 +10,9 @@ export default function LegacySection() {
     >
       <div className={styles.inner}>
         <div className={styles.centerText}>
-          <p className={styles.tag}>
-            <img
-              src="/asset/heading-icon.svg"
-              alt=""
-              aria-hidden="true"
-              className={styles.tagIcon}
-            />
-            <span className={styles.tagText}>Our Legacy</span>
-          </p>
+            <p className={styles.tag}>
+              <span className={styles.tagText}>Our Legacy</span>
+            </p>
           <h2 className={styles.title}>Iruttukadai Halwa</h2>
           <p className={styles.desc}>
            For generations, our Iruttukadai Halwa has been crafted using time-honored recipes and traditional methods.

@@ -6,19 +6,31 @@ export default function SweetsSavoriesSection() {
   return (
     <section id="sweets-savories" className={styles.section}>
       <section className={styles.block}>
-        <img
-          src="/asset/NewSection/Sweets.webp"
-          alt="Sweets"
-          className={styles.image}
-        />
+        <a
+          href="#sweets"
+          className={styles.link}
+          aria-label="Go to sweets products"
+        >
+          <img
+            src="/asset/NewSection/Sweets.webp"
+            alt="Sweets"
+            className={styles.image}
+          />
+        </a>
       </section>
 
       <section className={styles.block}>
-        <img
-          src="/asset/NewSection/Saveries.webp"
-          alt="Savories"
-          className={styles.image}
-        />
+        <a
+          href="#savories"
+          className={styles.link}
+          aria-label="Go to savories products"
+        >
+          <img
+            src="/asset/NewSection/Saveries.webp"
+            alt="Savories"
+            className={styles.image}
+          />
+        </a>
       </section>
     </section>
   );

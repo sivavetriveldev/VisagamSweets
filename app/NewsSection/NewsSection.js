@@ -42,15 +42,9 @@ export default function NewsSection() {
         <div className={styles.sectionHeader}>
           <div className={styles.headerTopRow}>
             <div className={styles.headerText}>
-              <p className={styles.tag}>
-                <img
-                  src="/asset/heading-icon.svg"
-                  alt=""
-                  aria-hidden="true"
-                  className={styles.tagIcon}
-                />
-                <span>News & Events</span>
-              </p>
+                <p className={styles.tag}>
+                  <span>News & Events</span>
+                </p>
               <h2 className={styles.title}>Stay Updated with Our Latest News & Celebrations</h2>
               <p className={styles.subtitle}>
                 Stories, announcements, and moments from our sweet journey.

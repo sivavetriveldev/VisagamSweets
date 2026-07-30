@@ -6,11 +6,10 @@ export default function YouTubeSection() {
   return (
     <section id="youtube" className={styles.youtubeSection}>
       <div className={styles.wrapper}>
-        <div className={styles.sectionHeader}>
-          <p className={styles.tag}>
-            <img src="/asset/heading-icon.svg" alt="" aria-hidden="true" className={styles.tagIcon} />
-            <span className={styles.tagText}>Video</span>
-          </p>
+          <div className={styles.sectionHeader}>
+            <p className={styles.tag}>
+              <span className={styles.tagText}>Video</span>
+            </p>
           <h2 className={styles.title}>A Journey of Authentic Flavours</h2>
           <p className={styles.subtitle}>
            Take a closer look at the passion and tradition behind every sweet and savoury.

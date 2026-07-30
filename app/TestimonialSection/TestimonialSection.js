@@ -133,12 +133,6 @@ export default function TestimonialSection() {
       <div className={styles.wrapper}>
         <div className={styles.sectionHeader}>
           <p className={styles.tag}>
-            <img
-              src="/asset/heading-icon.svg"
-              alt=""
-              aria-hidden="true"
-              className={styles.tagIcon}
-            />
             <span className={styles.tagText}>Testimonials</span>
           </p>
           <h2 className={styles.title}>Sweet Memories Shared by Our Customers</h2>
@@ -149,21 +143,17 @@ export default function TestimonialSection() {
             <div
               className={styles.track}
               onTransitionEnd={handleTransitionEnd}
-                style={{
-                  "--slide-width": `${slideWidth}px`,
-                  transform: `translateX(${slideWidth ? (viewportWidth - slideWidth) / 2 - index * slideWidth : 0}px)`,
-                  transition: isJumping ? "none" : "transform 650ms ease-in-out",
-                }}
-              >
+              style={{
+                "--slide-width": `${slideWidth}px`,
+                transform: `translateX(${
+                  slideWidth ? (viewportWidth - slideWidth) / 2 - index * slideWidth : 0
+                }px)`,
+                transition: isJumping ? "none" : "transform 650ms ease-in-out",
+              }}
+            >
               {slides.map((item, slideIndex) => (
                 <div className={styles.slide} key={`${item.name}-${slideIndex}`}>
                   <div className={styles.slideInner}>
-                    <img
-                      src="/asset/Testimonial/EmptyCenter.svg"
-                      alt=""
-                      aria-hidden="true"
-                      className={styles.centerImg}
-                    />
                     <div className={styles.centerContent}>
                       {(() => {
                         const { preview, isLong } = getReviewPreview(item.text, 50);
